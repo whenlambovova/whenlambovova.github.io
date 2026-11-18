@@ -20,7 +20,7 @@ const SYMBOLS = [
 
 const fmt = (n, d = 2) => n.toLocaleString("vi-VN", { minimumFractionDigits: d, maximumFractionDigits: d });
 const fmtPrice = (n) => n.toLocaleString("vi-VN", { maximumFractionDigits: n < 10 ? 4 : 2 });
-const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+const esc = (t) => String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 /* ---------- Market data ---------- */
 let tickers = []; // {id, price, changePct}
@@ -111,8 +111,47 @@ async function loadTickers() {
 
 /* ---------- Tin nóng tự động (RSS tổng hợp, workflow cập nhật 30 phút/lần) ---------- */
 let newsItems = null, newsError = false;
-async function loadNews() {
-  const fresh = cacheGet("wlv_news", 30 * 60 * 1000);
+const NEWS_NOTES = {
+  "ct-bitcoin-etf-240-million-outflow-bearish-phase": {
+    title: "Bitcoin ETF bị rút ròng 240 triệu USD, CryptoQuant cảnh báo thị trường quay lại pha giảm",
+    summary: "Dòng tiền rút khỏi các quỹ ETF Bitcoin xuất hiện trở lại sau một ngày tạm dừng. CryptoQuant, đơn vị phân tích dữ liệu chuỗi, cho rằng Bitcoin đã quay lại pha thị trường giảm giá.",
+    note: "Dòng vốn ETF là một dữ kiện, không phải bảo chứng cho xu hướng. Một ngày rút ròng chưa đủ để kết luận, và nhận định của một đơn vị phân tích chỉ là một góc nhìn. Cặp cần theo dõi: BTC/USD. Việc nên làm là so phản ứng của giá với tin, thay vì đọc tin rồi đoán chiều giá."
+  },
+  "ct-nvidia-board-rejects-huang-comeback-amid-record-116b-quarter": {
+    title: "Nvidia vượt dự báo doanh thu 5,6%, hội đồng quản trị chưa đồng ý đưa ông Jensen Huang trở lại",
+    summary: "Nvidia báo doanh thu cao hơn kỳ vọng của phố Wall 5,6% và đưa ra dự báo doanh số mạnh hơn dự kiến. Cùng lúc, hội đồng quản trị vẫn chưa đáp ứng những lời kêu gọi đưa ông Jensen Huang trở lại.",
+    note: "Kết quả kinh doanh và câu chuyện lãnh đạo là hai tầng tin khác nhau, và giá có thể phản ứng với tầng nào nổi hơn ở từng thời điểm. Tin chứng khoán Mỹ lớn đôi khi ảnh hưởng tâm lý chung với tài sản rủi ro, nhưng đừng mặc định điều đó: hãy kiểm tra xem BTC/USD có thực sự di chuyển cùng chiều trong phiên không."
+  },
+  "ct-solana-sol-gains-7-percent-breakpoint-beta-tokenization": {
+    title: "SOL tăng 7% sau Breakpoint khi Solana bỏ nhãn beta",
+    summary: "Token SOL chạm 75,12 USD vào thứ Ba, tăng mạnh hơn Bitcoin và Ether, sau khi mạng Solana gỡ nhãn beta đã dùng từ lúc ra mắt năm 2020.",
+    note: "Nên tách thay đổi về nhãn hoặc kỹ thuật khỏi thay đổi về dòng tiền thật. Giá tăng cùng ngày với tin tốt thường bị đọc thành tín hiệu, nhưng một ngày tăng chưa chứng minh được điều gì. Cặp liên quan: SOL/USD. Hãy xem biến động trên bảng thị trường và so với BTC/USD."
+  },
+  "ct-world-bank-circle-citi-explore-stablecoins-payments": {
+    title: "Ngân hàng Thế giới hợp tác với Circle và Citi để thử nghiệm stablecoin cho thanh toán",
+    summary: "Sáng kiến dựa trên nền tảng blockchain sẵn có của Ngân hàng Thế giới, nhằm giúp truy vết dòng tiền đầu tư tại các nước đang phát triển rõ hơn.",
+    note: "Đây là bước thử nghiệm, chưa phải triển khai quy mô lớn. Tin thuộc nhóm hạ tầng thanh toán hơn là tin giá. Circle phát hành stablecoin USDC, loại token giữ giá quanh 1 USD, nên không có cặp giá để theo dõi lệch giá như BTC hay ETH."
+  }
+};
+const NEWS_PAIRS = [[/bitcoin|\bbtc\b|etf/i, "BTC/USD"], [/ethereum|ether\b|\beth\b/i, "ETH/USD"], [/solana|\bsol\b/i, "SOL/USD"], [/\bxrp\b|ripple/i, "XRP/USD"], [/dogecoin|\bdoge\b/i, "DOGE/USD"], [/gold|vàng/i, "XAU/USD"], [/silver|bạc/i, "XAG/USD"], [/vn-index|vnindex|chứng khoán/i, "VN-Index"], [/oil|dầu|brent|wti/i, "Brent, WTI /USD"]];
+function newsView(n) {
+  const note = NEWS_NOTES[n.id] || null;
+  const title = (note && note.title) || n.title_vi || n.title;
+  const summary = (note && note.summary) || n.desc_vi || n.desc || "";
+  const pairs = NEWS_PAIRS.filter((p) => p[0].test(n.title + " " + (n.title_vi || ""))).map((p) => p[1]);
+  return { title, summary, note: note && note.note, pairs, translated: n.lang === "en" && !note };
+}
+function newsArticleHTML(n) {
+  const v = newsView(n);
+  const time = new Date(n.at).toLocaleString("vi-VN", { weekday: "long", day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" });
+  const pairs = v.pairs.length ? `<p><strong>Cặp liên quan:</strong> ${v.pairs.map(esc).join(", ")}. <a href="#/thi-truong">Xem bảng thị trường</a></p>` : "";
+  const note = v.note ? `<h3>Vova đọc tin này</h3><p>${esc(v.note)}</p>` : `<h3>Khung đọc tin của Vova</h3><ul><li>Tin này ảnh hưởng tới cặp nào, và giá đã phản ứng chưa?</li><li>Phản ứng giá có cùng chiều với tin, hay đi ngược?</li><li>Tin không phải tín hiệu vào lệnh. Cần chart và điểm sai rõ ràng trước khi hành động.</li></ul>`;
+  const mt = v.translated ? `<p class="source">Bản tiếng Việt do dịch máy tự động từ nguồn tiếng Anh, có thể chưa trọn nghĩa. Đọc bản gốc ở liên kết nguồn bên dưới khi cần chính xác.</p>` : "";
+  return `<div class="article-grid" style="margin-top:36px"><div class="article"><span class="tag">Tin tức · ${esc(n.source)}</span><h2 class="title">${esc(v.title)}</h2><p class="byline">When Lambo Vova · ${esc(time)}</p><p class="intro">${esc(v.summary)}</p>${pairs}${note}<div class="takeaway">Lưu ý: nội dung mang tính thông tin, không phải khuyến nghị đầu tư.</div>${mt}<p class="source" style="font-size:12px">Nguồn: ${esc(n.source)}. <a href="${esc(n.link)}" target="_blank" rel="noopener noreferrer nofollow">Bài gốc</a></p><a class="back" href="#/tin-tuc">← Quay lại Tin tức</a></div>${promoHTML()}</div>`;
+}
+
+async function loadNews(force) {
+  const fresh = force ? null : cacheGet("wlv_news", 30 * 60 * 1000);
   if (fresh) { newsItems = fresh; newsError = false; if (currentRoute === "tin-tuc") renderNews(); return; }
   try {
     const r = await fetch("data/news.json?t=" + Date.now());
@@ -134,14 +173,12 @@ function renderNews() {
   if (newsError && !newsItems) { el.innerHTML = '<div class="note">Chưa tải được tin tự động. Trang tự thử lại sau ít phút.</div>'; return; }
   if (!newsItems) { el.innerHTML = '<p class="muted">Đang tải tin…</p>'; return; }
   if (!newsItems.length) { el.innerHTML = '<p class="muted">Chưa có tin mới trong lần cập nhật gần nhất.</p>'; return; }
-  const esc = (t) => String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-  const clean = (u) => String(u || "").replace(/^\s*<!\[CDATA\[/, "").replace(/\]\]>\s*$/, "").trim();
-  const cutoff = Date.now() - 7 * 86400000;
-  const list = newsItems.filter((n) => n.at && n.at >= cutoff && /^https?:\/\//.test(clean(n.link)));
+  const list = newsItems.filter((n) => n.id && n.at >= Date.now() - 7 * 86400000);
   if (!list.length) { el.innerHTML = '<p class="muted">Chưa có tin mới trong 7 ngày gần nhất.</p>'; return; }
   el.innerHTML = list.map((n) => {
+    const v = newsView(n);
     const time = new Date(n.at).toLocaleString("vi-VN", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" });
-    return `<a class="article-item" href="${esc(clean(n.link))}" target="_blank" rel="noopener noreferrer"><span class="idx">↗</span><span><span class="tag">${esc(n.source)} · ${time}</span><h3>${esc(n.title)}</h3></span></a>`;
+    return `<a class="article-item" href="#/tin/${encodeURIComponent(n.id)}"><span class="idx">→</span><span><span class="tag">${esc(n.source)} · ${time}</span><h3>${esc(v.title)}</h3><p>${esc(v.summary.length > 170 ? v.summary.slice(0, 167).replace(/\s+\S*$/, "") + "..." : v.summary)}</p></span></a>`;
   }).join("");
 }
 
@@ -856,6 +893,18 @@ function route() {
   const hash = location.hash.replace(/^#\/?/, "");
   const app = document.getElementById("app");
   let page = "home";
+  if (hash.startsWith("tin/")) {
+    const id = decodeURIComponent(hash.slice(4));
+    document.body.dataset.page = "tin-tuc"; currentRoute = "news-article"; setActive("tin-tuc"); window.scrollTo(0, 0);
+    const draw = (retried) => {
+      const n = (newsItems || []).find((x) => x.id === id);
+      if (n) { app.innerHTML = newsArticleHTML(n); return; }
+      if (!retried) { app.innerHTML = '<section class="blk" style="margin-top:40px"><p class="muted">Đang tải bài…</p></section>'; loadNews(true).then(() => draw(true)); return; }
+      app.innerHTML = '<section class="blk" style="margin-top:40px"><h2 class="section">Bài này đã hết hạn</h2><p class="section-sub">Tin chỉ được giữ 7 ngày gần nhất.</p><a class="back" href="#/tin-tuc">← Quay lại Tin tức</a></section>';
+    };
+    draw(false);
+    return;
+  }
   if (hash.startsWith("bai/")) {
     const key = hash.slice(4);
     if (ARTICLES[key]) { app.innerHTML = articleHTML(key); page = hash.startsWith("bai/nhan-dinh") ? "tin-tuc" : "kien-thuc"; document.body.dataset.page = page; window.scrollTo(0, 0); setActive(page); currentRoute = page; return; }
