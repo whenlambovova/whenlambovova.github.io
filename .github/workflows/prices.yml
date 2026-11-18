@@ -71,6 +71,61 @@ jobs:
             fs.writeFileSync('data/live.json', JSON.stringify(out));
             if (rssItems.length) fs.writeFileSync('data/news.json', JSON.stringify({ at: Date.now(), items: rssItems.slice(0, 24) }));
           "
+      - name: Dich tin
+        run: |
+          cat > /tmp/news.js <<'JS'
+          const fs = require('fs');
+          const { execSync } = require('child_process');
+          const RAW = (p) => { try { return fs.readFileSync(p, 'utf8'); } catch (e) { return ''; } };
+          const dec = (s) => String(s || '').replace(/<!\[CDATA\[|\]\]>/g, '').replace(/<[^>]+>/g, ' ')
+            .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+            .replace(/&#(\d+);/g, (m, n) => String.fromCharCode(+n)).replace(/&#x([0-9a-f]+);/gi, (m, n) => String.fromCharCode(parseInt(n, 16)))
+            .replace(/\s+/g, ' ').trim();
+          const feeds = [
+            ['/tmp/rss_coindesk.xml', 'CoinDesk', 'en', 'cd'],
+            ['/tmp/rss_ct.xml', 'Cointelegraph', 'en', 'ct'],
+            ['/tmp/rss_vne.xml', 'VnExpress Kinh doanh', 'vi', 'vn'],
+            ['/tmp/rss_cafef.xml', 'CafeF', 'vi', 'cf'],
+          ];
+          const mkId = (pre, link) => pre + '-' + link.split('?')[0].replace(/\/+$/, '').split('/').pop().split('.')[0].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 70);
+          const fresh = [];
+          for (const [file, source, lang, pre] of feeds) {
+            const items = RAW(file).split(/<item[\s>]/).slice(1, 13);
+            for (const it of items) {
+              const g = (tag) => (it.match(new RegExp('<' + tag + '>([\\s\\S]*?)</' + tag + '>')) || [])[1];
+              const title = dec(g('title')); const link = dec(g('link')).split('?')[0]; const pd = g('pubDate');
+              let at = pd ? new Date(dec(pd)).getTime() : NaN; if (!(at > 0)) at = Date.now();
+              let desc = dec(g('description')); if (desc.length > 420) desc = desc.slice(0, 417).replace(/\s+\S*$/, '') + '...';
+              if (title && /^https?:/.test(link)) fresh.push({ id: mkId(pre, link), title, desc, link, source, at, lang });
+            }
+          }
+          let old = [];
+          try { old = JSON.parse(execSync('git show HEAD:data/news.json', { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] })).items || []; } catch (e) {}
+          const map = new Map();
+          for (const o of old) if (o.id) map.set(o.id, o);
+          for (const f of fresh) { const o = map.get(f.id); map.set(f.id, o ? Object.assign({}, f, { title_vi: o.title_vi, desc_vi: o.desc_vi }) : f); }
+          const tr = async (text) => {
+            if (!text) return '';
+            try {
+              const r = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&q=' + encodeURIComponent(text), { headers: { 'User-Agent': 'Mozilla/5.0' } });
+              const d = await r.json();
+              return d[0].map((x) => x[0]).join('').replace(/[\u200b\u200c\ufeff]/g, '').trim();
+            } catch (e) { return ''; }
+          };
+          (async () => {
+            let all = [...map.values()].filter((x) => x.at > Date.now() - 7 * 86400000).sort((a, b) => b.at - a.at).slice(0, 60);
+            let n = 0;
+            for (const x of all) {
+              if (x.lang === 'vi') { x.title_vi = x.title; x.desc_vi = x.desc; continue; }
+              if (!x.title_vi && n < 30) { x.title_vi = await tr(x.title); n++; await new Promise((r) => setTimeout(r, 250)); }
+              if (!x.desc_vi && x.desc && n < 40) { x.desc_vi = await tr(x.desc); n++; await new Promise((r) => setTimeout(r, 250)); }
+            }
+            fs.mkdirSync('data', { recursive: true });
+            if (all.length) fs.writeFileSync('data/news.json', JSON.stringify({ at: Date.now(), items: all }));
+            console.log('items', all.length, 'translated now', n);
+          })();
+          JS
+          node /tmp/news.js
       - name: Commit neu co thay doi
         run: |
           git config user.name "when-lambo-bot"
