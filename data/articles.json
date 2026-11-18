@@ -1,0 +1,58 @@
+{
+ "items": [
+  {
+   "id": "ct-world-bank-circle-citi-explore-stablecoins-payments",
+   "title": "Ngân hàng Thế giới hợp tác với Circle và Citi để thử nghiệm stablecoin cho thanh toán",
+   "summary": "Sáng kiến dựa trên nền tảng blockchain sẵn có của Ngân hàng Thế giới, nhằm giúp truy vết dòng tiền đầu tư tại các nước đang phát triển rõ hơn.",
+   "note": "Đây là bước thử nghiệm, chưa phải triển khai quy mô lớn. Tin thuộc nhóm hạ tầng thanh toán hơn là tin giá. Circle phát hành stablecoin USDC, loại token giữ giá quanh 1 USD, nên không có cặp giá để theo dõi lệch giá như BTC hay ETH.",
+   "source": "Cointelegraph",
+   "link": "https://cointelegraph.com/news/world-bank-circle-citi-explore-stablecoins-payments",
+   "at": 1794993438000
+  },
+  {
+   "id": "vn-vn-index-giam-hon-23-diem-5146202",
+   "title": "VN-Index lùi hơn 23 điểm, xuống sát mốc 1.700",
+   "summary": "Khối ngoại bán mạnh ở nhóm cổ phiếu ngân hàng lớn, kéo VN-Index về gần mốc 1.700 điểm.",
+   "note": "Khi khối ngoại bán ở các cổ phiếu vốn hóa lớn, chỉ số có thể chịu áp lực rõ hơn so với các mã nhỏ. Mốc 1.700 là mốc nhiều người nhìn vào. Phiên kế tiếp sẽ cho thấy lực bán có kéo dài hay không.",
+   "source": "VnExpress Kinh doanh",
+   "link": "https://vnexpress.net/vn-index-giam-hon-23-diem-5146202.html",
+   "at": 1794992037000
+  },
+  {
+   "id": "vn-hai-vi-tien-so-tai-dubai-bi-hack-hon-600-000-usd-5146195",
+   "title": "Hai ví Ledger mua ở Dubai báo mất hơn 600.000 USD tiền số",
+   "summary": "Hai người dùng cho biết tổng cộng 604.000 USD tiền số biến mất khỏi ví lạnh Ledger mua tại Dubai. Họ lo thiết bị đã bị cài chip lạ.",
+   "note": "Nguyên nhân chưa được xác nhận. Với người giữ ví lạnh, cách an toàn là mua từ nhà bán chính hãng và kiểm tra niêm phong khi nhận hàng.",
+   "source": "VnExpress Kinh doanh",
+   "link": "https://vnexpress.net/hai-vi-tien-so-tai-dubai-bi-hack-hon-600-000-usd-5146195.html",
+   "at": 1794991837000
+  },
+  {
+   "id": "ct-solana-sol-gains-7-percent-breakpoint-beta-tokenization",
+   "title": "SOL tăng 7% sau Breakpoint khi Solana bỏ nhãn beta",
+   "summary": "Token SOL chạm 75,12 USD vào thứ Ba, tăng mạnh hơn Bitcoin và Ether, sau khi mạng Solana gỡ nhãn beta đã dùng từ lúc ra mắt năm 2020.",
+   "note": "Nên tách thay đổi về nhãn hoặc kỹ thuật khỏi thay đổi về dòng tiền thật. Giá tăng cùng ngày với tin tốt thường bị đọc thành tín hiệu, nhưng một ngày tăng chưa chứng minh được điều gì. Cặp liên quan: SOL/USD. Hãy xem biến động trên bảng thị trường và so với BTC/USD.",
+   "source": "Cointelegraph",
+   "link": "https://cointelegraph.com/markets/solana-sol-gains-7-percent-breakpoint-beta-tokenization",
+   "at": 1794991276000
+  },
+  {
+   "id": "ct-bitcoin-etf-240-million-outflow-bearish-phase",
+   "title": "Bitcoin ETF bị rút ròng 240 triệu USD, CryptoQuant cảnh báo thị trường quay lại pha giảm",
+   "summary": "Dòng tiền rút khỏi các quỹ ETF Bitcoin xuất hiện trở lại sau một ngày tạm dừng. CryptoQuant, công ty chuyên phân tích dữ liệu tiền mã hóa, cho rằng Bitcoin đã quay lại pha thị trường giảm giá.",
+   "note": "Dòng vốn ETF là một dữ kiện, không phải bảo chứng cho xu hướng. Một ngày rút ròng chưa đủ để kết luận, và nhận định của một đơn vị phân tích chỉ là một góc nhìn. Cặp cần theo dõi: BTC/USD. Việc nên làm là so phản ứng của giá với tin, thay vì đọc tin rồi đoán chiều giá.",
+   "source": "Cointelegraph",
+   "link": "https://cointelegraph.com/markets/bitcoin-etf-240-million-outflow-bearish-phase",
+   "at": 1794989363000
+  },
+  {
+   "id": "ct-nvidia-board-rejects-huang-comeback-amid-record-116b-quarter",
+   "title": "Nvidia vượt dự báo doanh thu 5,6%, hội đồng quản trị chưa đồng ý đưa ông Jensen Huang trở lại",
+   "summary": "Nvidia báo doanh thu cao hơn kỳ vọng của phố Wall 5,6% và đưa ra dự báo doanh số mạnh hơn dự kiến. Cùng lúc, hội đồng quản trị vẫn chưa đáp ứng những lời kêu gọi đưa ông Jensen Huang trở lại.",
+   "note": "Kết quả kinh doanh và câu chuyện lãnh đạo là hai tầng tin khác nhau, và giá có thể phản ứng với tầng nào nổi hơn ở từng thời điểm. Tin chứng khoán Mỹ lớn đôi khi ảnh hưởng tâm lý chung với tài sản rủi ro, nhưng đừng mặc định điều đó: hãy kiểm tra xem BTC/USD có thực sự di chuyển cùng chiều trong phiên không.",
+   "source": "Cointelegraph",
+   "link": "https://cointelegraph.com/markets/nvidia-board-rejects-huang-comeback-amid-record-116b-quarter",
+   "at": 1794961003000
+  }
+ ]
+}
