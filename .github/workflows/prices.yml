@@ -19,10 +19,10 @@ jobs:
           curl -sf "https://api.gold-api.com/price/XAG" -o /tmp/xag.json || echo '{}' > /tmp/xag.json
           curl -sf "https://open.er-api.com/v6/latest/USD" -o /tmp/fx.json || echo '{}' > /tmp/fx.json
           curl -sf "https://vang.today/api/prices" -o /tmp/vang.json || echo '{}' > /tmp/vang.json
-          curl -sf "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?interval=1d&range=5d" -o /tmp/dxy.json || echo '{}' > /tmp/dxy.json
-          curl -sf "https://query1.finance.yahoo.com/v8/finance/chart/%5EVNINDEX?interval=1d&range=5d" -o /tmp/vni.json || echo '{}' > /tmp/vni.json
-          curl -sf "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?interval=1d&range=5d" -o /tmp/wti.json || echo '{}' > /tmp/wti.json
-          curl -sf "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?interval=1d&range=5d" -o /tmp/brent.json || echo '{}' > /tmp/brent.json
+          curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?interval=1d&range=5d" -o /tmp/dxy.json || echo '{}' > /tmp/dxy.json
+          curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://query1.finance.yahoo.com/v8/finance/chart/%5EVNINDEX?interval=1d&range=5d" -o /tmp/vni.json || echo '{}' > /tmp/vni.json
+          curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?interval=1d&range=5d" -o /tmp/wti.json || echo '{}' > /tmp/wti.json
+          curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?interval=1d&range=5d" -o /tmp/brent.json || echo '{}' > /tmp/brent.json
           node -e "
             const fs = require('fs');
             const rd = p => { try { return JSON.parse(fs.readFileSync(p)); } catch(e) { return {}; } };
