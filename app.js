@@ -131,6 +131,16 @@ const NEWS_NOTES = {
     title: "Ngân hàng Thế giới hợp tác với Circle và Citi để thử nghiệm stablecoin cho thanh toán",
     summary: "Sáng kiến dựa trên nền tảng blockchain sẵn có của Ngân hàng Thế giới, nhằm giúp truy vết dòng tiền đầu tư tại các nước đang phát triển rõ hơn.",
     note: "Đây là bước thử nghiệm, chưa phải triển khai quy mô lớn. Tin thuộc nhóm hạ tầng thanh toán hơn là tin giá. Circle phát hành stablecoin USDC, loại token giữ giá quanh 1 USD, nên không có cặp giá để theo dõi lệch giá như BTC hay ETH."
+  },
+  "vn-vn-index-giam-hon-23-diem-5146202": {
+    title: "VN-Index lùi hơn 23 điểm, xuống sát mốc 1.700",
+    summary: "Khối ngoại bán mạnh ở nhóm cổ phiếu ngân hàng lớn, kéo VN-Index về gần mốc 1.700 điểm.",
+    note: "Khi khối ngoại bán ở các cổ phiếu vốn hóa lớn, chỉ số có thể chịu áp lực rõ hơn so với các mã nhỏ. Mốc 1.700 là mốc nhiều người nhìn vào. Phiên kế tiếp sẽ cho thấy lực bán có kéo dài hay không."
+  },
+  "vn-hai-vi-tien-so-tai-dubai-bi-hack-hon-600-000-usd-5146195": {
+    title: "Hai ví Ledger mua ở Dubai báo mất hơn 600.000 USD tiền số",
+    summary: "Hai người dùng cho biết tổng cộng 604.000 USD tiền số biến mất khỏi ví lạnh Ledger mua tại Dubai. Họ lo thiết bị đã bị cài chip lạ.",
+    note: "Nguyên nhân chưa được xác nhận. Với người giữ ví lạnh, cách an toàn là mua từ nhà bán chính hãng và kiểm tra niêm phong khi nhận hàng."
   }
 };
 const NEWS_PAIRS = [[/bitcoin|\bbtc\b|etf/i, "BTC/USD"], [/ethereum|ether\b|\beth\b/i, "ETH/USD"], [/solana|\bsol\b/i, "SOL/USD"], [/\bxrp\b|ripple/i, "XRP/USD"], [/dogecoin|\bdoge\b/i, "DOGE/USD"], [/gold|vàng/i, "XAU/USD"], [/silver|bạc/i, "XAG/USD"], [/vn-index|vnindex|chứng khoán/i, "VN-Index"], [/oil|dầu|brent|wti/i, "Brent, WTI /USD"]];
@@ -172,8 +182,8 @@ function renderNews() {
   if (newsError && !newsItems) { el.innerHTML = '<div class="note">Chưa tải được tin tự động. Trang tự thử lại sau ít phút.</div>'; return; }
   if (!newsItems) { el.innerHTML = '<p class="muted">Đang tải tin…</p>'; return; }
   if (!newsItems.length) { el.innerHTML = '<p class="muted">Chưa có tin mới trong lần cập nhật gần nhất.</p>'; return; }
-  const list = newsItems.filter((n) => n.id && n.at >= Date.now() - 7 * 86400000);
-  if (!list.length) { el.innerHTML = '<p class="muted">Chưa có tin mới trong 7 ngày gần nhất.</p>'; return; }
+  const list = newsItems.filter((n) => n.id && n.at >= Date.now() - 7 * 86400000 && (NEWS_NOTES[n.id] || n.rw));
+  if (!list.length) { el.innerHTML = '<p class="muted">Đang viết lại các tin mới nhất. Quay lại sau ít phút.</p>'; return; }
   el.innerHTML = list.map((n) => {
     const v = newsView(n);
     const time = new Date(n.at).toLocaleString("vi-VN", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" });
