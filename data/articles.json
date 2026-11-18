@@ -1,6 +1,33 @@
 {
  "items": [
   {
+   "id": "vn-hai-vi-tien-so-tai-dubai-bi-hack-hon-600-000-usd-5146195",
+   "title": "Hai chủ ví Ledger ở Dubai báo mất khoảng 604.000 USD",
+   "summary": "Theo Crypto.news ngày 18/11, hai chủ ví Ledger nói họ mất tổng cộng khoảng 604.000 USD từ thiết bị mua tại Dubai. Nhà nghiên cứu Mark Karpelès xác định linh kiện cấy thêm qua ảnh một chiếc Flex; nghi vấn tương tự ở chiếc Stax còn lại chưa có ảnh bên trong xác nhận. Chưa rõ thiết bị bị sửa ở đâu hoặc ai chịu trách nhiệm.",
+   "note": "Số thiệt hại là lời người dùng thuật lại, chưa phải kết quả kiểm toán. Không thể từ hai trường hợp suy ra mọi Ledger đều bị ảnh hưởng hoặc đổ lỗi cho cửa hàng. Ledger Donjon nêu rõ: tem niêm phong không bảo đảm an toàn, và Genuine Check không phát hiện được mọi can thiệp vật lý khi chip gốc còn nguyên.",
+   "source": "Crypto.news; đối chiếu Ledger Implant OSINT và Ledger Donjon",
+   "link": "https://crypto.news/ledger-wallet-tampering-dubai-virgin-megastore-losses/",
+   "at": 1795000080000
+  },
+  {
+   "id": "binance-ke-hoach-them-thi-truong-chau-a-2026-11-18",
+   "title": "Binance lên kế hoạch mở thêm thị trường châu Á",
+   "summary": "Trao đổi với Reuters ngày 18/11, lãnh đạo Binance khu vực châu Á - Thái Bình Dương cho biết sàn dự định mở rộng vào năm thị trường trong năm tới, nhưng chưa công bố tên. Ba cuộc trao đổi đã ở giai đoạn khá sâu; chi tiết kế hoạch dự kiến được công bố trong quý I/2027. Ông cũng nói Binance không cần huy động vốn mới để hấp thụ chi phí sau vụ trộm tháng trước.",
+   "note": "Đây là kế hoạch do lãnh đạo sàn chia sẻ, chưa phải năm giấy phép đã được cấp. Tuyên bố không cần thêm vốn cũng không thay thế báo cáo tài chính: Reuters lưu ý Binance công bố bằng chứng dự trữ nhưng không công khai bảng cân đối, lợi nhuận hay dòng tiền. Không nên coi tin mở rộng là xác nhận mọi dịch vụ rút tiền đã hoạt động lại.",
+   "source": "Reuters, đăng trên Investing.com",
+   "link": "https://www.investing.com/news/forex-news/after-63-billion-crypto-heist-binance-plans-foray-into-5-asian-markets-5034971",
+   "at": 1795000079000
+  },
+  {
+   "id": "coinbase-india-xu-ly-rut-inr-ton-dong-2026-11-18",
+   "title": "Coinbase xử lý tiền rút tồn đọng tại Ấn Độ",
+   "summary": "Theo The Crypto Times ngày 18/11 dẫn cập nhật của Coinbase India, sàn đã bắt đầu xử lý theo đợt những lệnh rút rupee thất bại từ 9/11 qua một tuyến ngân hàng thay thế. Tuy vậy, tính năng rút INR trong ứng dụng vẫn chưa hoạt động lại và chưa có thời điểm khôi phục được công bố. Coinbase quy sự cố cho đối tác ngân hàng, nhưng chưa nêu tên đối tác.",
+   "note": "Cần tách việc trả các lệnh tồn đọng khỏi việc mở lại tính năng rút tiền thông thường. Thông tin này nói về rupee tại Ấn Độ, không chứng minh Coinbase dừng rút crypto trên toàn cầu hay bị tấn công. Giải thích về nguyên nhân là tuyên bố của Coinbase được báo chí dẫn lại, chưa phải kết luận điều tra độc lập.",
+   "source": "The Crypto Times; đối chiếu Moneycontrol",
+   "link": "https://www.cryptotimes.io/2026/11/18/coinbase-processes-failed-inr-payouts-as-app-withdrawals-remain-unavailable/",
+   "at": 1795000078000
+  },
+  {
    "id": "ct-world-bank-circle-citi-explore-stablecoins-payments",
    "title": "Ngân hàng Thế giới hợp tác với Circle và Citi để thử nghiệm stablecoin cho thanh toán",
    "summary": "Sáng kiến dựa trên nền tảng blockchain sẵn có của Ngân hàng Thế giới, nhằm giúp truy vết dòng tiền đầu tư tại các nước đang phát triển rõ hơn.",
@@ -17,15 +44,6 @@
    "source": "VnExpress Kinh doanh",
    "link": "https://vnexpress.net/vn-index-giam-hon-23-diem-5146202.html",
    "at": 1794992037000
-  },
-  {
-   "id": "vn-hai-vi-tien-so-tai-dubai-bi-hack-hon-600-000-usd-5146195",
-   "title": "Hai ví Ledger mua ở Dubai báo mất hơn 600.000 USD tiền số",
-   "summary": "Hai người dùng cho biết tổng cộng 604.000 USD tiền số biến mất khỏi ví lạnh Ledger mua tại Dubai. Họ lo thiết bị đã bị cài chip lạ.",
-   "note": "Nguyên nhân chưa được xác nhận. Với người giữ ví lạnh, cách an toàn là mua từ nhà bán chính hãng và kiểm tra niêm phong khi nhận hàng.",
-   "source": "VnExpress Kinh doanh",
-   "link": "https://vnexpress.net/hai-vi-tien-so-tai-dubai-bi-hack-hon-600-000-usd-5146195.html",
-   "at": 1794991837000
   },
   {
    "id": "ct-solana-sol-gains-7-percent-breakpoint-beta-tokenization",
