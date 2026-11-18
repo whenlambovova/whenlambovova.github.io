@@ -111,44 +111,10 @@ async function loadTickers() {
 
 /* ---------- Tin nóng tự động (RSS tổng hợp, workflow cập nhật 30 phút/lần) ---------- */
 let newsItems = null, newsError = false;
-const NEWS_NOTES = {
-  "ct-bitcoin-etf-240-million-outflow-bearish-phase": {
-    title: "Bitcoin ETF bị rút ròng 240 triệu USD, CryptoQuant cảnh báo thị trường quay lại pha giảm",
-    summary: "Dòng tiền rút khỏi các quỹ ETF Bitcoin xuất hiện trở lại sau một ngày tạm dừng. CryptoQuant, công ty chuyên phân tích dữ liệu tiền mã hóa, cho rằng Bitcoin đã quay lại pha thị trường giảm giá.",
-    note: "Dòng vốn ETF là một dữ kiện, không phải bảo chứng cho xu hướng. Một ngày rút ròng chưa đủ để kết luận, và nhận định của một đơn vị phân tích chỉ là một góc nhìn. Cặp cần theo dõi: BTC/USD. Việc nên làm là so phản ứng của giá với tin, thay vì đọc tin rồi đoán chiều giá."
-  },
-  "ct-nvidia-board-rejects-huang-comeback-amid-record-116b-quarter": {
-    title: "Nvidia vượt dự báo doanh thu 5,6%, hội đồng quản trị chưa đồng ý đưa ông Jensen Huang trở lại",
-    summary: "Nvidia báo doanh thu cao hơn kỳ vọng của phố Wall 5,6% và đưa ra dự báo doanh số mạnh hơn dự kiến. Cùng lúc, hội đồng quản trị vẫn chưa đáp ứng những lời kêu gọi đưa ông Jensen Huang trở lại.",
-    note: "Kết quả kinh doanh và câu chuyện lãnh đạo là hai tầng tin khác nhau, và giá có thể phản ứng với tầng nào nổi hơn ở từng thời điểm. Tin chứng khoán Mỹ lớn đôi khi ảnh hưởng tâm lý chung với tài sản rủi ro, nhưng đừng mặc định điều đó: hãy kiểm tra xem BTC/USD có thực sự di chuyển cùng chiều trong phiên không."
-  },
-  "ct-solana-sol-gains-7-percent-breakpoint-beta-tokenization": {
-    title: "SOL tăng 7% sau Breakpoint khi Solana bỏ nhãn beta",
-    summary: "Token SOL chạm 75,12 USD vào thứ Ba, tăng mạnh hơn Bitcoin và Ether, sau khi mạng Solana gỡ nhãn beta đã dùng từ lúc ra mắt năm 2020.",
-    note: "Nên tách thay đổi về nhãn hoặc kỹ thuật khỏi thay đổi về dòng tiền thật. Giá tăng cùng ngày với tin tốt thường bị đọc thành tín hiệu, nhưng một ngày tăng chưa chứng minh được điều gì. Cặp liên quan: SOL/USD. Hãy xem biến động trên bảng thị trường và so với BTC/USD."
-  },
-  "ct-world-bank-circle-citi-explore-stablecoins-payments": {
-    title: "Ngân hàng Thế giới hợp tác với Circle và Citi để thử nghiệm stablecoin cho thanh toán",
-    summary: "Sáng kiến dựa trên nền tảng blockchain sẵn có của Ngân hàng Thế giới, nhằm giúp truy vết dòng tiền đầu tư tại các nước đang phát triển rõ hơn.",
-    note: "Đây là bước thử nghiệm, chưa phải triển khai quy mô lớn. Tin thuộc nhóm hạ tầng thanh toán hơn là tin giá. Circle phát hành stablecoin USDC, loại token giữ giá quanh 1 USD, nên không có cặp giá để theo dõi lệch giá như BTC hay ETH."
-  },
-  "vn-vn-index-giam-hon-23-diem-5146202": {
-    title: "VN-Index lùi hơn 23 điểm, xuống sát mốc 1.700",
-    summary: "Khối ngoại bán mạnh ở nhóm cổ phiếu ngân hàng lớn, kéo VN-Index về gần mốc 1.700 điểm.",
-    note: "Khi khối ngoại bán ở các cổ phiếu vốn hóa lớn, chỉ số có thể chịu áp lực rõ hơn so với các mã nhỏ. Mốc 1.700 là mốc nhiều người nhìn vào. Phiên kế tiếp sẽ cho thấy lực bán có kéo dài hay không."
-  },
-  "vn-hai-vi-tien-so-tai-dubai-bi-hack-hon-600-000-usd-5146195": {
-    title: "Hai ví Ledger mua ở Dubai báo mất hơn 600.000 USD tiền số",
-    summary: "Hai người dùng cho biết tổng cộng 604.000 USD tiền số biến mất khỏi ví lạnh Ledger mua tại Dubai. Họ lo thiết bị đã bị cài chip lạ.",
-    note: "Nguyên nhân chưa được xác nhận. Với người giữ ví lạnh, cách an toàn là mua từ nhà bán chính hãng và kiểm tra niêm phong khi nhận hàng."
-  }
-};
 const NEWS_PAIRS = [[/bitcoin|\bbtc\b|etf/i, "BTC/USD"], [/ethereum|ether\b|\beth\b/i, "ETH/USD"], [/solana|\bsol\b/i, "SOL/USD"], [/\bxrp\b|ripple/i, "XRP/USD"], [/dogecoin|\bdoge\b/i, "DOGE/USD"], [/gold|vàng/i, "XAU/USD"], [/silver|bạc/i, "XAG/USD"], [/vn-index|vnindex|chứng khoán/i, "VN-Index"], [/oil|dầu|brent|wti/i, "Brent, WTI /USD"]];
 function newsView(n) {
-  const note = NEWS_NOTES[n.id] || n.rw || null;
-  const title = (note && note.title) || n.title_vi || n.title;
-  const summary = (note && note.summary) || n.desc_vi || n.desc || "";
-  const pairs = NEWS_PAIRS.filter((p) => p[0].test(n.title + " " + (n.title_vi || ""))).map((p) => p[1]);
+  const note = n; const title = n.title; const summary = n.summary || "";
+  const pairs = NEWS_PAIRS.filter((p) => p[0].test(n.title + " " + (n.summary || ""))).map((p) => p[1]);
   return { title, summary, note: note && note.note, pairs };
 }
 function newsArticleHTML(n) {
@@ -160,17 +126,17 @@ function newsArticleHTML(n) {
 }
 
 async function loadNews(force) {
-  const fresh = force ? null : cacheGet("wlv_news", 30 * 60 * 1000);
+  const fresh = force ? null : cacheGet("wlv_art", 30 * 60 * 1000);
   if (fresh) { newsItems = fresh; newsError = false; if (currentRoute === "tin-tuc") renderNews(); return; }
   try {
-    const r = await fetch("data/news.json?t=" + Date.now());
+    const r = await fetch("data/articles.json?t=" + Date.now());
     if (!r.ok) throw new Error("news " + r.status);
     const d = await r.json();
     newsItems = (d && d.items) ? d.items : [];
     newsError = false;
-    cacheSet("wlv_news", newsItems);
+    cacheSet("wlv_art", newsItems);
   } catch (e) {
-    const stale = cacheGetStale("wlv_news");
+    const stale = cacheGetStale("wlv_art");
     if (stale) { newsItems = stale.data; newsError = false; }
     else newsError = true;
   }
@@ -182,8 +148,8 @@ function renderNews() {
   if (newsError && !newsItems) { el.innerHTML = '<div class="note">Chưa tải được tin tự động. Trang tự thử lại sau ít phút.</div>'; return; }
   if (!newsItems) { el.innerHTML = '<p class="muted">Đang tải tin…</p>'; return; }
   if (!newsItems.length) { el.innerHTML = '<p class="muted">Chưa có tin mới trong lần cập nhật gần nhất.</p>'; return; }
-  const list = newsItems.filter((n) => n.id && n.at >= Date.now() - 7 * 86400000 && (NEWS_NOTES[n.id] || n.rw));
-  if (!list.length) { el.innerHTML = '<p class="muted">Đang viết lại các tin mới nhất. Quay lại sau ít phút.</p>'; return; }
+  const list = newsItems.filter((n) => n.id && n.title);
+  if (!list.length) { el.innerHTML = '<p class="muted">Chưa có bài mới. Quay lại sau ít phút.</p>'; return; }
   el.innerHTML = list.map((n) => {
     const v = newsView(n);
     const time = new Date(n.at).toLocaleString("vi-VN", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" });
@@ -909,7 +875,7 @@ function route() {
       const n = (newsItems || []).find((x) => x.id === id);
       if (n) { app.innerHTML = newsArticleHTML(n); return; }
       if (!retried) { app.innerHTML = '<section class="blk" style="margin-top:40px"><p class="muted">Đang tải bài…</p></section>'; loadNews(true).then(() => draw(true)); return; }
-      app.innerHTML = '<section class="blk" style="margin-top:40px"><h2 class="section">Bài này đã hết hạn</h2><p class="section-sub">Tin chỉ được giữ 7 ngày gần nhất.</p><a class="back" href="#/tin-tuc">← Quay lại Tin tức</a></section>';
+      app.innerHTML = '<section class="blk" style="margin-top:40px"><h2 class="section">Không tìm thấy bài này</h2><p class="section-sub">Bài có thể đã được gỡ hoặc chưa được duyệt.</p><a class="back" href="#/tin-tuc">← Quay lại Tin tức</a></section>';
     };
     draw(false);
     return;
