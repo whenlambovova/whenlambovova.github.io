@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  models: read
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -72,6 +73,8 @@ jobs:
             if (rssItems.length) fs.writeFileSync('data/news.json', JSON.stringify({ at: Date.now(), items: rssItems.slice(0, 24) }));
           "
       - name: Dich tin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cat > /tmp/news.js <<'JS'
           const fs = require('fs');
@@ -103,7 +106,7 @@ jobs:
           try { old = JSON.parse(execSync('git show HEAD:data/news.json', { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] })).items || []; } catch (e) {}
           const map = new Map();
           for (const o of old) if (o.id) map.set(o.id, o);
-          for (const f of fresh) { const o = map.get(f.id); map.set(f.id, o ? Object.assign({}, f, { title_vi: o.title_vi, desc_vi: o.desc_vi }) : f); }
+          for (const f of fresh) { const o = map.get(f.id); map.set(f.id, o ? Object.assign({}, f, { title_vi: o.title_vi, desc_vi: o.desc_vi, rw: o.rw }) : f); }
           const tr = async (text) => {
             if (!text) return '';
             try {
@@ -111,6 +114,18 @@ jobs:
               const d = await r.json();
               return d[0].map((x) => x[0]).join('').replace(/[\u200b\u200c\ufeff]/g, '').trim();
             } catch (e) { return ''; }
+          };
+          const rewrite = async (x) => {
+            const tok = process.env.GITHUB_TOKEN; if (!tok) return null;
+            const sys = 'Bạn là biên tập viên tin thị trường tiếng Việt cho trang When Lambo Vova. Viết cho người đọc bình thường, từ ngữ đơn giản, giọng bình tĩnh, rõ ràng, nghiêm túc. Chỉ dùng thông tin có trong đầu vào, không thêm số liệu hay sự kiện mới. Không khuyên mua, bán, vào lệnh hay giữ lệnh. Không sao chép câu chữ của nguồn, luôn diễn đạt lại bằng lời của mình và ngắn hơn nguồn. Mỗi bài mở đầu một cách khác nhau. Trả về JSON với ba khóa: title (tối đa 90 ký tự), summary (tối đa 2 câu, dưới 45 từ), note (mục Nhận định, 1 đến 2 câu, nêu điều đáng chú ý hoặc điều nên theo dõi tiếp, không phải lời khuyên).';
+            const user = 'Tiêu đề nguồn: ' + x.title + '\nMở đầu nguồn: ' + (x.desc || '') + '\nNguồn: ' + x.source;
+            try {
+              const r = await fetch('https://models.github.ai/inference/chat/completions', { method: 'POST', headers: { 'Authorization': 'Bearer ' + tok, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' }, body: JSON.stringify({ model: 'openai/gpt-4.1-mini', temperature: 0.8, response_format: { type: 'json_object' }, messages: [{ role: 'system', content: sys }, { role: 'user', content: user }] }) });
+              if (!r.ok) { console.log('rewrite http', r.status); return r.status === 429 ? 'stop' : null; }
+              const d = await r.json(); const o = JSON.parse(d.choices[0].message.content);
+              if (o.title && o.summary && o.note) return { title: String(o.title).slice(0, 140), summary: String(o.summary).slice(0, 400), note: String(o.note).slice(0, 400) };
+            } catch (e) { console.log('rewrite err', String(e).slice(0, 80)); }
+            return null;
           };
           (async () => {
             let all = [...map.values()].filter((x) => x.at > Date.now() - 7 * 86400000).sort((a, b) => b.at - a.at).slice(0, 60);
@@ -120,6 +135,15 @@ jobs:
               if (!x.title_vi && n < 30) { x.title_vi = await tr(x.title); n++; await new Promise((r) => setTimeout(r, 250)); }
               if (!x.desc_vi && x.desc && n < 40) { x.desc_vi = await tr(x.desc); n++; await new Promise((r) => setTimeout(r, 250)); }
             }
+            let rn = 0, stop = false;
+            for (const x of all) {
+              if (stop || x.rw || rn >= 10) continue;
+              const o = await rewrite(x); rn++;
+              if (o === 'stop') { stop = true; continue; }
+              if (o) x.rw = o;
+              await new Promise((r) => setTimeout(r, 4500));
+            }
+            console.log('rewritten', all.filter((x) => x.rw).length);
             fs.mkdirSync('data', { recursive: true });
             if (all.length) fs.writeFileSync('data/news.json', JSON.stringify({ at: Date.now(), items: all }));
             console.log('items', all.length, 'translated now', n);
