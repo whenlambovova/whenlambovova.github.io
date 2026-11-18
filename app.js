@@ -548,6 +548,63 @@ const ARTICLES = {
     source: "Nguồn: hồ sơ phá sản công khai của FTX, dữ liệu nến Coinbase.",
     back: "#/kien-thuc", backLabel: "Quay lại Kiến thức",
   },
+  "btc-2021-05": {
+    tag: "Kiến thức · Bài học lịch sử", date: "Ngày 18 tháng 11 năm 2026", title: "19/5/2021: Bitcoin rơi mạnh sau một đợt tăng nóng",
+    intro: "Giữa tháng 5/2021, sau nhiều tháng tăng mạnh, Bitcoin giảm sâu chỉ trong vài ngày, kèm làn sóng thanh lý lệnh đòn bẩy trên các sàn phái sinh. Giá có lúc chạm vùng quanh 30.000 USD từ vùng trên 50.000 USD đầu tháng.",
+    body: `
+      <h3>Điều gì đã xảy ra</h3>
+      <ul>
+        <li>Thị trường vào đợt này với tâm lý rất lạc quan và đòn bẩy cao, nên một cú đẩy xuống đã kích hoạt thanh lý dây chuyền.</li>
+        <li>Tin tức về siết chặt khai thác và tiền mã hóa tại Trung Quốc được nhiều bên nhắc đến như một yếu tố thời điểm, nhưng không ai tách được chính xác phần đóng góp của từng yếu tố.</li>
+        <li>Giá không về đáy rồi đi lên ngay: sau cú rơi còn nhiều tháng đi ngang và rung lắc.</li>
+      </ul>`,
+    takeaway: "Bài học đúc kết: khi mọi người cùng lạc quan và cùng dùng đòn bẩy, rủi ro không nằm ở tin tức mà ở cấu trúc vị thế. Hãy biết mình chịu được mức giảm bao nhiêu trước khi vào lệnh.",
+    source: "Nguồn: dữ liệu nến lịch sử BTC/USD trên Coinbase. Mức giá nêu là gần đúng, không phải số liệu chính xác từng giây.",
+    back: "#/kien-thuc", backLabel: "Quay lại Kiến thức",
+  },
+  "luna-2022": {
+    tag: "Kiến thức · Bài học lịch sử", date: "Ngày 18 tháng 11 năm 2026", title: "LUNA và UST 5/2022: khi stablecoin mất neo",
+    intro: "Tuần 9 đến 12 tháng 5 năm 2022, UST, stablecoin thuật toán của hệ sinh thái Terra, mất mốc 1 USD, kéo token LUNA từ vùng hàng chục USD về gần bằng không trong vài ngày.",
+    body: `
+      <h3>Cơ chế sụp đổ</h3>
+      <ul>
+        <li>UST không được bảo chứng bằng tiền mặt mà dựa vào cơ chế đổi qua lại với LUNA, nên khi niềm tin lung lay, cơ chế biến thành vòng xoáy giảm giá.</li>
+        <li>Hàng chục tỷ USD vốn hóa bốc hơi, nhiều quỹ và người dùng cá nhân bị ảnh hưởng nặng.</li>
+        <li>Lãi suất rất cao từng được quảng bá là dấu hiệu cần hỏi: lợi nhuận đến từ đâu?</li>
+      </ul>`,
+    takeaway: "Bài học đúc kết: lãi suất cao bất thường là chi phí của một rủi ro mà mình chưa nhìn thấy. Trước khi bỏ tiền, hãy trả lời được câu hỏi tiền lãi đến từ đâu.",
+    source: "Nguồn: dữ liệu giá lịch sử LUNA, UST từ các sàn lớn và báo cáo công khai của báo chí tài chính. Số liệu nêu ở mức gần đúng.",
+    back: "#/kien-thuc", backLabel: "Quay lại Kiến thức",
+  },
+  "don-bay-ky-quy": {
+    tag: "Kiến thức · Khái niệm cơ bản", date: "Ngày 18 tháng 11 năm 2026", title: "Đòn bẩy và ký quỹ: vì sao tài khoản có thể về 0 nhanh",
+    intro: "Đòn bẩy cho phép mở vị thế lớn hơn số vốn của mình. Phần vốn bỏ ra gọi là ký quỹ. Cả lãi và lỗ đều tính trên vị thế lớn, nên lỗ cũng phóng đại như lãi.",
+    body: `
+      <h3>Cách tính nhanh</h3>
+      <ul>
+        <li>Ví dụ đơn giản: đòn bẩy 10 lần nghĩa là giá đi ngược khoảng 10% thì phần ký quỹ gần như mất hết, trước cả phí.</li>
+        <li>Khi ký quỹ không đủ duy trì vị thế, sàn tự đóng lệnh. Đó là thanh lý.</li>
+        <li>Giá có thể quét qua mức thanh lý rồi quay lại ngay, nhưng vị thế đã bị đóng và không quay lại cùng giá.</li>
+      </ul>`,
+    takeaway: "Bài học đúc kết: đòn bẩy không đổi xác suất thắng, nó chỉ đổi mức giá mình bị loại khỏi cuộc chơi. Đòn bẩy càng cao thì biên sai càng nhỏ.",
+    source: "Nội dung giáo dục, không phải khuyến nghị đầu tư. Ví dụ là minh họa, chưa tính phí và chênh lệch giá.",
+    back: "#/kien-thuc", backLabel: "Quay lại Kiến thức",
+  },
+  "quan-tri-rui-ro": {
+    tag: "Kiến thức · Khái niệm cơ bản", date: "Ngày 18 tháng 11 năm 2026", title: "Quản trị rủi ro: quyết định mức lỗ trước khi vào lệnh",
+    intro: "Người mới thường nghĩ về lãi trước. Người giữ được vốn lâu thường nghĩ về mức lỗ chấp nhận được trước. Mức lỗ đó quyết định khối lượng, không phải ngược lại.",
+    body: `
+      <h3>Bốn việc nên làm trước khi bấm nút</h3>
+      <ul>
+        <li>Chọn mức lỗ tối đa mỗi lệnh theo phần trăm vốn mà mình thật sự chịu được. Nhiều người dùng một con số nhỏ, nhưng đây là lựa chọn cá nhân, không phải quy tắc chung.</li>
+        <li>Điểm sai của ý tưởng phải có trước khi vào lệnh: giá đi tới đâu thì ý tưởng sai.</li>
+        <li>Tỷ lệ lời lỗ 1:3 không đảm bảo có lãi. Với tỷ lệ này, thắng khoảng 25% lệnh mới hòa vốn trước phí.</li>
+        <li>Ghi nhật ký từng lệnh: lý do vào, điểm sai, kết quả, cảm xúc lúc đó.</li>
+      </ul>`,
+    takeaway: "Bài học đúc kết: một quy tắc rõ ràng viết ra trước khi vào lệnh có giá trị hơn một dự đoán tự tin. Dự đoán có thể sai, quy tắc giúp mình sống sót khi sai.",
+    source: "Nội dung giáo dục, không phải khuyến nghị mua bán hay phân bổ vốn.",
+    back: "#/kien-thuc", backLabel: "Quay lại Kiến thức",
+  },
 };
 
 function articleHTML(key) {
@@ -694,6 +751,26 @@ const PAGES = {
       <div class="article-list">
         <a class="article-item" href="#/bai/flash-crash-2020"><span class="idx">01</span><span><span class="tag">Bài học lịch sử</span><h3>12/3/2020: ngày Bitcoin mất gần 39%</h3><p>Đòn bẩy, thanh khoản, và vì sao không có cái đáy nào an toàn cả.</p></span></a>
         <a class="article-item" href="#/bai/ftx-2022"><span class="idx">02</span><span><span class="tag">Bài học lịch sử</span><h3>FTX sập: khi niềm tin vào sàn là rủi ro lớn nhất</h3><p>Tháng 11/2022, từ bài báo về Alameda tới tờ đơn phá sản.</p></span></a>
+        <a class="article-item" href="#/bai/btc-2021-05"><span class="idx">03</span><span><span class="tag">Bài học lịch sử</span><h3>19/5/2021: Bitcoin rơi mạnh sau đợt tăng nóng</h3><p>Thanh lý dây chuyền và tâm lý đám đông.</p></span></a>
+        <a class="article-item" href="#/bai/luna-2022"><span class="idx">04</span><span><span class="tag">Bài học lịch sử</span><h3>LUNA và UST 5/2022: khi stablecoin mất neo</h3><p>Lãi suất cao bất thường đến từ đâu?</p></span></a>
+        <a class="article-item" href="#/bai/don-bay-ky-quy"><span class="idx">05</span><span><span class="tag">Khái niệm cơ bản</span><h3>Đòn bẩy và ký quỹ</h3><p>Vì sao tài khoản có thể về 0 nhanh.</p></span></a>
+        <a class="article-item" href="#/bai/quan-tri-rui-ro"><span class="idx">06</span><span><span class="tag">Khái niệm cơ bản</span><h3>Quản trị rủi ro trước khi vào lệnh</h3><p>Mức lỗ quyết định khối lượng, không ngược lại.</p></span></a>
+      </div>
+      <h2 class="section" style="margin-top:44px">Từ điển nhanh</h2>
+      <p class="section-sub">Những từ hay gặp trong video và bài viết. Nội dung giáo dục, không phải khuyến nghị đầu tư.</p>
+      <div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line, rgba(128,128,128,.3))"><strong>Thanh lý (liquidation)</strong><p style="margin:4px 0 0;color:var(--muted)">Sàn tự đóng vị thế khi ký quỹ không đủ duy trì.</p></div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line, rgba(128,128,128,.3))"><strong>Ký quỹ (margin)</strong><p style="margin:4px 0 0;color:var(--muted)">Số vốn bỏ ra làm tài sản bảo đảm cho vị thế dùng đòn bẩy.</p></div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line, rgba(128,128,128,.3))"><strong>Đòn bẩy (leverage)</strong><p style="margin:4px 0 0;color:var(--muted)">Hệ số phóng đại vị thế so với vốn. Phóng đại cả lãi lẫn lỗ.</p></div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line, rgba(128,128,128,.3))"><strong>Stop-loss</strong><p style="margin:4px 0 0;color:var(--muted)">Lệnh tự đóng vị thế khi giá chạm mức sai đã định trước.</p></div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line, rgba(128,128,128,.3))"><strong>RR (rủi ro/lợi nhuận)</strong><p style="margin:4px 0 0;color:var(--muted)">Tỷ lệ mức lời mục tiêu trên mức lỗ chấp nhận. Không nói gì về xác suất thắng.</p></div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line, rgba(128,128,128,.3))"><strong>Thanh khoản</strong><p style="margin:4px 0 0;color:var(--muted)">Mức dễ mua bán mà không làm giá dịch chuyển nhiều.</p></div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line, rgba(128,128,128,.3))"><strong>Slippage (trượt giá)</strong><p style="margin:4px 0 0;color:var(--muted)">Chênh lệch giữa giá mong muốn và giá khớp thực tế.</p></div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line, rgba(128,128,128,.3))"><strong>Spread</strong><p style="margin:4px 0 0;color:var(--muted)">Chênh lệch giữa giá mua và giá bán tại cùng thời điểm.</p></div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line, rgba(128,128,128,.3))"><strong>Stablecoin</strong><p style="margin:4px 0 0;color:var(--muted)">Token cố giữ giá quanh 1 USD. Cơ chế giữ neo khác nhau, rủi ro cũng khác nhau.</p></div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line, rgba(128,128,128,.3))"><strong>MA (đường trung bình động)</strong><p style="margin:4px 0 0;color:var(--muted)">Đường làm mượt giá trung bình của N phiên gần nhất.</p></div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line, rgba(128,128,128,.3))"><strong>RSI</strong><p style="margin:4px 0 0;color:var(--muted)">Chỉ báo dao động 0 đến 100 đo tốc độ tăng giảm gần đây. Không phải tín hiệu mua bán.</p></div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line, rgba(128,128,128,.3))"><strong>FVG (vùng mất cân bằng giá)</strong><p style="margin:4px 0 0;color:var(--muted)">Khoảng trống giữa các nến. Một giả thuyết cần định nghĩa và kiểm chứng, không phải điểm đảo chiều chắc chắn.</p></div>
       </div>
     </section>
     ${promoBandHTML()}`,
