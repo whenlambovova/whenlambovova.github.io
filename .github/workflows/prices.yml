@@ -20,7 +20,8 @@ jobs:
           curl -sf "https://open.er-api.com/v6/latest/USD" -o /tmp/fx.json || echo '{}' > /tmp/fx.json
           curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://www.coindesk.com/arc/outboundfeeds/rss/" -o /tmp/rss_coindesk.xml || echo "" > /tmp/rss_coindesk.xml
           curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://cointelegraph.com/rss" -o /tmp/rss_ct.xml || echo "" > /tmp/rss_ct.xml
-          curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://vnexpress.net/rss/kinh-te.rss" -o /tmp/rss_vne.xml || echo "" > /tmp/rss_vne.xml
+          curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://vnexpress.net/rss/kinh-doanh.rss" -o /tmp/rss_vne.xml || echo "" > /tmp/rss_vne.xml
+          curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://cafef.vn/thi-truong-chung-khoan.rss" -o /tmp/rss_cafef.xml || echo "" > /tmp/rss_cafef.xml
           curl -sf "https://vang.today/api/prices" -o /tmp/vang.json || echo '{}' > /tmp/vang.json
           curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?interval=1d&range=5d" -o /tmp/dxy.json || echo '{}' > /tmp/dxy.json
           curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?interval=1d&range=5d" -o /tmp/vni.json || echo '{}' > /tmp/vni.json
@@ -40,7 +41,8 @@ jobs:
             const parseRss = (file, source) => { try { const xml = fs.readFileSync(file, 'utf8'); const items = xml.split(/<item[\s>]/).slice(1); for (const it of items.slice(0, 12)) { const t = (it.match(/<title><!\[CDATA\[([\s\S]*?)\]\]><\/title>/) || it.match(/<title>([\s\S]*?)<\/title>/) || [])[1]; const l = (it.match(/<link>([\s\S]*?)<\/link>/) || [])[1]; const d = (it.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1]; if (t && l) rssItems.push({ title: t.trim(), link: l.trim(), source, at: d ? new Date(d).getTime() : Date.now() }); } } catch (e) {} };
             parseRss('/tmp/rss_coindesk.xml', 'CoinDesk');
             parseRss('/tmp/rss_ct.xml', 'Cointelegraph');
-            parseRss('/tmp/rss_vne.xml', 'VnExpress Kinh te');
+            parseRss('/tmp/rss_vne.xml', 'VnExpress Kinh doanh');
+            parseRss('/tmp/rss_cafef.xml', 'CafeF');
             rssItems.sort((a, b) => b.at - a.at);
             const yh = (p, oldv) => { try { const r = rd(p).chart.result[0]; const c = r.meta.regularMarketPrice; const pc = r.meta.chartPreviousClose; return (c && pc) ? { price: c, changePct: (c - pc) / pc * 100 } : (oldv || null); } catch(e) { return oldv || null; } };
             const vang = (v && v.prices) ? {
