@@ -18,6 +18,9 @@ jobs:
           curl -sf "https://api.gold-api.com/price/XAU" -o /tmp/xau.json || echo '{}' > /tmp/xau.json
           curl -sf "https://api.gold-api.com/price/XAG" -o /tmp/xag.json || echo '{}' > /tmp/xag.json
           curl -sf "https://open.er-api.com/v6/latest/USD" -o /tmp/fx.json || echo '{}' > /tmp/fx.json
+          curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://www.coindesk.com/arc/outboundfeeds/rss/" -o /tmp/rss_coindesk.xml || echo "" > /tmp/rss_coindesk.xml
+          curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://cointelegraph.com/rss" -o /tmp/rss_ct.xml || echo "" > /tmp/rss_ct.xml
+          curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://vnexpress.net/rss/kinh-te.rss" -o /tmp/rss_vne.xml || echo "" > /tmp/rss_vne.xml
           curl -sf "https://vang.today/api/prices" -o /tmp/vang.json || echo '{}' > /tmp/vang.json
           curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?interval=1d&range=5d" -o /tmp/dxy.json || echo '{}' > /tmp/dxy.json
           curl -sf -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?interval=1d&range=5d" -o /tmp/vni.json || echo '{}' > /tmp/vni.json
@@ -33,6 +36,12 @@ jobs:
             const xa = rd('/tmp/xag.json');
             const f = rd('/tmp/fx.json');
             const v = rd('/tmp/vang.json');
+            const rssItems = [];
+            const parseRss = (file, source) => { try { const xml = fs.readFileSync(file, 'utf8'); const items = xml.split(/<item[\s>]/).slice(1); for (const it of items.slice(0, 12)) { const t = (it.match(/<title><!\[CDATA\[([\s\S]*?)\]\]><\/title>/) || it.match(/<title>([\s\S]*?)<\/title>/) || [])[1]; const l = (it.match(/<link>([\s\S]*?)<\/link>/) || [])[1]; const d = (it.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1]; if (t && l) rssItems.push({ title: t.trim(), link: l.trim(), source, at: d ? new Date(d).getTime() : Date.now() }); } } catch (e) {} };
+            parseRss('/tmp/rss_coindesk.xml', 'CoinDesk');
+            parseRss('/tmp/rss_ct.xml', 'Cointelegraph');
+            parseRss('/tmp/rss_vne.xml', 'VnExpress Kinh te');
+            rssItems.sort((a, b) => b.at - a.at);
             const yh = (p, oldv) => { try { const r = rd(p).chart.result[0]; const c = r.meta.regularMarketPrice; const pc = r.meta.chartPreviousClose; return (c && pc) ? { price: c, changePct: (c - pc) / pc * 100 } : (oldv || null); } catch(e) { return oldv || null; } };
             const vang = (v && v.prices) ? {
               at: v.timestamp * 1000,
@@ -58,11 +67,12 @@ jobs:
               }
             };
             fs.writeFileSync('data/live.json', JSON.stringify(out));
+            if (rssItems.length) fs.writeFileSync('data/news.json', JSON.stringify({ at: Date.now(), items: rssItems.slice(0, 24) }));
           "
       - name: Commit neu co thay doi
         run: |
           git config user.name "when-lambo-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/live.json
+          git add data/live.json; git add data/news.json 2>/dev/null || true
           git diff --cached --quiet || git commit -m "cap nhat gia $(date -u +%Y-%m-%dT%H:%MZ)"
           git push
