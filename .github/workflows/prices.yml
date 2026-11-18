@@ -13,10 +13,16 @@ jobs:
       - name: Lay gia
         run: |
           set -e
-          curl -sf "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana,ripple,dogecoin,pax-gold&vs_currencies=usd&include_24hr_change=true" -o /tmp/tickers.json || echo '{}' > /tmp/tickers.json
+          curl -sf "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana,ripple,dogecoin,pax-gold,cardano,avalanche-2,chainlink,polkadot,toncoin&vs_currencies=usd&include_24hr_change=true" -o /tmp/tickers.json || echo '{}' > /tmp/tickers.json
           curl -sf "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=250&interval=daily" -o /tmp/btc.json || echo '{}' > /tmp/btc.json
           curl -sf "https://api.gold-api.com/price/XAU" -o /tmp/xau.json || echo '{}' > /tmp/xau.json
+          curl -sf "https://api.gold-api.com/price/XAG" -o /tmp/xag.json || echo '{}' > /tmp/xag.json
           curl -sf "https://open.er-api.com/v6/latest/USD" -o /tmp/fx.json || echo '{}' > /tmp/fx.json
+          curl -sf "https://vang.today/api/prices" -o /tmp/vang.json || echo '{}' > /tmp/vang.json
+          curl -sf "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?interval=1d&range=5d" -o /tmp/dxy.json || echo '{}' > /tmp/dxy.json
+          curl -sf "https://query1.finance.yahoo.com/v8/finance/chart/%5EVNINDEX?interval=1d&range=5d" -o /tmp/vni.json || echo '{}' > /tmp/vni.json
+          curl -sf "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?interval=1d&range=5d" -o /tmp/wti.json || echo '{}' > /tmp/wti.json
+          curl -sf "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?interval=1d&range=5d" -o /tmp/brent.json || echo '{}' > /tmp/brent.json
           node -e "
             const fs = require('fs');
             const rd = p => { try { return JSON.parse(fs.readFileSync(p)); } catch(e) { return {}; } };
@@ -24,14 +30,32 @@ jobs:
             const t = rd('/tmp/tickers.json');
             const b = rd('/tmp/btc.json');
             const x = rd('/tmp/xau.json');
+            const xa = rd('/tmp/xag.json');
             const f = rd('/tmp/fx.json');
+            const v = rd('/tmp/vang.json');
+            const yh = (p, oldv) => { try { const r = rd(p).chart.result[0]; const c = r.meta.regularMarketPrice; const pc = r.meta.chartPreviousClose; return (c && pc) ? { price: c, changePct: (c - pc) / pc * 100 } : (oldv || null); } catch(e) { return oldv || null; } };
+            const vang = (v && v.prices) ? {
+              at: v.timestamp * 1000,
+              sjc: { buy: v.prices.BTSJC?.buy || null, sell: v.prices.BTSJC?.sell || null, change: v.prices.BTSJC?.change_buy || null },
+              nhan: { buy: v.prices.BT9999NTT?.buy || null, sell: v.prices.BT9999NTT?.sell || null, change: v.prices.BT9999NTT?.change_buy || null },
+              doji: { buy: v.prices.DOHCML?.buy || null, sell: v.prices.DOHCML?.sell || null, change: v.prices.DOHCML?.change_buy || null },
+              phuquy: { buy: v.prices.PQHNVM?.buy || null, sell: v.prices.PQHNVM?.sell || null, change: v.prices.PQHNVM?.change_buy || null }
+            } : (old.vang || null);
             fs.mkdirSync('data', { recursive: true });
             const out = {
               at: Date.now(),
               tickers: Object.keys(t).length ? t : old.tickers,
               btcDaily: b.prices ? b.prices : old.btcDaily,
               xau: x.price ? x : (old.xau || null),
-              fx: (f.rates && f.rates.VND) ? f.rates.VND : (old.fx || null)
+              xag: xa.price ? xa : (old.xag || null),
+              fx: (f.rates && f.rates.VND) ? f.rates.VND : (old.fx || null),
+              vang,
+              macro: {
+                dxy: yh('/tmp/dxy.json', old.macro && old.macro.dxy),
+                vnindex: yh('/tmp/vni.json', old.macro && old.macro.vnindex),
+                wti: yh('/tmp/wti.json', old.macro && old.macro.wti),
+                brent: yh('/tmp/brent.json', old.macro && old.macro.brent)
+              }
             };
             fs.writeFileSync('data/live.json', JSON.stringify(out));
           "
