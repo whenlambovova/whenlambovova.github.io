@@ -109,6 +109,37 @@ async function loadTickers() {
 }
 
 
+/* ---------- Tin nóng tự động (RSS tổng hợp, workflow cập nhật 30 phút/lần) ---------- */
+let newsItems = null, newsError = false;
+async function loadNews() {
+  const fresh = cacheGet("wlv_news", 30 * 60 * 1000);
+  if (fresh) { newsItems = fresh; newsError = false; if (currentRoute === "tin-tuc") renderNews(); return; }
+  try {
+    const r = await fetch("data/news.json?t=" + Date.now());
+    if (!r.ok) throw new Error("news " + r.status);
+    const d = await r.json();
+    newsItems = (d && d.items) ? d.items : [];
+    newsError = false;
+    cacheSet("wlv_news", newsItems);
+  } catch (e) {
+    const stale = cacheGetStale("wlv_news");
+    if (stale) { newsItems = stale.data; newsError = false; }
+    else newsError = true;
+  }
+  if (currentRoute === "tin-tuc") renderNews();
+}
+function renderNews() {
+  const el = document.getElementById("news-auto");
+  if (!el) return;
+  if (newsError && !newsItems) { el.innerHTML = '<div class="note">Chưa tải được tin tự động. Trang tự thử lại sau ít phút.</div>'; return; }
+  if (!newsItems) { el.innerHTML = '<p class="muted">Đang tải tin…</p>'; return; }
+  if (!newsItems.length) { el.innerHTML = '<p class="muted">Chưa có tin mới trong lần cập nhật gần nhất.</p>'; return; }
+  el.innerHTML = newsItems.map((n) => {
+    const time = n.at ? new Date(n.at).toLocaleString("vi-VN", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" }) : "";
+    return `<a class="article-item" href="${n.link}" target="_blank" rel="noopener noreferrer"><span class="idx">${n.source}</span><span><span class="tag">${time}</span><h3>${n.title}</h3></span></a>`;
+  }).join("");
+}
+
 /* ---------- Gold spot (XAU/USD) + USD/VND ---------- */
 let goldSpot = null, goldFx = null, goldError = false;
 async function loadGold() {
@@ -642,6 +673,9 @@ const PAGES = {
       <p class="label">Tin tức</p>
       <h2 class="section">Tin tức và nhận định</h2>
       <p class="section-sub">Tin nóng tổng hợp từ tối thiểu hai nguồn chính thống, gắn ngay vào chart của cặp …/USD bị ảnh hưởng. Không đăng tin trơ trụi không có phân tích.</p>
+      <p class="label" style="margin-top:18px">Tin tự động · cập nhật mỗi 30 phút</p>
+      <div class="article-list" id="news-auto"><p class="muted">Đang tải tin…</p></div>
+      <p class="label" style="margin-top:18px">Bài nhận định của Vova</p>
       <div class="article-list">
         <a class="article-item" href="#/bai/nhan-dinh-mau"><span class="idx">01</span><span><span class="tag">Nhận định · Khung hằng ngày</span><h3>Nhận định đầu ngày: vàng, BTC, ETH</h3><p>Khung nhận định mỗi sáng, dựng theo bản 9/11 trên kênh.</p></span></a>
       </div>
@@ -754,6 +788,7 @@ function route() {
   if (page === "vang") renderGoldChart();
   if (page === "fx") renderFx();
   if (page === "vang") { renderGoldSpot(); renderGoldChart(); }
+  if (page === "tin-tuc") { renderNews(); loadNews(); }
 }
 
 function setActive(page) {
