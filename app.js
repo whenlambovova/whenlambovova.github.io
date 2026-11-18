@@ -114,7 +114,7 @@ let newsItems = null, newsError = false;
 const NEWS_NOTES = {
   "ct-bitcoin-etf-240-million-outflow-bearish-phase": {
     title: "Bitcoin ETF bị rút ròng 240 triệu USD, CryptoQuant cảnh báo thị trường quay lại pha giảm",
-    summary: "Dòng tiền rút khỏi các quỹ ETF Bitcoin xuất hiện trở lại sau một ngày tạm dừng. CryptoQuant, đơn vị phân tích dữ liệu chuỗi, cho rằng Bitcoin đã quay lại pha thị trường giảm giá.",
+    summary: "Dòng tiền rút khỏi các quỹ ETF Bitcoin xuất hiện trở lại sau một ngày tạm dừng. CryptoQuant, công ty chuyên phân tích dữ liệu tiền mã hóa, cho rằng Bitcoin đã quay lại pha thị trường giảm giá.",
     note: "Dòng vốn ETF là một dữ kiện, không phải bảo chứng cho xu hướng. Một ngày rút ròng chưa đủ để kết luận, và nhận định của một đơn vị phân tích chỉ là một góc nhìn. Cặp cần theo dõi: BTC/USD. Việc nên làm là so phản ứng của giá với tin, thay vì đọc tin rồi đoán chiều giá."
   },
   "ct-nvidia-board-rejects-huang-comeback-amid-record-116b-quarter": {
@@ -135,19 +135,18 @@ const NEWS_NOTES = {
 };
 const NEWS_PAIRS = [[/bitcoin|\bbtc\b|etf/i, "BTC/USD"], [/ethereum|ether\b|\beth\b/i, "ETH/USD"], [/solana|\bsol\b/i, "SOL/USD"], [/\bxrp\b|ripple/i, "XRP/USD"], [/dogecoin|\bdoge\b/i, "DOGE/USD"], [/gold|vàng/i, "XAU/USD"], [/silver|bạc/i, "XAG/USD"], [/vn-index|vnindex|chứng khoán/i, "VN-Index"], [/oil|dầu|brent|wti/i, "Brent, WTI /USD"]];
 function newsView(n) {
-  const note = NEWS_NOTES[n.id] || null;
+  const note = NEWS_NOTES[n.id] || n.rw || null;
   const title = (note && note.title) || n.title_vi || n.title;
   const summary = (note && note.summary) || n.desc_vi || n.desc || "";
   const pairs = NEWS_PAIRS.filter((p) => p[0].test(n.title + " " + (n.title_vi || ""))).map((p) => p[1]);
-  return { title, summary, note: note && note.note, pairs, translated: n.lang === "en" && !note };
+  return { title, summary, note: note && note.note, pairs };
 }
 function newsArticleHTML(n) {
   const v = newsView(n);
   const time = new Date(n.at).toLocaleString("vi-VN", { weekday: "long", day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" });
   const pairs = v.pairs.length ? `<p><strong>Cặp liên quan:</strong> ${v.pairs.map(esc).join(", ")}. <a href="#/thi-truong">Xem bảng thị trường</a></p>` : "";
-  const note = v.note ? `<h3>Vova đọc tin này</h3><p>${esc(v.note)}</p>` : `<h3>Khung đọc tin của Vova</h3><ul><li>Tin này ảnh hưởng tới cặp nào, và giá đã phản ứng chưa?</li><li>Phản ứng giá có cùng chiều với tin, hay đi ngược?</li><li>Tin không phải tín hiệu vào lệnh. Cần chart và điểm sai rõ ràng trước khi hành động.</li></ul>`;
-  const mt = v.translated ? `<p class="source">Bản tiếng Việt do dịch máy tự động từ nguồn tiếng Anh, có thể chưa trọn nghĩa. Đọc bản gốc ở liên kết nguồn bên dưới khi cần chính xác.</p>` : "";
-  return `<div class="article-grid" style="margin-top:36px"><div class="article"><span class="tag">Tin tức · ${esc(n.source)}</span><h2 class="title">${esc(v.title)}</h2><p class="byline">When Lambo Vova · ${esc(time)}</p><p class="intro">${esc(v.summary)}</p>${pairs}${note}<div class="takeaway">Lưu ý: nội dung mang tính thông tin, không phải khuyến nghị đầu tư.</div>${mt}<p class="source" style="font-size:12px">Nguồn: ${esc(n.source)}. <a href="${esc(n.link)}" target="_blank" rel="noopener noreferrer nofollow">Bài gốc</a></p><a class="back" href="#/tin-tuc">← Quay lại Tin tức</a></div>${promoHTML()}</div>`;
+  const note = `<h3>Nhận định</h3><p>${esc(v.note || "Tin này chỉ để bạn nắm thông tin. Hãy xem giá phản ứng thế nào trước khi rút ra kết luận.")}</p>`;
+  return `<div class="article-grid" style="margin-top:36px"><div class="article"><span class="tag">Tin tức mới nhất · ${esc(n.source)}</span><h2 class="title">${esc(v.title)}</h2><p class="byline">When Lambo Vova · ${esc(time)}</p><p class="intro">${esc(v.summary)}</p>${pairs}${note}<p class="source">Nội dung chỉ để tham khảo, không phải lời khuyên đầu tư.</p><p class="source" style="font-size:12px">Nguồn: ${esc(n.source)}. <a href="${esc(n.link)}" target="_blank" rel="noopener noreferrer nofollow">Bài gốc</a></p><a class="back" href="#/tin-tuc">← Quay lại Tin tức mới nhất</a></div>${promoHTML()}</div>`;
 }
 
 async function loadNews(force) {
@@ -554,7 +553,7 @@ const ARTICLES = {
       <p>Ngày nào bàn vàng thế giới thì đối chiếu SJC và nhẫn trơn: giá mua, giá bán, chênh lệch mua bán và chênh với thế giới, ghi rõ giờ niêm yết, không ghép hai loại giá thành một câu chuyện.</p>`,
     takeaway: "Nguyên tắc giữ xuyên suốt: mô tả điều kiện, không hứa hướng đi; không điểm vào, dừng lỗ hay mục tiêu lệnh trong bản tin.",
     source: `Video mẫu 9/11: <a href="${DAILY_VIEW_VIDEO}">xem trên kênh YouTube</a>.`,
-    back: "#/tin-tuc", backLabel: "Quay lại Tin tức",
+    back: "#/tin-tuc", backLabel: "Quay lại Tin tức mới nhất",
   },
   "flash-crash-2020": {
     tag: "Kiến thức · Bài học lịch sử", date: "Ngày 18 tháng 11 năm 2026", title: "12/3/2020: ngày Bitcoin mất gần 39%",
@@ -769,10 +768,10 @@ const PAGES = {
     ${promoBandHTML()}`,
   "tin-tuc": () => `
     <section class="blk" style="margin-top:40px">
-      <p class="label">Tin tức</p>
-      <h2 class="section">Tin tức và nhận định</h2>
-      <p class="section-sub">Tin nóng tổng hợp từ tối thiểu hai nguồn chính thống, gắn ngay vào chart của cặp …/USD bị ảnh hưởng. Không đăng tin trơ trụi không có phân tích.</p>
-      <p class="label" style="margin-top:18px">Tin tự động · cập nhật mỗi 30 phút</p>
+      <p class="label">Thị trường</p>
+      <h2 class="section">Tin tức mới nhất</h2>
+      <p class="section-sub">Tin thị trường được viết lại ngắn gọn bằng tiếng Việt, có ghi nguồn. Chỉ để tham khảo, không phải lời khuyên đầu tư.</p>
+      <p class="label" style="margin-top:18px">Cập nhật mỗi 30 phút</p>
       <div class="article-list" id="news-auto"><p class="muted">Đang tải tin…</p></div>
       <p class="label" style="margin-top:18px">Bài nhận định của Vova</p>
       <div class="article-list">
