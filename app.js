@@ -134,9 +134,14 @@ function renderNews() {
   if (newsError && !newsItems) { el.innerHTML = '<div class="note">Chưa tải được tin tự động. Trang tự thử lại sau ít phút.</div>'; return; }
   if (!newsItems) { el.innerHTML = '<p class="muted">Đang tải tin…</p>'; return; }
   if (!newsItems.length) { el.innerHTML = '<p class="muted">Chưa có tin mới trong lần cập nhật gần nhất.</p>'; return; }
-  el.innerHTML = newsItems.map((n) => {
-    const time = n.at ? new Date(n.at).toLocaleString("vi-VN", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" }) : "";
-    return `<a class="article-item" href="${n.link}" target="_blank" rel="noopener noreferrer"><span class="idx">${n.source}</span><span><span class="tag">${time}</span><h3>${n.title}</h3></span></a>`;
+  const esc = (t) => String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const clean = (u) => String(u || "").replace(/^\s*<!\[CDATA\[/, "").replace(/\]\]>\s*$/, "").trim();
+  const cutoff = Date.now() - 7 * 86400000;
+  const list = newsItems.filter((n) => n.at && n.at >= cutoff && /^https?:\/\//.test(clean(n.link)));
+  if (!list.length) { el.innerHTML = '<p class="muted">Chưa có tin mới trong 7 ngày gần nhất.</p>'; return; }
+  el.innerHTML = list.map((n) => {
+    const time = new Date(n.at).toLocaleString("vi-VN", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" });
+    return `<a class="article-item" href="${esc(clean(n.link))}" target="_blank" rel="noopener noreferrer"><span class="idx">↗</span><span><span class="tag">${esc(n.source)} · ${time}</span><h3>${esc(n.title)}</h3></span></a>`;
   }).join("");
 }
 
