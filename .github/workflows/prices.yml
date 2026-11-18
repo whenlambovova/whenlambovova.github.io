@@ -52,7 +52,7 @@ jobs:
               vang,
               macro: {
                 dxy: yh('/tmp/dxy.json', old.macro && old.macro.dxy),
-                us10y: yh("/tmp/vni.json", old.macro && old.macro.us10y),
+                us10y: yh('/tmp/vni.json', old.macro && old.macro.us10y),
                 wti: yh('/tmp/wti.json', old.macro && old.macro.wti),
                 brent: yh('/tmp/brent.json', old.macro && old.macro.brent)
               }
