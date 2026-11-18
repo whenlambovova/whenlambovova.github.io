@@ -112,6 +112,16 @@ jobs:
               return d[0].map((x) => x[0]).join('').replace(/[\u200b\u200c\ufeff]/g, '').trim();
             } catch (e) { return ''; }
           };
+          const okRw = (x, o) => {
+            const src = (x.title + ' ' + (x.desc || '')).toLowerCase();
+            const text = String(o.title) + '. ' + o.summary + '. ' + o.note;
+            const sents = text.split(/(?<=[.!?:])\s+/);
+            for (const s of sents) {
+              const w = s.split(/\s+/).slice(1);
+              for (const t of w) { const c = t.replace(/[^\p{L}\p{N}]/gu, ''); if (c.length > 1 && /^\p{Lu}/u.test(c) && src.indexOf(c.toLowerCase()) < 0) { console.log('rewrite rejected name', c); return false; } }
+            }
+            return true;
+          };
           const rewrite = async (x) => {
             const sys = 'Bạn là biên tập viên tin thị trường tiếng Việt cho trang When Lambo Vova. Viết cho người đọc bình thường, từ ngữ đơn giản, giọng bình tĩnh, rõ ràng, nghiêm túc. Chỉ dùng thông tin có trong đầu vào, tuyệt đối không thêm số liệu, tên hay sự kiện mới. Không khuyên mua, bán, vào lệnh. Không sao chép câu chữ của nguồn, luôn diễn đạt lại bằng lời của mình và ngắn hơn nguồn. Mỗi bài mở đầu một cách khác nhau. Trả về JSON với ba khóa: title (tối đa 90 ký tự), summary (tối đa 2 câu, dưới 45 từ), note (mục Nhận định: 1 đến 2 câu nêu điều đáng chú ý hoặc điều cần theo dõi tiếp, cụ thể cho tin này, không phải lời khuyên).';
             const user = 'Tiêu đề nguồn: ' + x.title + '\nMở đầu nguồn: ' + (x.desc || '') + '\nNguồn: ' + x.source;
@@ -126,7 +136,9 @@ jobs:
               if (!(o.title && o.summary && o.note)) return null;
               const nums = (String(o.title) + ' ' + o.summary + ' ' + o.note).match(/\d[\d.,]*/g) || [];
               for (const n of nums) { const k = n.replace(/[.,]+$/, '').replace(/[.,]/g, ''); if (k.length > 1 && src.indexOf(k) < 0 && !/^(7|30)$/.test(k)) { console.log('rewrite rejected number', n); return null; } }
-              return { title: String(o.title).slice(0, 140), summary: String(o.summary).slice(0, 400), note: String(o.note).slice(0, 400) };
+              const out = { title: String(o.title).slice(0, 140), summary: String(o.summary).slice(0, 400), note: String(o.note).slice(0, 400) };
+              if (!okRw(x, out)) return null;
+              return out;
             } catch (e) { console.log('rewrite err', String(e).slice(0, 80)); }
             return null;
           };
@@ -138,6 +150,7 @@ jobs:
               if (!x.title_vi && n < 30) { x.title_vi = await tr(x.title); n++; await new Promise((r) => setTimeout(r, 250)); }
               if (!x.desc_vi && x.desc && n < 40) { x.desc_vi = await tr(x.desc); n++; await new Promise((r) => setTimeout(r, 250)); }
             }
+            for (const x of all) { if (x.rw && !okRw(x, x.rw)) delete x.rw; }
             let rn = 0, stop = false;
             for (const x of all) {
               if (stop || x.rw || rn >= 5) continue;
