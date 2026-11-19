@@ -332,3 +332,21 @@ html[data-theme="dark"] body[data-page="home"], html[data-theme="dark"] body[dat
 .article figure.ph img { width: 100%; border-radius: 8px; border: 1px solid var(--hairline); display: block; }
 .article figcaption { margin-top: 8px; font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-align: right; }
 .article figcaption a { color: inherit; }
+
+/* San ao (demo trading) */
+.demo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 4px 0 30px; }
+.demo-card { border: 1px solid var(--hairline); padding: 14px 16px; }
+.demo-card .k { font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.demo-card .v { font-family: "Playfair Display", Georgia, serif; font-size: 21px; font-variant-numeric: tabular-nums; }
+.demo-order { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--hairline); padding: 18px 0; margin-bottom: 10px; }
+.demo-order select, .demo-order input { font: inherit; font-size: 14px; padding: 9px 12px; background: transparent; color: var(--ink); border: 1px solid var(--hairline); }
+.demo-order select:focus, .demo-order input:focus { outline: none; border-color: var(--accent); }
+.demo-order .amt { width: 120px; }
+.btn-demo { font: inherit; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; padding: 10px 24px; border: 1px solid var(--ink); background: var(--ink); color: var(--paper); cursor: pointer; }
+.btn-demo:hover { opacity: 0.85; }
+.btn-demo.sell { background: transparent; color: var(--ink); }
+.btn-demo.sell:hover { background: var(--ink); color: var(--paper); opacity: 1; }
+.btn-mini { font: inherit; font-size: 11.5px; padding: 5px 12px; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; border-radius: 999px; opacity: 0.8; }
+.btn-mini:hover { opacity: 1; }
+.demo-h { font-family: "Playfair Display", Georgia, serif; font-size: 19px; font-weight: 500; margin: 30px 0 12px; }
+@media (max-width: 760px) { .demo-grid { grid-template-columns: repeat(2, 1fr); } }
