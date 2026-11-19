@@ -256,7 +256,7 @@ function d2ChartOpts(h) {
   };
 }
 function d2DestroyCharts() {
-  (D2C.panes || []).forEach((p) => { try { p.chart.remove(); } catch (e) {} });
+  (D2C.panes || []).forEach((p) => { try { p.chart.remove(); } catch (e) {} if(p.el)p.el.remove(); });
   if (D2C.chart) { try { D2C.chart.remove(); } catch (e) {} }
   if(D2C.ro) D2C.ro.disconnect();
   D2C.chart = null; D2C.cs = null; D2C.vol = null; D2C.panes = []; D2C.indSeries = []; D2C.drawn = []; D2C.livePriceLine = null;
@@ -370,7 +370,7 @@ async function d2LoadCandles() {
     if(D2C.cs) D2C.cs.setData([]);
     if(D2C.vol) D2C.vol.setData([]);
     if (st) st.textContent = "Chưa có nguồn nến miễn phí cho " + instr.pair + " (Kraken chưa niêm yết). Vẫn đặt lệnh theo giá trực tiếp bình thường.";
-    D2C.candles = []; d2ApplyIndicators();
+    D2C.candles = []; d2ApplyIndicators(); d2RedrawDrawings();
     return;
   }
   if (st) st.textContent = "Đang tải nến " + instr.pair + "…";
