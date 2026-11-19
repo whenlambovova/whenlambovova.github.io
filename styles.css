@@ -350,3 +350,69 @@ html[data-theme="dark"] body[data-page="home"], html[data-theme="dark"] body[dat
 .btn-mini:hover { opacity: 1; }
 .demo-h { font-family: "Playfair Display", Georgia, serif; font-size: 19px; font-weight: 500; margin: 30px 0 12px; }
 @media (max-width: 760px) { .demo-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* ===== Sàn ảo v2 dashboard ===== */
+.dz-shell { margin-top: 1rem; }
+.dz-msg { display: none; margin: 0.5rem 0; padding: 0.6rem 0.9rem; border-radius: 8px; background: rgba(201,162,39,0.15); border: 1px solid #c9a227; font-size: 0.9rem; }
+.dz-msg.show { display: block; }
+.dz-pairhead { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; padding: 0.7rem 1rem; border: 1px solid var(--line, #262626); border-radius: 10px; background: var(--card, #161616); }
+.dz-pairname { display: flex; flex-direction: column; }
+.dz-pairname strong { font-size: 1.15rem; color: var(--gold, #c9a227); }
+.dz-pairname small { color: var(--dim, #888); }
+.dz-lastprice { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.dz-lastprice.up, .up { color: #26a69a; }
+.dz-lastprice.dn, .dn { color: #ef5350; }
+.dz-stat { display: flex; flex-direction: column; font-size: 0.82rem; }
+.dz-stat b { color: var(--dim, #888); font-weight: 500; }
+.dz-stat span { font-variant-numeric: tabular-nums; }
+.dz-grid { display: grid; grid-template-columns: 220px 1fr 250px; gap: 0.8rem; margin-top: 0.8rem; }
+.dz-col h3 { font-size: 0.85rem; margin: 0 0 0.4rem; color: var(--dim, #888); }
+.dz-col h3 small { font-weight: 400; opacity: 0.8; }
+.dz-toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }
+.dz-toolbar > div { display: flex; gap: 0.25rem; }
+.dz-tf, .dz-ind, .dz-tool, #dz-clear-draw, .dz-ftab, .dz-tab { background: transparent; border: 1px solid var(--line, #2c2c2c); color: var(--fg, #ddd); border-radius: 6px; padding: 0.22rem 0.55rem; font-size: 0.78rem; cursor: pointer; }
+.dz-tf.on, .dz-ind.on, .dz-tool.on, .dz-ftab.on, .dz-tab.on { border-color: var(--gold, #c9a227); color: var(--gold, #c9a227); }
+.dz-chart-wrap { border: 1px solid var(--line, #262626); border-radius: 10px; overflow: hidden; background: var(--card, #161616); }
+#dz-chart { position: relative; }
+.dz-pane { border-top: 1px solid var(--line, #262626); }
+.dz-dim { color: var(--dim, #888); font-size: 0.82rem; }
+.dz-ob-head, .dz-ob-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.3rem; font-size: 0.78rem; padding: 0.14rem 0.4rem; font-variant-numeric: tabular-nums; }
+.dz-ob-head { color: var(--dim, #888); border-bottom: 1px solid var(--line, #262626); margin-bottom: 2px; }
+.dz-ob-row.ask span:first-child { color: #ef5350; }
+.dz-ob-row.bid span:first-child { color: #26a69a; }
+.dz-ob-mid { text-align: center; font-weight: 700; padding: 0.3rem 0; border-block: 1px solid var(--line, #262626); margin-block: 2px; }
+.dz-mkrow { width: 100%; background: transparent; border: 0; cursor: pointer; text-align: left; color: inherit; border-radius: 4px; }
+.dz-mkrow:hover { background: rgba(201,162,39,0.08); }
+.dz-mkrow.cur { background: rgba(201,162,39,0.14); outline: 1px solid var(--gold, #c9a227); }
+.dz-mksearch input { width: 100%; margin-bottom: 0.4rem; }
+.dz-form { border: 1px solid var(--line, #262626); border-radius: 10px; padding: 0.8rem; margin-top: 0.7rem; background: var(--card, #161616); }
+.dz-side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+.dz-buy, .dz-sell { border-radius: 6px; padding: 0.5rem; font-weight: 700; cursor: pointer; border: 1px solid var(--line, #2c2c2c); background: transparent; color: var(--fg, #ddd); }
+.dz-buy.on { background: #26a69a; border-color: #26a69a; color: #fff; }
+.dz-sell.on { background: #ef5350; border-color: #ef5350; color: #fff; }
+.dz-ftabs { display: flex; gap: 0.3rem; margin: 0.55rem 0; }
+.dz-ffields { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.55rem; align-items: end; }
+.dz-ffields label { display: flex; flex-direction: column; font-size: 0.76rem; color: var(--dim, #888); gap: 0.2rem; }
+.dz-ffields input, .dz-ffields select, .dz-mksearch input { background: var(--bg, #101010); border: 1px solid var(--line, #2c2c2c); color: var(--fg, #ddd); border-radius: 6px; padding: 0.4rem 0.5rem; font-size: 0.85rem; }
+.dz-slider { grid-column: 1 / -1; display: flex; align-items: center; gap: 0.6rem; }
+.dz-slider input { flex: 1; accent-color: var(--gold, #c9a227); }
+.dz-slider span { font-size: 0.8rem; min-width: 3ch; }
+.dz-tpsl { grid-column: 1 / -1; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.dz-tpsl input[type="number"] { width: 130px; }
+.dz-chk { flex-direction: row !important; align-items: center; gap: 0.3rem !important; }
+#dz-submit { grid-column: 1 / -1; padding: 0.6rem; font-size: 0.95rem; }
+.dz-bottom { margin-top: 0.9rem; border: 1px solid var(--line, #262626); border-radius: 10px; background: var(--card, #161616); }
+.dz-tabs { display: flex; gap: 0.3rem; padding: 0.5rem 0.6rem 0; flex-wrap: wrap; }
+.dz-twrap { overflow-x: auto; }
+.dz-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.dz-table th, .dz-table td { padding: 0.45rem 0.6rem; text-align: left; border-bottom: 1px solid var(--line, #262626); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dz-table th { color: var(--dim, #888); font-weight: 500; }
+.dz-close { background: transparent; border: 1px solid var(--line, #2c2c2c); color: var(--fg, #ddd); border-radius: 5px; padding: 0.15rem 0.5rem; cursor: pointer; font-size: 0.76rem; }
+.dz-close:hover { border-color: var(--gold, #c9a227); color: var(--gold, #c9a227); }
+.dz-summary { display: flex; gap: 1.4rem; flex-wrap: wrap; margin-top: 0.8rem; padding: 0.7rem 1rem; border: 1px solid var(--line, #262626); border-radius: 10px; font-size: 0.9rem; background: var(--card, #161616); align-items: center; }
+.dz-draw-canvas { position: absolute; inset: 0; pointer-events: none; }
+@media (max-width: 980px) {
+  .dz-grid { grid-template-columns: 1fr; }
+  .dz-col-ob, .dz-col-mk { order: 2; }
+  .dz-col-mid { order: 1; }
+}
