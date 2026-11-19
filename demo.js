@@ -532,6 +532,16 @@ async function d2FetchTicker(krakenPair) {
   cacheSet(cacheKey, out, 30000);
   return out;
 }
+async function d2RefreshOrderQuotes() {
+  const s=d2Load();const keys=[...new Set([...s.positions,...s.orders].map(x=>x.key))].filter(k=>k!==D2C.key);
+  for(const key of keys){try{
+    const ins=d2Instr(key);if(!ins)continue;
+    if(key==="XAU"||key==="XAG"){
+      const r=await fetch("https://api.gold-api.com/price/"+key,{signal:AbortSignal.timeout(10000)});if(!r.ok)continue;const j=await r.json();if(j.price>0)D2_QUOTES[key]={price:j.price,at:Date.now()};
+    }else if(ins.kraken){const q=await d2FetchTicker(ins.kraken);if(q.last>0)D2_QUOTES[key]={price:q.last,at:Date.now()};}
+  }catch(e){}}
+  if(d2Mounted){d2Tick();d2RefreshPanels();}
+}
 async function d2RenderHeader() {
   const el = document.getElementById("dz-pairhead");
   if (!el) return;
@@ -884,6 +894,8 @@ async function d2Mount() {
     }
     d2Timers.push(setInterval(() => { d2Tick(); d2RenderObTrades(); d2RefreshPanels(); d2LiveTick(); }, 5000));
     d2Timers.push(setInterval(d2RenderHeader, 60000));
+    d2RefreshOrderQuotes();
+    d2Timers.push(setInterval(d2RefreshOrderQuotes, 60000));
     d2Timers.push(setInterval(d2LoadCandles, 60000));
     d2Timers.push(setInterval(d2RenderMarkets, 15000));
   }
