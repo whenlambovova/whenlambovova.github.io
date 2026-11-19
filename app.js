@@ -507,28 +507,36 @@ function barsHTML() {
 }
 
 const ARTICLES = {
-  "nhan-dinh-mau": {
-    tag: "Tin tức · Nhận định", date: "Ngày 18 tháng 11 năm 2026", title: "Nhận định đầu ngày: cấu trúc cố định",
-    intro: "Đây là khung bài nhận định hằng ngày, dựa trên bản 9/11 đã phát trên kênh. Số liệu hằng ngày được tính lại từ dữ liệu nến; bài này giữ cấu trúc.",
+  "nhan-dinh-19-11": {
+    tag: "Tin tức · Nhận định", date: "Ngày 19 tháng 11 năm 2026", title: "Nhận định đầu ngày 19/11: BTC sát đáy 90 ngày, RSI chạm 22",
+    intro: "Bản nhận định sáng 19/11 dùng số liệu thật: nến ngày BTC đã đóng theo giờ UTC, vàng thế giới cập nhật 08:04, cùng tin trong ngày từ Fed. Chỉ mô tả trạng thái thị trường, không điểm vào, không lệnh, không hứa hướng đi.",
     body: `
-      <h3>Bước 1 — Tách ba thứ riêng biệt</h3>
+      <h3>Giá đã xảy ra</h3>
       <ul>
-        <li>Giá đã xảy ra: nến đã đóng, theo giờ UTC, ghi rõ sàn và khung.</li>
-        <li>Cấu trúc khung lớn: tháng, tuần, ngày xét theo thứ tự, không dùng nến đang chạy thay nến đã đóng.</li>
-        <li>Kịch bản chưa xảy ra: điều kiện xác nhận và điều kiện khiến nhận định không còn phù hợp.</li>
+        <li>BTC/USD đóng nến ngày gần nhất (theo UTC) ở 63.076,38 USD, giảm 2,39% trong 24 giờ qua. Đáy 90 ngày là 62.996,68 USD — giá đóng cửa chỉ còn cách đáy này chưa tới 80 USD.</li>
+        <li>ETH/USD 1.782,74 USD (-1,82%), SOL/USD 73,6 USD (-1,54%) tại thời điểm 08:22 sáng nay.</li>
+        <li>Vàng thế giới XAU/USD giao dịch quanh 3.751,95 USD/oz lúc 08:04, nến ngày đóng ở 3.741,5 USD. Tỷ giá tham khảo USD/VND 25.704.</li>
       </ul>
-      <h3>Bước 2 — Đọc bộ chỉ báo cố định</h3>
+      <h3>Bộ chỉ báo cố định nói gì</h3>
       <ul>
-        <li>MA 20, 50, 65, 200 và EMA 21, 34, 89, 200 trên khung ngày: giá trên hay dưới từng đường, nêu đúng như dữ liệu.</li>
-        <li>Bollinger (21, 2): vị trí so với đường giữa và hai biên.</li>
-        <li>RSI 14: vùng lực, không suy diễn quá mức.</li>
-        <li>Fibonacci từ nhịp gần nhất: đỉnh, đáy, các mức hồi 23,6% và 38,2%.</li>
-        <li>Khối lượng một sàn chỉ là của sàn đó; tăng khối lượng khi giá giảm là sức ép bán, chưa phải phân kỳ.</li>
+        <li>BTC/USD đang nằm dưới cả bốn đường MA: MA 20 ở 72.026,3; MA 50 ở 78.191,78; MA 65 ở 79.239,44; MA 200 ở 72.650,53 USD. Dưới cả bốn đường EMA (21, 34, 89, 200), đường gần nhất là EMA 21 ở 70.898,97 USD.</li>
+        <li>RSI 14 của BTC ở 22,0 — vùng quá bán theo thang thông dụng. Biên dưới Bollinger (21, 2) nằm ở 60.964,5 USD.</li>
+        <li>Vàng thế giới cũng nằm dưới cả bốn đường MA: MA 20 ở 3.935,87; MA 50 ở 4.040,21; MA 65 ở 4.096,95; MA 200 ở 4.244,76 USD. RSI 14 của vàng ở 31,9, sát biên dưới Bollinger ở 3.715,38 USD.</li>
       </ul>
-      <h3>Bước 3 — Vàng thì thêm vàng trong nước</h3>
-      <p>Ngày nào bàn vàng thế giới thì đối chiếu SJC và nhẫn trơn: giá mua, giá bán, chênh lệch mua bán và chênh với thế giới, ghi rõ giờ niêm yết, không ghép hai loại giá thành một câu chuyện.</p>`,
-    takeaway: "Nguyên tắc giữ xuyên suốt: mô tả điều kiện, không hứa hướng đi; không điểm vào, dừng lỗ hay mục tiêu lệnh trong bản tin.",
-    source: `Video mẫu 9/11: <a href="${DAILY_VIEW_VIDEO}">xem trên kênh YouTube</a>.`,
+      <h3>Tin trong ngày cần kể tới</h3>
+      <ul>
+        <li>Rạng sáng 19/11 (giờ Việt Nam), Fed công bố biên bản cuộc họp 27-28/10: phần lớn quan chức vẫn nghiêng về thắt chặt thêm nếu kinh tế đi đúng kịch bản, đồng thời cảnh báo định giá tài sản và đòn bẩy có thể khuếch đại cú sốc. <a href="#/tin/fed-bien-ban-thang-10-cong-bo-2026-11-19">Đọc bản tin đầy đủ</a>.</li>
+        <li>Ngày 18/11, các quỹ ETF Bitcoin bị rút ròng 240 triệu USD và CryptoQuant nhận định thị trường quay lại pha giảm — đây là góc nhìn của một đơn vị phân tích, không phải kết luận.</li>
+        <li>Chiều 18/11, VN-Index mất hơn 23 điểm, xuống sát mốc 1.700 khi khối ngoại bán mạnh ở nhóm ngân hàng lớn.</li>
+      </ul>
+      <h3>Những mức cần theo dõi, không phải điểm vào</h3>
+      <ul>
+        <li>Nếu nến ngày BTC đóng dưới 62.996,68 USD, thị trường sẽ có đáy 90 ngày mới — một dữ kiện, không phải tín hiệu mua hay bán.</li>
+        <li>Phía trên, hình ảnh khung ngày chỉ đổi khi giá đóng cửa vượt lại EMA 21 quanh 70.899 USD, rồi tới cụm MA 200 quanh 72.650 USD. Giữa hai vùng đó là vùng chờ, không phải vùng đoán.</li>
+        <li>Với vàng, biên dưới Bollinger 3.715,38 USD và MA 20 ở 3.935,87 USD là hai mức gần nhất để đối chiếu khi nến ngày đóng.</li>
+      </ul>`,
+    takeaway: "Đúc kết hôm nay: cả BTC lẫn vàng đều đóng nến dưới toàn bộ đường trung bình dài hạn, RSI ở vùng thấp, và giá đang đi sát các đáy 90 ngày. Đó là mô tả trạng thái, không phải lời hứa về hướng đi tiếp theo.",
+    source: "Nguồn số liệu: nến ngày BTC/USD tổng hợp từ CoinGecko; XAU/USD từ Gold API lúc 08:04 19/11/2026; USD/VND từ open.er-api.com; biên bản Fed từ federalreserve.gov. Giờ ghi trong bài là giờ Việt Nam.",
     back: "#/tin-tuc", backLabel: "Quay lại Tin tức mới nhất",
   },
   "flash-crash-2020": {
@@ -708,7 +716,7 @@ const PAGES = {
       <h2 class="section">Bài mới trên trang</h2>
       <p class="section-sub">Mỗi bài kết lại bằng một điều đúc kết, kiểm chứng được trên chart.</p>
       <div class="article-list">
-        <a class="article-item" href="#/bai/nhan-dinh-mau"><span class="idx">01</span><span><span class="tag">Tin tức · Nhận định</span><h3>Nhận định đầu ngày: vàng, BTC, ETH</h3><p>Cấu trúc bản nhận định hằng ngày: giá đã xảy ra, cấu trúc khung lớn, rồi mới tới kịch bản.</p></span></a>
+        <a class="article-item" href="#/bai/nhan-dinh-19-11"><span class="idx">01</span><span><span class="tag">Tin tức · Nhận định</span><h3>Nhận định đầu ngày 19/11: BTC sát đáy 90 ngày, RSI chạm 22</h3><p>Số liệu thật sáng nay: BTC và vàng dưới mọi đường MA, biên bản Fed, ETF bị rút 240 triệu USD.</p></span></a>
         <a class="article-item" href="#/bai/flash-crash-2020"><span class="idx">02</span><span><span class="tag">Kiến thức · Bài học lịch sử</span><h3>12/3/2020: ngày Bitcoin mất gần 39%</h3><p>Đòn bẩy, thanh khoản, và vì sao không có cái đáy nào an toàn cả.</p></span></a>
         <a class="article-item" href="#/bai/ftx-2022"><span class="idx">03</span><span><span class="tag">Kiến thức · Bài học lịch sử</span><h3>FTX sập: khi niềm tin vào sàn là rủi ro lớn nhất</h3><p>Tháng 11/2022, từ bài báo về Alameda tới tờ đơn phá sản.</p></span></a>
       </div>
@@ -751,7 +759,7 @@ const PAGES = {
       <div class="article-list" id="news-auto"><p class="muted">Đang tải tin…</p></div>
       <p class="label" style="margin-top:18px">Bài nhận định của Vova</p>
       <div class="article-list">
-        <a class="article-item" href="#/bai/nhan-dinh-mau"><span class="idx">01</span><span><span class="tag">Nhận định · Khung hằng ngày</span><h3>Nhận định đầu ngày: vàng, BTC, ETH</h3><p>Khung nhận định mỗi sáng, dựng theo bản 9/11 trên kênh.</p></span></a>
+        <a class="article-item" href="#/bai/nhan-dinh-19-11"><span class="idx">01</span><span><span class="tag">Nhận định · Bản sáng 19/11</span><h3>Nhận định đầu ngày 19/11: BTC sát đáy 90 ngày, RSI chạm 22</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
       </div>
     </section>
     ${promoBandHTML()}`,
