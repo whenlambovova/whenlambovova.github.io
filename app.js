@@ -754,7 +754,7 @@ const PAGES = {
     <section class="blk" style="margin-top:40px">
       <p class="label">Thị trường</p>
       <h2 class="section">Tin tức mới nhất</h2>
-      <p class="section-sub">Tin thị trường được viết lại ngắn gọn bằng tiếng Việt, có ghi nguồn. Chỉ để tham khảo, không phải lời khuyên đầu tư.</p>
+      <p class="section-sub">Tin thị trường được viết lại đầy đủ bằng tiếng Việt, giọng When Lambo, đủ bối cảnh và số liệu từ bài gốc, có ghi nguồn. Chỉ để tham khảo, không phải lời khuyên đầu tư.</p>
       <p class="label" style="margin-top:18px">Cập nhật mỗi 30 phút</p>
       <div class="article-list" id="news-auto"><p class="muted">Đang tải tin…</p></div>
       <p class="label" style="margin-top:18px">Bài nhận định của Vova</p>
