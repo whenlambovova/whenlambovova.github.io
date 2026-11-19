@@ -523,6 +523,7 @@ function barsHTML() {
 
 const ARTICLES = {
   "nhan-dinh-19-11": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg", credit: "https://commons.wikimedia.org/wiki/File:Physical_Bitcoin_by_Mike_Cauldwell_(Casascius).jpg",
     tag: "Tin tức · Nhận định", date: "Ngày 19 tháng 11 năm 2026", title: "Nhận định đầu ngày 19/11: BTC sát đáy 90 ngày, RSI chạm 22",
     intro: "Bản nhận định sáng 19/11 dùng số liệu thật: nến ngày BTC đã đóng theo giờ UTC, vàng thế giới cập nhật 08:04, cùng tin trong ngày từ Fed. Chỉ mô tả trạng thái thị trường, không điểm vào, không lệnh, không hứa hướng đi.",
     body: `
@@ -555,6 +556,7 @@ const ARTICLES = {
     back: "#/tin-tuc", backLabel: "Quay lại Tin tức mới nhất",
   },
   "flash-crash-2020": {
+    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg", credit: "https://commons.wikimedia.org/wiki/File:Bitcoin_on_Laptop_Keyboard.jpg",
     tag: "Kiến thức · Bài học lịch sử", date: "Ngày 18 tháng 11 năm 2026", title: "12/3/2020: ngày Bitcoin mất gần 39%",
     intro: "Ngày 12/3/2020, khi hoảng loạn COVID-19 quét qua mọi thị trường, Bitcoin trên Coinbase rơi từ vùng khoảng 7.900 USD xuống đáy trong ngày quanh 3.850 USD, tức mất gần 39% trong cùng một ngày. Đây là dữ liệu nến thật của một sàn, không phải con số minh họa.",
     body: `
@@ -570,6 +572,7 @@ const ARTICLES = {
     back: "#/kien-thuc", backLabel: "Quay lại Kiến thức",
   },
   "ftx-2022": {
+    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Sam_Bankman-Fried.png/1280px-Sam_Bankman-Fried.png", credit: "https://commons.wikimedia.org/wiki/File:Sam_Bankman-Fried.png", captext: "Sam Bankman-Fried, nhà sáng lập FTX, tại hội nghị Bitcoin 2021",
     tag: "Kiến thức · Bài học lịch sử", date: "Ngày 18 tháng 11 năm 2026", title: "FTX sập: khi niềm tin vào sàn là rủi ro lớn nhất",
     intro: "Đầu tháng 11/2022, một bài báo về bảng cân đối của Alameda Research làm dấy nghi vấn về sàn FTX. Trong vài ngày, token FTT rơi từ vùng khoảng 22 USD xuống quanh 1,5 USD, sàn đông cứng rút tiền, và ngày 11/11/2022 FTX nộp đơn phá sản. Các báo cáo công khai sau đó chỉ ra khoảng thiếu hụt lên tới hàng tỷ USD của tiền khách hàng.",
     body: `
@@ -584,6 +587,7 @@ const ARTICLES = {
     back: "#/kien-thuc", backLabel: "Quay lại Kiến thức",
   },
   "btc-2021-05": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/2014_Pure_Gold_Physical_Bitcoin_China_Mint.jpg", credit: "https://commons.wikimedia.org/wiki/File:2014_Pure_Gold_Physical_Bitcoin_China_Mint.jpg",
     tag: "Kiến thức · Bài học lịch sử", date: "Ngày 18 tháng 11 năm 2026", title: "19/5/2021: Bitcoin rơi mạnh sau một đợt tăng nóng",
     intro: "Giữa tháng 5/2021, sau nhiều tháng tăng mạnh, Bitcoin giảm sâu chỉ trong vài ngày, kèm làn sóng thanh lý lệnh đòn bẩy trên các sàn phái sinh. Giá có lúc chạm vùng quanh 30.000 USD từ vùng trên 50.000 USD đầu tháng.",
     body: `
@@ -598,6 +602,7 @@ const ARTICLES = {
     back: "#/kien-thuc", backLabel: "Quay lại Kiến thức",
   },
   "luna-2022": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Do_Kwon.png", credit: "https://commons.wikimedia.org/wiki/File:Do_Kwon.png", captext: "Do Kwon, nhà sáng lập Terra",
     tag: "Kiến thức · Bài học lịch sử", date: "Ngày 18 tháng 11 năm 2026", title: "LUNA và UST 5/2022: khi stablecoin mất neo",
     intro: "Tuần 9 đến 12 tháng 5 năm 2022, UST, stablecoin thuật toán của hệ sinh thái Terra, mất mốc 1 USD, kéo token LUNA từ vùng hàng chục USD về gần bằng không trong vài ngày.",
     body: `
@@ -612,6 +617,7 @@ const ARTICLES = {
     back: "#/kien-thuc", backLabel: "Quay lại Kiến thức",
   },
   "don-bay-ky-quy": {
+    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Bloomberg_Terminal_and_keyboard.JPG/1280px-Bloomberg_Terminal_and_keyboard.JPG", credit: "https://commons.wikimedia.org/wiki/File:Bloomberg_Terminal_and_keyboard.JPG", captext: "Màn hình giao dịch Bloomberg Terminal",
     tag: "Kiến thức · Khái niệm cơ bản", date: "Ngày 18 tháng 11 năm 2026", title: "Đòn bẩy và ký quỹ: vì sao tài khoản có thể về 0 nhanh",
     intro: "Đòn bẩy cho phép mở vị thế lớn hơn số vốn của mình. Phần vốn bỏ ra gọi là ký quỹ. Cả lãi và lỗ đều tính trên vị thế lớn, nên lỗ cũng phóng đại như lãi.",
     body: `
@@ -626,6 +632,7 @@ const ARTICLES = {
     back: "#/kien-thuc", backLabel: "Quay lại Kiến thức",
   },
   "quan-tri-rui-ro": {
+    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Frankfurt_am_Main%2C_Skulptur_-Bulle_%26_B%C3%A4r-_--_2015_--_6760.jpg/1280px-Frankfurt_am_Main%2C_Skulptur_-Bulle_%26_B%C3%A4r-_--_2015_--_6760.jpg", credit: "https://commons.wikimedia.org/wiki/File:Frankfurt_am_Main,_Skulptur_-Bulle_%26_B%C3%A4r-_--_2015_--_6760.jpg", captext: "Tượng Bull & Bär trước sở chứng khoán Frankfurt",
     tag: "Kiến thức · Khái niệm cơ bản", date: "Ngày 18 tháng 11 năm 2026", title: "Quản trị rủi ro: quyết định mức lỗ trước khi vào lệnh",
     intro: "Người mới thường nghĩ về lãi trước. Người giữ được vốn lâu thường nghĩ về mức lỗ chấp nhận được trước. Mức lỗ đó quyết định khối lượng, không phải ngược lại.",
     body: `
@@ -650,6 +657,7 @@ function articleHTML(key) {
       <h2 class="title">${a.title}</h2>
       <p class="byline">When Lambo Vova · ${a.date}</p>
       <p class="intro">${a.intro}</p>
+      ${a.image ? `<figure class="leadfig"><img class="lead" src="${esc(a.image)}" alt="">${a.credit ? `<figcaption>${a.captext ? esc(a.captext) + " · " : ""}Ảnh: <a href="${esc(a.credit)}" target="_blank" rel="noopener">${esc(a.creditlabel || "Wikimedia Commons")}</a></figcaption>` : ""}</figure>` : ""}
       ${a.body}
       <div class="takeaway">${a.takeaway}</div>
       <p class="source">${a.source}</p>
@@ -775,7 +783,7 @@ const PAGES = {
       <div class="article-list" id="news-auto"><p class="muted">Đang tải tin…</p></div>
       <p class="label" style="margin-top:18px">Bài nhận định của Vova</p>
       <div class="article-list">
-        <a class="article-item has-thumb" href="#/bai/nhan-dinh-19-11"><span class="idx">01</span><span><span class="tag">Nhận định · Bản sáng 19/11</span><h3>Nhận định đầu ngày 19/11: BTC sát đáy 90 ngày, RSI chạm 22</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/nhan-dinh-19-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Nhận định · Bản sáng 19/11</span><h3>Nhận định đầu ngày 19/11: BTC sát đáy 90 ngày, RSI chạm 22</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
       </div>
     </section>
     ${promoBandHTML()}`,
@@ -785,12 +793,12 @@ const PAGES = {
       <h2 class="section">Bài học từ lịch sử</h2>
       <p class="section-sub">Những cú sập thật, số liệu thật, nguồn ghi rõ. Đọc để nhớ, vì thị trường không có nút hoàn tác.</p>
       <div class="article-list">
-        <a class="article-item has-thumb" href="#/bai/flash-crash-2020"><span class="idx">01</span><span><span class="tag">Bài học lịch sử</span><h3>12/3/2020: ngày Bitcoin mất gần 39%</h3><p>Đòn bẩy, thanh khoản, và vì sao không có cái đáy nào an toàn cả.</p></span></a>
-        <a class="article-item has-thumb" href="#/bai/ftx-2022"><span class="idx">02</span><span><span class="tag">Bài học lịch sử</span><h3>FTX sập: khi niềm tin vào sàn là rủi ro lớn nhất</h3><p>Tháng 11/2022, từ bài báo về Alameda tới tờ đơn phá sản.</p></span></a>
-        <a class="article-item" href="#/bai/btc-2021-05"><span class="idx">03</span><span><span class="tag">Bài học lịch sử</span><h3>19/5/2021: Bitcoin rơi mạnh sau đợt tăng nóng</h3><p>Thanh lý dây chuyền và tâm lý đám đông.</p></span></a>
-        <a class="article-item" href="#/bai/luna-2022"><span class="idx">04</span><span><span class="tag">Bài học lịch sử</span><h3>LUNA và UST 5/2022: khi stablecoin mất neo</h3><p>Lãi suất cao bất thường đến từ đâu?</p></span></a>
-        <a class="article-item" href="#/bai/don-bay-ky-quy"><span class="idx">05</span><span><span class="tag">Khái niệm cơ bản</span><h3>Đòn bẩy và ký quỹ</h3><p>Vì sao tài khoản có thể về 0 nhanh.</p></span></a>
-        <a class="article-item" href="#/bai/quan-tri-rui-ro"><span class="idx">06</span><span><span class="tag">Khái niệm cơ bản</span><h3>Quản trị rủi ro trước khi vào lệnh</h3><p>Mức lỗ quyết định khối lượng, không ngược lại.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/flash-crash-2020"><span class="idx">01</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg" alt="" loading="lazy"><span><span class="tag">Bài học lịch sử</span><h3>12/3/2020: ngày Bitcoin mất gần 39%</h3><p>Đòn bẩy, thanh khoản, và vì sao không có cái đáy nào an toàn cả.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/ftx-2022"><span class="idx">02</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Sam_Bankman-Fried.png/1280px-Sam_Bankman-Fried.png" alt="" loading="lazy"><span><span class="tag">Bài học lịch sử</span><h3>FTX sập: khi niềm tin vào sàn là rủi ro lớn nhất</h3><p>Tháng 11/2022, từ bài báo về Alameda tới tờ đơn phá sản.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/btc-2021-05"><span class="idx">03</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/d/d4/2014_Pure_Gold_Physical_Bitcoin_China_Mint.jpg" alt="" loading="lazy"><span><span class="tag">Bài học lịch sử</span><h3>19/5/2021: Bitcoin rơi mạnh sau đợt tăng nóng</h3><p>Thanh lý dây chuyền và tâm lý đám đông.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/luna-2022"><span class="idx">04</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Do_Kwon.png" alt="" loading="lazy"><span><span class="tag">Bài học lịch sử</span><h3>LUNA và UST 5/2022: khi stablecoin mất neo</h3><p>Lãi suất cao bất thường đến từ đâu?</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/don-bay-ky-quy"><span class="idx">05</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Bloomberg_Terminal_and_keyboard.JPG/1280px-Bloomberg_Terminal_and_keyboard.JPG" alt="" loading="lazy"><span><span class="tag">Khái niệm cơ bản</span><h3>Đòn bẩy và ký quỹ</h3><p>Vì sao tài khoản có thể về 0 nhanh.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/quan-tri-rui-ro"><span class="idx">06</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Frankfurt_am_Main%2C_Skulptur_-Bulle_%26_B%C3%A4r-_--_2015_--_6760.jpg/1280px-Frankfurt_am_Main%2C_Skulptur_-Bulle_%26_B%C3%A4r-_--_2015_--_6760.jpg" alt="" loading="lazy"><span><span class="tag">Khái niệm cơ bản</span><h3>Quản trị rủi ro trước khi vào lệnh</h3><p>Mức lỗ quyết định khối lượng, không ngược lại.</p></span></a>
       </div>
       <h2 class="section" style="margin-top:44px">Từ điển nhanh</h2>
       <p class="section-sub">Những từ hay gặp trong video và bài viết. Nội dung giáo dục, không phải khuyến nghị đầu tư.</p>
