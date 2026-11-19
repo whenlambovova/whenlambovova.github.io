@@ -1,6 +1,6 @@
 /* ===== When Lambo Sàn ảo v2: dashboard giao dịch demo (tiền ảo, lưu trình duyệt) ===== */
 (function () {
-const style=document.createElement("style"); style.textContent="/* ===== S\u00e0n \u1ea3o v2 dashboard ===== */\n.dz-shell { margin-top: 1rem; }\n.dz-msg { display: none; margin: 0.5rem 0; padding: 0.6rem 0.9rem; border-radius: 8px; background: rgba(201,162,39,0.15); border: 1px solid #c9a227; font-size: 0.9rem; }\n.dz-msg.show { display: block; }\n.dz-pairhead { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; padding: 0.7rem 1rem; border: 1px solid var(--hairline, #262626); border-radius: 10px; background: var(--paper-2, #161616); }\n.dz-pairname { display: flex; flex-direction: column; }\n.dz-pairname strong { font-size: 1.15rem; color: var(--accent, #c9a227); }\n.dz-pairname small { color: var(--muted, #888); }\n.dz-lastprice { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }\n.dz-lastprice.up, .up { color: #26a69a; }\n.dz-lastprice.dn, .dn { color: #ef5350; }\n.dz-stat { display: flex; flex-direction: column; font-size: 0.82rem; }\n.dz-stat b { color: var(--muted, #888); font-weight: 500; }\n.dz-stat span { font-variant-numeric: tabular-nums; }\n.dz-grid { display: grid; grid-template-columns: 220px 1fr 250px; gap: 0.8rem; margin-top: 0.8rem; }\n.dz-col h3 { font-size: 0.85rem; margin: 0 0 0.4rem; color: var(--muted, #888); }\n.dz-col h3 small { font-weight: 400; opacity: 0.8; }\n.dz-toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }\n.dz-toolbar > div { display: flex; gap: 0.25rem; }\n.dz-tf, .dz-ind, .dz-tool, #dz-clear-draw, .dz-ftab, .dz-tab { background: transparent; border: 1px solid var(--hairline, #2c2c2c); color: var(--ink, #ddd); border-radius: 6px; padding: 0.22rem 0.55rem; font-size: 0.78rem; cursor: pointer; }\n.dz-tf.on, .dz-ind.on, .dz-tool.on, .dz-ftab.on, .dz-tab.on { border-color: var(--accent, #c9a227); color: var(--accent, #c9a227); }\n.dz-chart-wrap { border: 1px solid var(--hairline, #262626); border-radius: 10px; overflow: hidden; background: var(--paper-2, #161616); }\n#dz-chart { position: relative; }\n.dz-pane { border-top: 1px solid var(--hairline, #262626); }\n.dz-dim { color: var(--muted, #888); font-size: 0.82rem; }\n.dz-ob-head, .dz-ob-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.3rem; font-size: 0.78rem; padding: 0.14rem 0.4rem; font-variant-numeric: tabular-nums; }\n.dz-ob-head { color: var(--muted, #888); border-bottom: 1px solid var(--hairline, #262626); margin-bottom: 2px; }\n.dz-ob-row.ask span:first-child { color: #ef5350; }\n.dz-ob-row.bid span:first-child { color: #26a69a; }\n.dz-ob-mid { text-align: center; font-weight: 700; padding: 0.3rem 0; border-block: 1px solid var(--hairline, #262626); margin-block: 2px; }\n.dz-mkrow { width: 100%; background: transparent; border: 0; cursor: pointer; text-align: left; color: inherit; border-radius: 4px; }\n.dz-mkrow:hover { background: rgba(201,162,39,0.08); }\n.dz-mkrow.cur { background: rgba(201,162,39,0.14); outline: 1px solid var(--accent, #c9a227); }\n.dz-mksearch input { width: 100%; margin-bottom: 0.4rem; }\n.dz-form { border: 1px solid var(--hairline, #262626); border-radius: 10px; padding: 0.8rem; margin-top: 0.7rem; background: var(--paper-2, #161616); }\n.dz-side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }\n.dz-buy, .dz-sell { border-radius: 6px; padding: 0.5rem; font-weight: 700; cursor: pointer; border: 1px solid var(--hairline, #2c2c2c); background: transparent; color: var(--ink, #ddd); }\n.dz-buy.on { background: #26a69a; border-color: #26a69a; color: #fff; }\n.dz-sell.on { background: #ef5350; border-color: #ef5350; color: #fff; }\n.dz-ftabs { display: flex; gap: 0.3rem; margin: 0.55rem 0; }\n.dz-ffields { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.55rem; align-items: end; }\n.dz-ffields label { display: flex; flex-direction: column; font-size: 0.76rem; color: var(--muted, #888); gap: 0.2rem; }\n.dz-ffields input, .dz-ffields select, .dz-mksearch input { background: var(--paper, #101010); border: 1px solid var(--hairline, #2c2c2c); color: var(--ink, #ddd); border-radius: 6px; padding: 0.4rem 0.5rem; font-size: 0.85rem; }\n.dz-slider { grid-column: 1 / -1; display: flex; align-items: center; gap: 0.6rem; }\n.dz-slider input { flex: 1; accent-color: var(--accent, #c9a227); }\n.dz-slider span { font-size: 0.8rem; min-width: 3ch; }\n.dz-tpsl { grid-column: 1 / -1; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }\n.dz-tpsl input[type=\"number\"] { width: 130px; }\n.dz-chk { flex-direction: row !important; align-items: center; gap: 0.3rem !important; }\n#dz-submit { grid-column: 1 / -1; padding: 0.6rem; font-size: 0.95rem; }\n.dz-bottom { margin-top: 0.9rem; border: 1px solid var(--hairline, #262626); border-radius: 10px; background: var(--paper-2, #161616); }\n.dz-tabs { display: flex; gap: 0.3rem; padding: 0.5rem 0.6rem 0; flex-wrap: wrap; }\n.dz-twrap { overflow-x: auto; }\n.dz-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }\n.dz-table th, .dz-table td { padding: 0.45rem 0.6rem; text-align: left; border-bottom: 1px solid var(--hairline, #262626); font-variant-numeric: tabular-nums; white-space: nowrap; }\n.dz-table th { color: var(--muted, #888); font-weight: 500; }\n.dz-close { background: transparent; border: 1px solid var(--hairline, #2c2c2c); color: var(--ink, #ddd); border-radius: 5px; padding: 0.15rem 0.5rem; cursor: pointer; font-size: 0.76rem; }\n.dz-close:hover { border-color: var(--accent, #c9a227); color: var(--accent, #c9a227); }\n.dz-summary { display: flex; gap: 1.4rem; flex-wrap: wrap; margin-top: 0.8rem; padding: 0.7rem 1rem; border: 1px solid var(--hairline, #262626); border-radius: 10px; font-size: 0.9rem; background: var(--paper-2, #161616); align-items: center; }\n.dz-draw-canvas { position: absolute; inset: 0; pointer-events: none; }\n@media (max-width: 980px) {\n  .dz-grid { grid-template-columns: 1fr; }\n  .dz-col-ob, .dz-col-mk { order: 2; }\n  .dz-col-mid { order: 1; }\n}\n"; style.textContent += "body[data-page=demo] #app{max-width:1800px;margin:auto;padding:0 18px 32px}body[data-page=demo] .hero{display:block;padding:18px 0 0;margin:0}.dz-col-mid{min-width:0}.dz-chart-wrap{width:100%}.dz-shell{font-weight:400}.dz-col-mk h3{margin-top:18px}.dz-pairhead{min-height:68px}.dz-inds{flex-wrap:wrap}"; document.head.appendChild(style);
+const style=document.createElement("style"); style.textContent="/* ===== S\u00e0n \u1ea3o v2 dashboard ===== */\n.dz-shell { margin-top: 1rem; }\n.dz-msg { display: none; margin: 0.5rem 0; padding: 0.6rem 0.9rem; border-radius: 8px; background: rgba(201,162,39,0.15); border: 1px solid #c9a227; font-size: 0.9rem; }\n.dz-msg.show { display: block; }\n.dz-pairhead { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; padding: 0.7rem 1rem; border: 1px solid var(--hairline, #262626); border-radius: 10px; background: var(--paper-2, #161616); }\n.dz-pairname { display: flex; flex-direction: column; }\n.dz-pairname strong { font-size: 1.15rem; color: var(--accent, #c9a227); }\n.dz-pairname small { color: var(--muted, #888); }\n.dz-lastprice { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }\n.dz-lastprice.up, .up { color: #26a69a; }\n.dz-lastprice.dn, .dn { color: #ef5350; }\n.dz-stat { display: flex; flex-direction: column; font-size: 0.82rem; }\n.dz-stat b { color: var(--muted, #888); font-weight: 500; }\n.dz-stat span { font-variant-numeric: tabular-nums; }\n.dz-grid { display: grid; grid-template-columns: 220px 1fr 250px; gap: 0.8rem; margin-top: 0.8rem; }\n.dz-col h3 { font-size: 0.85rem; margin: 0 0 0.4rem; color: var(--muted, #888); }\n.dz-col h3 small { font-weight: 400; opacity: 0.8; }\n.dz-toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }\n.dz-toolbar > div { display: flex; gap: 0.25rem; }\n.dz-tf, .dz-ind, .dz-tool, #dz-clear-draw, .dz-ftab, .dz-tab { background: transparent; border: 1px solid var(--hairline, #2c2c2c); color: var(--ink, #ddd); border-radius: 6px; padding: 0.22rem 0.55rem; font-size: 0.78rem; cursor: pointer; }\n.dz-tf.on, .dz-ind.on, .dz-tool.on, .dz-ftab.on, .dz-tab.on { border-color: var(--accent, #c9a227); color: var(--accent, #c9a227); }\n.dz-chart-wrap { border: 1px solid var(--hairline, #262626); border-radius: 10px; overflow: hidden; background: var(--paper-2, #161616); }\n#dz-chart { position: relative; }\n.dz-pane { border-top: 1px solid var(--hairline, #262626); }\n.dz-dim { color: var(--muted, #888); font-size: 0.82rem; }\n.dz-ob-head, .dz-ob-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.3rem; font-size: 0.78rem; padding: 0.14rem 0.4rem; font-variant-numeric: tabular-nums; }\n.dz-ob-head { color: var(--muted, #888); border-bottom: 1px solid var(--hairline, #262626); margin-bottom: 2px; }\n.dz-ob-row.ask span:first-child { color: #ef5350; }\n.dz-ob-row.bid span:first-child { color: #26a69a; }\n.dz-ob-mid { text-align: center; font-weight: 700; padding: 0.3rem 0; border-block: 1px solid var(--hairline, #262626); margin-block: 2px; }\n.dz-mkrow { width: 100%; background: transparent; border: 0; cursor: pointer; text-align: left; color: inherit; border-radius: 4px; }\n.dz-mkrow:hover { background: rgba(201,162,39,0.08); }\n.dz-mkrow.cur { background: rgba(201,162,39,0.14); outline: 1px solid var(--accent, #c9a227); }\n.dz-mksearch input { width: 100%; margin-bottom: 0.4rem; }\n.dz-form { border: 1px solid var(--hairline, #262626); border-radius: 10px; padding: 0.8rem; margin-top: 0.7rem; background: var(--paper-2, #161616); }\n.dz-side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }\n.dz-buy, .dz-sell { border-radius: 6px; padding: 0.5rem; font-weight: 700; cursor: pointer; border: 1px solid var(--hairline, #2c2c2c); background: transparent; color: var(--ink, #ddd); }\n.dz-buy.on { background: #26a69a; border-color: #26a69a; color: #fff; }\n.dz-sell.on { background: #ef5350; border-color: #ef5350; color: #fff; }\n.dz-ftabs { display: flex; gap: 0.3rem; margin: 0.55rem 0; }\n.dz-ffields { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.55rem; align-items: end; }\n.dz-ffields label { display: flex; flex-direction: column; font-size: 0.76rem; color: var(--muted, #888); gap: 0.2rem; }\n.dz-ffields input, .dz-ffields select, .dz-mksearch input { background: var(--paper, #101010); border: 1px solid var(--hairline, #2c2c2c); color: var(--ink, #ddd); border-radius: 6px; padding: 0.4rem 0.5rem; font-size: 0.85rem; }\n.dz-slider { grid-column: 1 / -1; display: flex; align-items: center; gap: 0.6rem; }\n.dz-slider input { flex: 1; accent-color: var(--accent, #c9a227); }\n.dz-slider span { font-size: 0.8rem; min-width: 3ch; }\n.dz-tpsl { grid-column: 1 / -1; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }\n.dz-tpsl input[type=\"number\"] { width: 130px; }\n.dz-chk { flex-direction: row !important; align-items: center; gap: 0.3rem !important; }\n#dz-submit { grid-column: 1 / -1; padding: 0.6rem; font-size: 0.95rem; }\n.dz-bottom { margin-top: 0.9rem; border: 1px solid var(--hairline, #262626); border-radius: 10px; background: var(--paper-2, #161616); }\n.dz-tabs { display: flex; gap: 0.3rem; padding: 0.5rem 0.6rem 0; flex-wrap: wrap; }\n.dz-twrap { overflow-x: auto; }\n.dz-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }\n.dz-table th, .dz-table td { padding: 0.45rem 0.6rem; text-align: left; border-bottom: 1px solid var(--hairline, #262626); font-variant-numeric: tabular-nums; white-space: nowrap; }\n.dz-table th { color: var(--muted, #888); font-weight: 500; }\n.dz-close { background: transparent; border: 1px solid var(--hairline, #2c2c2c); color: var(--ink, #ddd); border-radius: 5px; padding: 0.15rem 0.5rem; cursor: pointer; font-size: 0.76rem; }\n.dz-close:hover { border-color: var(--accent, #c9a227); color: var(--accent, #c9a227); }\n.dz-summary { display: flex; gap: 1.4rem; flex-wrap: wrap; margin-top: 0.8rem; padding: 0.7rem 1rem; border: 1px solid var(--hairline, #262626); border-radius: 10px; font-size: 0.9rem; background: var(--paper-2, #161616); align-items: center; }\n.dz-draw-canvas { position: absolute; inset: 0; pointer-events: none; }\n@media (max-width: 980px) {\n  .dz-grid { grid-template-columns: 1fr; }\n  .dz-col-ob, .dz-col-mk { order: 2; }\n  .dz-col-mid { order: 1; }\n}\n"; style.textContent += "body[data-page=demo] #app{max-width:1800px;margin:auto;padding:0 18px 32px}body[data-page=demo] .hero{display:block;padding:18px 0 0;margin:0}.dz-col-mid{min-width:0}.dz-chart-wrap{width:100%}.dz-shell{font-weight:400}.dz-col-mk h3{margin-top:18px}.dz-pairhead{min-height:68px}.dz-inds{flex-wrap:wrap}"; style.textContent+=".dz-pane{position:relative}.dz-pane:after{position:absolute;left:10px;top:4px;content:attr(aria-label);font-size:10px;color:var(--muted);pointer-events:none;z-index:2}";document.head.appendChild(style);
 const D2_KEY = "wlv_demo_v2";
 const D2_START = 10000;
 const D2_QUOTES = {};
@@ -46,8 +46,9 @@ const D2_INSTR = [
 ];
 function d2Instr(key) { return D2_INSTR.find((i) => i.key === key); }
 function d2Price(key) {
-  if (key === "XAU") return goldSpot ? goldSpot.price : null;
+  if (key === "XAU") return goldSpot && Date.now()-goldSpot.at<180000 ? goldSpot.price : null;
   if (D2_QUOTES[key] && Date.now()-D2_QUOTES[key].at<120000) return D2_QUOTES[key].price;
+  if (typeof lastUpdate !== "undefined" && lastUpdate && Date.now()-new Date(lastUpdate).getTime()>180000) return null;
   if (key === "XAG") return goldXag || null;
   const t = (tickers || []).find((x) => x.id === key);
   return t ? t.price : null;
@@ -125,7 +126,7 @@ function d2Tick() {
   for (let i = s.orders.length - 1; i >= 0; i--) {
     const o = s.orders[i];
     const cur = d2Price(o.key);
-    if (!cur) continue;
+    if (!cur || !Number.isFinite(cur)) continue;
     const hit = d2TriggerHit(o, cur);
     if (hit) {
       if (o.margin>s.cash) continue;
@@ -139,7 +140,7 @@ function d2Tick() {
   for (let i = s.positions.length - 1; i >= 0; i--) {
     const p = s.positions[i];
     const cur = d2Price(p.key);
-    if (!cur) continue;
+    if (!cur || !Number.isFinite(cur)) continue;
     const pnl = d2PosPnl(p, cur);
     if (pnl <= -p.margin * 0.95) { d2ClosePosition(p.id, "Thanh lý (chạm giới hạn ký quỹ)"); d2Msg("Vị thế " + p.pair + " bị thanh lý."); changed = true; continue; }
     if (p.tp && ((p.side === "long" && cur >= p.tp) || (p.side === "short" && cur <= p.tp))) { d2ClosePosition(p.id, "Chốt lời TP"); d2Msg("Vị thế " + p.pair + " chạm TP."); changed = true; continue; }
@@ -185,7 +186,7 @@ async function d2FetchKlines(krakenPair, minutes) {
 }
 /* Tính toán chỉ báo */
 function d2SMA(c, n) { const out = []; let sum = 0; for (let i = 0; i < c.length; i++) { sum += c[i]; if (i >= n) sum -= c[i - n]; out.push(i >= n - 1 ? sum / n : null); } return out; }
-function d2EMA(c, n) { const out = []; const k = 2 / (n + 1); let e = null; for (let i = 0; i < c.length; i++) { e = e === null ? c[i] : c[i] * k + e * (1 - k); out.push(i >= n - 1 ? e : null); } return out; }
+function d2EMA(c,n) { const out=[]; let e=0; const k=2/(n+1); for(let i=0;i<c.length;i++){if(i<n){e+=c[i]/n;out.push(i===n-1?e:null);}else{e=c[i]*k+e*(1-k);out.push(e);}}return out; }
 function d2BB(c, n, mult) {
   const mid = d2SMA(c, n), up = [], lo = [];
   for (let i = 0; i < c.length; i++) {
@@ -199,8 +200,8 @@ function d2RSI(c, n) {
   const out = new Array(c.length).fill(null); let g = 0, l = 0;
   for (let i = 1; i < c.length; i++) {
     const d = c[i] - c[i - 1], up = Math.max(d, 0), dn = Math.max(-d, 0);
-    if (i <= n) { g += up / n; l += dn / n; if (i === n) out[i] = 100 - 100 / (1 + (l === 0 ? 100 : g / l)); }
-    else { g = (g * (n - 1) + up) / n; l = (l * (n - 1) + dn) / n; out[i] = 100 - 100 / (1 + (l === 0 ? 100 : g / l)); }
+    if (i <= n) { g += up / n; l += dn / n; if (i === n) out[i] = 100 - 100 / (1 + (l === 0 ? Infinity : g / l)); }
+    else { g = (g * (n - 1) + up) / n; l = (l * (n - 1) + dn) / n; out[i] = 100 - 100 / (1 + (l === 0 ? Infinity : g / l)); }
   }
   return out;
 }
@@ -276,7 +277,7 @@ function d2BuildCharts() {
   const addPane = (id, h) => {
     const host = document.getElementById("dz-panes");
     const el = document.createElement("div");
-    el.className = "dz-pane"; el.id = "dz-pane-" + id;
+    el.className = "dz-pane"; el.id = "dz-pane-" + id;el.setAttribute("aria-label",id.toUpperCase());
     host.appendChild(el);
     const ch = LightweightCharts.createChart(el, Object.assign(d2ChartOpts(h), { rightPriceScale: { borderColor: t.border } }));
     D2C.panes.push({ id, chart: ch, el });
@@ -533,14 +534,16 @@ async function d2FetchTicker(krakenPair) {
 async function d2RenderHeader() {
   const el = document.getElementById("dz-pairhead");
   if (!el) return;
-  const instr = d2Instr(D2C.key);
+  const headerKey = D2C.key;
+  const instr = d2Instr(headerKey);
   let p = d2Price(D2C.key);
   let chg = d2Chg(D2C.key), hi = null, lo = null, vol = null;
   if (instr.kraken) {
     try {
       const tk = await d2FetchTicker(instr.kraken);
+      if(headerKey!==D2C.key)return;
       hi = tk.high; lo = tk.low; vol = tk.vol;
-      if(D2C.key!=="XAU") { D2_QUOTES[D2C.key]={price:tk.last,at:Date.now()}; p=tk.last; }
+      if(headerKey!=="XAU") { D2_QUOTES[headerKey]={price:tk.last,at:Date.now()}; p=tk.last; }
     } catch (e) {}
   }
   const cls = chg === null || chg === undefined ? "" : chg >= 0 ? "up" : "dn";
@@ -649,7 +652,7 @@ function d2FormHTML() {
   const priceFields =
     (D2F.type === "limit" ? '<label>Giá limit<input id="dz-f-price" type="number" step="any" value="' + p + '"></label>' : "") +
     (D2F.type === "stop" ? '<label>Giá kích hoạt<input id="dz-f-price" type="number" step="any" placeholder="Giá stop"></label><label>Giá limit sau kích hoạt<input id="dz-f-limit" type="number" step="any"></label>' : "") +
-    (D2F.type === "oco" ? '<label>Giá chốt lời (limit)<input id="dz-f-price" type="number" step="any"></label><label>Giá cắt lỗ (stop)<input id="dz-f-price2" type="number" step="any"></label><label>Giá limit nhánh stop<input id="dz-f-limit" type="number" step="any"></label>' : "");
+    (D2F.type === "oco" ? '<label>Giá limit<input id="dz-f-price" type="number" step="any"></label><label>Giá kích hoạt stop<input id="dz-f-price2" type="number" step="any"></label><label>Giá limit nhánh stop<input id="dz-f-limit" type="number" step="any"></label>' : "");
   return (
     '<div class="dz-form">' +
     '<div class="dz-side">' +
@@ -724,7 +727,7 @@ function d2Submit() {
         d2PlaceOrder(Object.assign(base, { type: "stop", price: p1, limitPrice }));
       }
     }
-    d2Msg("Đã đặt lệnh " + D2F.type.toUpperCase() + " " + instr.pair + ". Sẽ khớp khi giá chạm mức đặt.");
+    d2Msg("Đã đặt lệnh " + (D2F.type === "stop" ? "STOP LIMIT" : D2F.type.toUpperCase()) + " " + instr.pair + ". Sẽ khớp khi giá chạm mức đặt.");
   }
   d2RefreshPanels();
 }
@@ -870,6 +873,7 @@ async function d2Mount() {
     d2Timers.push(setInterval(d2RenderMarkets, 15000));
   }
 }
+new MutationObserver(()=>{if(d2Mounted && window.LightweightCharts){d2BuildCharts();d2LoadCandles();}}).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
 window.demoDashMount = d2Mount;
 window.demoDashUnmount = d2Unmount;
 window.demoDashRefresh = () => {if(d2Mounted){d2RenderHeader();d2RenderMarkets();}};
