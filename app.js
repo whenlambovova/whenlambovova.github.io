@@ -900,60 +900,6 @@ if (themeToggle) {
   }));
 }
 
-function route() {
-  const hash = location.hash.replace(/^#\/?/, "");
-  const app = document.getElementById("app");
-  let page = "home";
-  if (hash.startsWith("tin/")) {
-    const id = decodeURIComponent(hash.slice(4));
-    document.body.dataset.page = "tin-tuc"; currentRoute = "news-article"; setActive("tin-tuc"); window.scrollTo(0, 0);
-    const draw = (retried) => {
-      const n = (newsItems || []).find((x) => x.id === id);
-      if (n) { app.innerHTML = newsArticleHTML(n); return; }
-      if (!retried) { app.innerHTML = '<section class="blk" style="margin-top:40px"><p class="muted">Đang tải bài…</p></section>'; loadNews(true).then(() => draw(true)); return; }
-      app.innerHTML = '<section class="blk" style="margin-top:40px"><h2 class="section">Không tìm thấy bài này</h2><p class="section-sub">Bài có thể đã được gỡ hoặc chưa được duyệt.</p><a class="back" href="#/tin-tuc">← Quay lại Tin tức</a></section>';
-    };
-    draw(false);
-    return;
-  }
-  if (hash.startsWith("bai/")) {
-    const key = hash.slice(4);
-    if (ARTICLES[key]) { app.innerHTML = articleHTML(key); page = hash.startsWith("bai/nhan-dinh") ? "tin-tuc" : "kien-thuc"; document.body.dataset.page = page; window.scrollTo(0, 0); setActive(page); currentRoute = page; return; }
-  }
-  if (PAGES[hash]) page = hash;
-  document.body.dataset.page = page;
-  app.innerHTML = PAGES[page]();
-  currentRoute = page;
-  setActive(page);
-  window.scrollTo(0, 0);
-  if (page === "thi-truong") renderChart();
-  if (page === "vang") renderGoldChart();
-  if (page === "fx") renderFx();
-  if (page === "vang") { renderGoldSpot(); renderGoldChart(); }
-  if (page === "tin-tuc") { renderNews(); loadNews(); }
-  if (page === "demo") { demoRenderLive(); loadGold(); }
-}
-
-function setActive(page) {
-  document.querySelectorAll("#nav a").forEach((a) => a.classList.toggle("active", a.dataset.route === page));
-}
-
-window.addEventListener("hashchange", route);
-window.addEventListener("resize", () => { if (currentRoute === "thi-truong") renderChart(); if (currentRoute === "vang") renderGoldChart(); });
-
-const dl = document.getElementById("date-line");
-if (dl) dl.textContent = new Date().toLocaleDateString("vi-VN", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
-
-route();
-loadTickers();
-loadKlines();
-loadGold();
-loadVangVN();
-loadGoldKlines();
-loadFx();
-setInterval(loadTickers, 90000);
-setInterval(loadKlines, 60 * 60 * 1000);
-
 /* ---------- Sàn ảo: tài khoản demo 10.000 USD, tiền ảo, giá trực tiếp ---------- */
 const DEMO_KEY = "wlv_demo_v1";
 const DEMO_START = 10000;
@@ -1110,3 +1056,57 @@ function demoReset() {
   demoMsg("Đã làm lại tài khoản về 10.000 USD ảo.");
   demoRenderLive();
 }
+
+function route() {
+  const hash = location.hash.replace(/^#\/?/, "");
+  const app = document.getElementById("app");
+  let page = "home";
+  if (hash.startsWith("tin/")) {
+    const id = decodeURIComponent(hash.slice(4));
+    document.body.dataset.page = "tin-tuc"; currentRoute = "news-article"; setActive("tin-tuc"); window.scrollTo(0, 0);
+    const draw = (retried) => {
+      const n = (newsItems || []).find((x) => x.id === id);
+      if (n) { app.innerHTML = newsArticleHTML(n); return; }
+      if (!retried) { app.innerHTML = '<section class="blk" style="margin-top:40px"><p class="muted">Đang tải bài…</p></section>'; loadNews(true).then(() => draw(true)); return; }
+      app.innerHTML = '<section class="blk" style="margin-top:40px"><h2 class="section">Không tìm thấy bài này</h2><p class="section-sub">Bài có thể đã được gỡ hoặc chưa được duyệt.</p><a class="back" href="#/tin-tuc">← Quay lại Tin tức</a></section>';
+    };
+    draw(false);
+    return;
+  }
+  if (hash.startsWith("bai/")) {
+    const key = hash.slice(4);
+    if (ARTICLES[key]) { app.innerHTML = articleHTML(key); page = hash.startsWith("bai/nhan-dinh") ? "tin-tuc" : "kien-thuc"; document.body.dataset.page = page; window.scrollTo(0, 0); setActive(page); currentRoute = page; return; }
+  }
+  if (PAGES[hash]) page = hash;
+  document.body.dataset.page = page;
+  app.innerHTML = PAGES[page]();
+  currentRoute = page;
+  setActive(page);
+  window.scrollTo(0, 0);
+  if (page === "thi-truong") renderChart();
+  if (page === "vang") renderGoldChart();
+  if (page === "fx") renderFx();
+  if (page === "vang") { renderGoldSpot(); renderGoldChart(); }
+  if (page === "tin-tuc") { renderNews(); loadNews(); }
+  if (page === "demo") { demoRenderLive(); loadGold(); }
+}
+
+function setActive(page) {
+  document.querySelectorAll("#nav a").forEach((a) => a.classList.toggle("active", a.dataset.route === page));
+}
+
+window.addEventListener("hashchange", route);
+window.addEventListener("resize", () => { if (currentRoute === "thi-truong") renderChart(); if (currentRoute === "vang") renderGoldChart(); });
+
+const dl = document.getElementById("date-line");
+if (dl) dl.textContent = new Date().toLocaleDateString("vi-VN", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+
+route();
+loadTickers();
+loadKlines();
+loadGold();
+loadVangVN();
+loadGoldKlines();
+loadFx();
+setInterval(loadTickers, 90000);
+setInterval(loadKlines, 60 * 60 * 1000);
