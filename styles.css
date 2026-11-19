@@ -324,3 +324,4 @@ html[data-theme="dark"] body[data-page="thi-truong"] { --bg-filter: blur(22px) b
 #theme-toggle button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 html[data-theme="dark"] #theme-toggle button.active { color: #0f1115; }
 html[data-theme="dark"] body[data-page="home"], html[data-theme="dark"] body[data-page="thi-truong"] { --top-bg: rgba(15,17,21,0.85); --strip-bg: rgba(22,25,32,0.88); }
+.article img.inline-img { width: 100%; max-width: 620px; margin: 20px auto; display: block; border-radius: 8px; border: 1px solid var(--hairline); }
