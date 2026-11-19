@@ -122,7 +122,7 @@ function newsArticleHTML(n) {
   const time = new Date(n.at).toLocaleString("vi-VN", { weekday: "long", day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" });
   const pairs = v.pairs.length ? `<p><strong>Cặp liên quan:</strong> ${v.pairs.map(esc).join(", ")}. <a href="#/thi-truong">Xem bảng thị trường</a></p>` : "";
   const note = `<h3>Nhận định</h3><p>${esc(v.note || "Tin này chỉ để bạn nắm thông tin. Hãy xem giá phản ứng thế nào trước khi rút ra kết luận.")}</p>`;
-  return `<div class="article-grid" style="margin-top:36px"><div class="article"><span class="tag">Tin tức mới nhất · ${esc(n.source)}</span><h2 class="title">${esc(v.title)}</h2><p class="byline">When Lambo Vova · ${esc(time)}</p><p class="intro">${esc(v.summary)}</p>${n.body || ""}${pairs}${note}<p class="source">Nội dung chỉ để tham khảo, không phải lời khuyên đầu tư.</p><p class="source" style="font-size:12px">Nguồn: ${esc(n.source)}.</p><a class="back" href="#/tin-tuc">← Quay lại Tin tức mới nhất</a></div>${promoHTML()}</div>`;
+  return `<div class="article-grid" style="margin-top:36px"><div class="article"><span class="tag">Tin tức mới nhất · ${n.category ? esc(n.category) + " · " : ""}${esc(n.source)}</span><h2 class="title">${esc(v.title)}</h2><p class="byline">When Lambo Vova · ${esc(time)}</p><p class="intro">${esc(v.summary)}</p>${n.body || ""}${pairs}${note}<p class="source">Nội dung chỉ để tham khảo, không phải lời khuyên đầu tư.</p><p class="source" style="font-size:12px">Nguồn: ${esc(n.source)}.</p><a class="back" href="#/tin-tuc">← Quay lại Tin tức mới nhất</a></div>${promoHTML()}</div>`;
 }
 
 async function loadNews(force) {
@@ -142,6 +142,9 @@ async function loadNews(force) {
   }
   if (currentRoute === "tin-tuc") renderNews();
 }
+const NEWS_CATS = ["", "Crypto", "Chứng khoán thế giới", "Chứng khoán VN", "Forex", "Vàng Bạc"];
+let newsCat = "";
+window.setNewsCat = function (c) { newsCat = c; renderNews(); };
 function renderNews() {
   const el = document.getElementById("news-auto");
   if (!el) return;
@@ -150,10 +153,21 @@ function renderNews() {
   if (!newsItems.length) { el.innerHTML = '<p class="muted">Chưa có tin mới trong lần cập nhật gần nhất.</p>'; return; }
   const list = newsItems.filter((n) => n.id && n.title);
   if (!list.length) { el.innerHTML = '<p class="muted">Chưa có bài mới. Quay lại sau ít phút.</p>'; return; }
-  el.innerHTML = list.map((n) => {
+  const catsEl = document.getElementById("news-cats");
+  if (catsEl) {
+    catsEl.innerHTML = NEWS_CATS.map((c) => {
+      const active = c === newsCat;
+      const label = c || "Tất cả";
+      return `<button type="button" onclick="setNewsCat('${c.replace(/'/g, "\\'")}')" style="cursor:pointer;font:inherit;font-size:12.5px;padding:5px 13px;border-radius:999px;border:1px solid ${active ? "var(--accent)" : "currentColor"};background:${active ? "var(--accent)" : "transparent"};color:${active ? "#14100a" : "inherit"};opacity:${active ? "1" : ".7"}">${label}</button>`;
+    }).join("");
+  }
+  const filtered = newsCat ? list.filter((n) => (n.category || "") === newsCat) : list;
+  if (!filtered.length) { el.innerHTML = '<p class="muted">Chưa có bài ở mục này. Quay lại sau ít phút.</p>'; return; }
+  el.innerHTML = filtered.map((n) => {
     const v = newsView(n);
     const time = new Date(n.at).toLocaleString("vi-VN", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" });
-    return `<a class="article-item" href="#/tin/${encodeURIComponent(n.id)}"><span class="idx">→</span><span><span class="tag">${esc(n.source)} · ${time}</span><h3>${esc(v.title)}</h3><p>${esc(v.summary.length > 170 ? v.summary.slice(0, 167).replace(/\s+\S*$/, "") + "..." : v.summary)}</p></span></a>`;
+    const cat = n.category ? `${esc(n.category)} · ` : "";
+    return `<a class="article-item" href="#/tin/${encodeURIComponent(n.id)}"><span class="idx">→</span><span><span class="tag">${cat}${esc(n.source)} · ${time}</span><h3>${esc(v.title)}</h3><p>${esc(v.summary.length > 170 ? v.summary.slice(0, 167).replace(/\s+\S*$/, "") + "..." : v.summary)}</p></span></a>`;
   }).join("");
 }
 
@@ -756,6 +770,7 @@ const PAGES = {
       <h2 class="section">Tin tức mới nhất</h2>
       <p class="section-sub">Tin thị trường được viết lại đầy đủ bằng tiếng Việt, giọng When Lambo, đủ bối cảnh và số liệu từ bài gốc, có ghi nguồn. Chỉ để tham khảo, không phải lời khuyên đầu tư.</p>
       <p class="label" style="margin-top:18px">Cập nhật mỗi 30 phút</p>
+      <div id="news-cats" style="display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 16px"></div>
       <div class="article-list" id="news-auto"><p class="muted">Đang tải tin…</p></div>
       <p class="label" style="margin-top:18px">Bài nhận định của Vova</p>
       <div class="article-list">
