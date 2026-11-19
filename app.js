@@ -106,6 +106,7 @@ async function loadTickers() {
   renderTickerStrip();
   if (currentRoute === "home") renderHomeMarket();
   if (currentRoute === "thi-truong") renderMarketTable();
+  if (currentRoute === "demo") demoRenderLive();
 }
 
 
@@ -189,6 +190,7 @@ async function loadGold() {
         spot = await fetchJSON("https://api.gold-api.com/price/XAU");
         try { const f = await fetchJSON("https://open.er-api.com/v6/latest/USD"); fx = f && f.rates ? f.rates.VND : null; } catch (e) { fx = null; }
       }
+      if (!goldXag) { try { const ag = await fetchJSON("https://api.gold-api.com/price/XAG"); if (ag && ag.price) goldXag = ag.price; } catch (e) {} }
       goldSpot = { price: spot.price, at: spot.updatedAt ? new Date(spot.updatedAt).getTime() : Date.now() };
       goldFx = fx;
       goldError = false;
@@ -200,6 +202,7 @@ async function loadGold() {
     }
   }
   if (currentRoute === "vang") renderGoldSpot();
+  if (currentRoute === "demo") demoRenderLive();
 }
 
 function renderGoldSpot() {
@@ -711,6 +714,7 @@ function promoBandHTML() {
 }
 
 const PAGES = {
+  demo: () => demoPageHTML(),
   home: () => `
     <section class="hero blk">
       <div>
@@ -927,6 +931,7 @@ function route() {
   if (page === "fx") renderFx();
   if (page === "vang") { renderGoldSpot(); renderGoldChart(); }
   if (page === "tin-tuc") { renderNews(); loadNews(); }
+  if (page === "demo") { demoRenderLive(); loadGold(); }
 }
 
 function setActive(page) {
@@ -948,3 +953,160 @@ loadGoldKlines();
 loadFx();
 setInterval(loadTickers, 90000);
 setInterval(loadKlines, 60 * 60 * 1000);
+
+/* ---------- Sàn ảo: tài khoản demo 10.000 USD, tiền ảo, giá trực tiếp ---------- */
+const DEMO_KEY = "wlv_demo_v1";
+const DEMO_START = 10000;
+let demoState = null, demoResetArmed = false;
+function demoLoad() {
+  if (demoState) return demoState;
+  try {
+    const raw = localStorage.getItem(DEMO_KEY);
+    if (raw) { const o = JSON.parse(raw); if (o && typeof o.cash === "number" && Array.isArray(o.positions) && Array.isArray(o.history)) { demoState = o; return demoState; } }
+  } catch (e) {}
+  demoState = { cash: DEMO_START, positions: [], history: [] };
+  return demoState;
+}
+function demoSave() { try { localStorage.setItem(DEMO_KEY, JSON.stringify(demoState)); } catch (e) {} }
+function demoInstruments() {
+  const l = [{ key: "XAU", pair: "XAU/USD", name: "Vàng thế giới" }, { key: "XAG", pair: "XAG/USD", name: "Bạc thế giới" }];
+  SYMBOLS.forEach((s) => { if (s.id !== "pax-gold") l.push({ key: s.id, pair: s.pair, name: s.name.replace(/, tham khảo$/, "") }); });
+  return l;
+}
+function demoPrice(key) {
+  if (key === "XAU") return goldSpot ? goldSpot.price : null;
+  if (key === "XAG") return goldXag || null;
+  const t = (tickers || []).find((x) => x.id === key);
+  return t ? t.price : null;
+}
+function demoCloseValue(p, cur) {
+  if (p.side === "long") return p.qty * cur;
+  return Math.max(0, p.qty * (2 * p.entry - cur));
+}
+function demoEquity() {
+  const s = demoLoad();
+  let eq = s.cash;
+  s.positions.forEach((p) => { const c = demoPrice(p.key); eq += c ? demoCloseValue(p, c) : p.notional; });
+  return eq;
+}
+const demoFmt = (n, d = 2) => n.toLocaleString("vi-VN", { minimumFractionDigits: d, maximumFractionDigits: d });
+function demoQtyFmt(q) { return q >= 100 ? demoFmt(q, 2) : q >= 1 ? demoFmt(q, 3) : demoFmt(q, 6); }
+function demoPageHTML() {
+  demoLoad();
+  const opts = demoInstruments().map((i) => `<option value="${i.key}">${i.pair} - ${esc(i.name)}</option>`).join("");
+  return `<section class="blk">
+<p class="label">Công cụ luyện tập</p>
+<h2 class="section">Sàn ảo When Lambo</h2>
+<p class="section-sub">Tài khoản demo ${demoFmt(DEMO_START, 0)} USD, giá trực tiếp từ các nguồn công khai miễn phí. Luyện đọc thị trường và quản trị vốn mà không đụng tiền thật.</p>
+<div class="demo-grid" id="demo-summary"></div>
+<div class="demo-order">
+  <select id="demo-sym" onchange="demoRenderLive()">${opts}</select>
+  <input id="demo-amt" class="amt" type="number" min="10" step="10" value="1000" inputmode="decimal">
+  <span class="muted">USD · giá hiện tại: <strong id="demo-price-now">—</strong></span>
+  <button type="button" class="btn-demo" onclick="demoOpen('long')">Mua</button>
+  <button type="button" class="btn-demo sell" onclick="demoOpen('short')">Bán</button>
+</div>
+<p class="muted" id="demo-msg" style="min-height:18px"></p>
+<h3 class="demo-h">Lệnh đang mở</h3>
+<div id="demo-positions"></div>
+<h3 class="demo-h">Lịch sử lệnh đã đóng</h3>
+<div id="demo-history"></div>
+<p style="margin-top:26px"><button type="button" class="btn-mini" id="demo-reset" onclick="demoReset()">Làm lại từ đầu (về 10.000 USD)</button></p>
+<p class="table-note">Đây là tài khoản ảo để luyện tập: không dùng tiền thật, không kết nối sàn giao dịch, không phải khuyến nghị mua bán. Mỗi lệnh giữ lại đúng số tiền đặt (không đòn bẩy); lệnh Bán là kỳ vọng giá xuống, lỗ tối đa bằng số tiền đặt. Giá có thể chậm vài phút so với thị trường. Dữ liệu tài khoản lưu ngay trên trình duyệt của bạn.</p>
+</section>`;
+}
+function demoMsg(t) { const m = document.getElementById("demo-msg"); if (m) m.textContent = t || ""; }
+function demoRenderLive() {
+  const sum = document.getElementById("demo-summary");
+  if (!sum) return;
+  const s = demoLoad();
+  const eq = demoEquity();
+  let openPnl = 0;
+  s.positions.forEach((p) => { const c = demoPrice(p.key); if (c) openPnl += demoCloseValue(p, c) - p.notional; });
+  const wins = s.history.filter((h) => h.pnl > 0).length;
+  const losses = s.history.filter((h) => h.pnl <= 0).length;
+  sum.innerHTML = `
+  <div class="demo-card"><div class="k">Tiền khả dụng</div><div class="v">${demoFmt(s.cash)} $</div></div>
+  <div class="demo-card"><div class="k">Giá trị tài khoản</div><div class="v">${demoFmt(eq)} $</div></div>
+  <div class="demo-card"><div class="k">Lãi/lỗ lệnh mở</div><div class="v ${openPnl >= 0 ? "up" : "down"}">${openPnl >= 0 ? "+" : ""}${demoFmt(openPnl)} $</div></div>
+  <div class="demo-card"><div class="k">Lệnh đã đóng</div><div class="v">${wins} thắng – ${losses} thua</div></div>`;
+  const sel = document.getElementById("demo-sym");
+  const now = document.getElementById("demo-price-now");
+  if (sel && now) { const pr = demoPrice(sel.value); now.textContent = pr ? demoFmt(pr, pr < 10 ? 4 : 2) + " $" : "chưa tải được"; }
+  const pos = document.getElementById("demo-positions");
+  if (pos) {
+    if (!s.positions.length) pos.innerHTML = '<p class="muted">Chưa có lệnh nào. Chọn tài sản, nhập số tiền rồi bấm Mua hoặc Bán.</p>';
+    else {
+      const rows = s.positions.map((p, i) => {
+        const c = demoPrice(p.key);
+        const val = c ? demoCloseValue(p, c) : null;
+        const pnl = val !== null ? val - p.notional : null;
+        const cls = pnl === null ? "" : pnl >= 0 ? "up" : "down";
+        return `<tr><td class="pair">${p.pair}<small>${p.side === "long" ? "Mua" : "Bán"} · ${new Date(p.at).toLocaleString("vi-VN", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" })}</small></td>
+        <td class="num">${demoQtyFmt(p.qty)}</td><td class="num">${demoFmt(p.entry, p.entry < 10 ? 4 : 2)}</td><td class="num">${c ? demoFmt(c, c < 10 ? 4 : 2) : "—"}</td>
+        <td class="num ${cls}">${pnl === null ? "—" : (pnl >= 0 ? "+" : "") + demoFmt(pnl) + " $"}</td>
+        <td class="num"><button type="button" class="btn-mini" onclick="demoClose(${i})">Đóng lệnh</button></td></tr>`;
+      }).join("");
+      pos.innerHTML = `<table class="price"><thead><tr><th>Lệnh</th><th class="num">Khối lượng</th><th class="num">Giá vào</th><th class="num">Giá hiện tại</th><th class="num">Lãi/lỗ</th><th class="num"></th></tr></thead><tbody>${rows}</tbody></table>`;
+    }
+  }
+  const his = document.getElementById("demo-history");
+  if (his) {
+    if (!s.history.length) his.innerHTML = '<p class="muted">Chưa có lệnh nào đã đóng.</p>';
+    else {
+      const rows = s.history.slice(0, 20).map((h) => {
+        const cls = h.pnl >= 0 ? "up" : "down";
+        return `<tr><td class="pair">${h.pair}<small>${h.side === "long" ? "Mua" : "Bán"} · đóng ${new Date(h.closedAt).toLocaleString("vi-VN", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" })}</small></td>
+        <td class="num">${demoFmt(h.entry, h.entry < 10 ? 4 : 2)}</td><td class="num">${demoFmt(h.exit, h.exit < 10 ? 4 : 2)}</td>
+        <td class="num ${cls}">${(h.pnl >= 0 ? "+" : "") + demoFmt(h.pnl) + " $"}</td></tr>`;
+      }).join("");
+      his.innerHTML = `<table class="price"><thead><tr><th>Lệnh</th><th class="num">Giá vào</th><th class="num">Giá đóng</th><th class="num">Kết quả</th></tr></thead><tbody>${rows}</tbody></table>`;
+    }
+  }
+}
+function demoOpen(side) {
+  const s = demoLoad();
+  const sel = document.getElementById("demo-sym");
+  const amtEl = document.getElementById("demo-amt");
+  if (!sel || !amtEl) return;
+  const key = sel.value;
+  const price = demoPrice(key);
+  const amt = parseFloat((amtEl.value || "").replace(",", "."));
+  if (!price) { demoMsg("Chưa tải được giá tài sản này, thử lại sau ít phút."); return; }
+  if (!amt || amt < 10) { demoMsg("Số tiền tối thiểu 10 USD."); return; }
+  if (amt > s.cash + 1e-9) { demoMsg("Số tiền vượt quá tiền khả dụng (" + demoFmt(s.cash) + " $)."); return; }
+  const inst = demoInstruments().find((x) => x.key === key);
+  s.positions.push({ key, pair: inst.pair, side, qty: amt / price, entry: price, notional: amt, at: Date.now() });
+  s.cash -= amt;
+  demoSave();
+  demoMsg("Đã mở lệnh " + (side === "long" ? "Mua" : "Bán") + " " + inst.pair + " tại " + demoFmt(price, price < 10 ? 4 : 2) + " $.");
+  demoRenderLive();
+}
+function demoClose(i) {
+  const s = demoLoad();
+  const p = s.positions[i];
+  if (!p) return;
+  const c = demoPrice(p.key);
+  if (!c) { demoMsg("Chưa tải được giá để đóng lệnh, thử lại sau ít phút."); return; }
+  const val = demoCloseValue(p, c);
+  s.cash += val;
+  s.positions.splice(i, 1);
+  s.history.unshift({ pair: p.pair, side: p.side, entry: p.entry, exit: c, pnl: val - p.notional, closedAt: Date.now() });
+  demoSave();
+  demoMsg("Đã đóng lệnh " + p.pair + " tại " + demoFmt(c, c < 10 ? 4 : 2) + " $.");
+  demoRenderLive();
+}
+function demoReset() {
+  const b = document.getElementById("demo-reset");
+  if (!demoResetArmed) {
+    demoResetArmed = true;
+    if (b) b.textContent = "Bấm lần nữa để xác nhận xóa tài khoản ảo";
+    setTimeout(() => { demoResetArmed = false; if (b) b.textContent = "Làm lại từ đầu (về 10.000 USD)"; }, 4000);
+    return;
+  }
+  demoResetArmed = false;
+  demoState = { cash: DEMO_START, positions: [], history: [] };
+  demoSave();
+  demoMsg("Đã làm lại tài khoản về 10.000 USD ảo.");
+  demoRenderLive();
+}
