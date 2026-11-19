@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#241b0d"/><stop offset="1" stop-color="#171208"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9a227" stop-opacity=".20"/><stop offset="1" stop-color="#c9a227" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<line x1="0" y1="300" x2="1200" y2="300" stroke="#2b2214" stroke-width="1"/><line x1="0" y1="400" x2="1200" y2="400" stroke="#2b2214" stroke-width="1"/><line x1="0" y1="500" x2="1200" y2="500" stroke="#2b2214" stroke-width="1"/><line x1="0" y1="600" x2="1200" y2="600" stroke="#2b2214" stroke-width="1"/>
+<path d="M60,492 L180,466 L300,479 L420,425 L540,438 L660,398 L780,403 L900,366 L1020,376 L1140,330 L1140,560 L60,560 Z" fill="url(#fade)"/><path d="M60,492 L180,466 L300,479 L420,425 L540,438 L660,398 L780,403 L900,366 L1020,376 L1140,330" fill="none" stroke="#c9a227" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="60" y1="60" x2="240" y2="60" stroke="#c9a227" stroke-width="3"/>
+<text x="60" y="195" font-family="Georgia, serif" font-size="110" font-style="italic" fill="#c9a227">W</text>
+<text x="63" y="245" font-family="Georgia, serif" font-size="30" letter-spacing="5" fill="#efe6d0">TIN TỨC THỊ TRƯỜNG</text>
+<text x="60" y="635" font-family="Georgia, serif" font-size="22" letter-spacing="6" fill="#9b8c6d">WHEN LAMBO VOVA</text>
+</svg>
