@@ -104,6 +104,7 @@ async function loadTickers() {
     }
   }
   renderTickerStrip();
+  if(window.demoDashRefresh) window.demoDashRefresh();
   if (currentRoute === "home") renderHomeMarket();
   if (currentRoute === "thi-truong") renderMarketTable();
 }
@@ -904,7 +905,7 @@ function demoPageHTML() {
   <div>
     <p class="label">Công cụ luyện tập</p>
     <h2 class="section">Sàn ảo When Lambo</h2>
-    <p class="section-sub">Dashboard giao dịch mô phỏng: nến thật từ Kraken, chỉ báo MA / EMA / BOLL / SuperTrend / RSI / MACD, công cụ vẽ, lệnh Limit / Market / Stop / OCO với TP/SL và đòn bẩy tới 10x. Tài khoản ảo 10.000 USD lưu ngay trên trình duyệt — không dùng tiền thật, không phải lời khuyên đầu tư.</p>
+    <p class="section-sub">Dashboard giao dịch mô phỏng: nến thật từ Kraken, chỉ báo MA / EMA / BOLL / SuperTrend / RSI / MACD, công cụ vẽ, lệnh Limit / Market / Stop Limit / OCO với TP/SL và đòn bẩy tới 10x. Tài khoản ảo 10.000 USD lưu ngay trên trình duyệt — không dùng tiền thật, không phải lời khuyên đầu tư.</p>
   </div>
 </section>
 <div id="dz-shell-root"><p class="muted" style="padding:1rem">Đang tải sàn ảo…</p></div>`;
