@@ -122,7 +122,7 @@ function newsArticleHTML(n) {
   const time = new Date(n.at).toLocaleString("vi-VN", { weekday: "long", day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" });
   const pairs = v.pairs.length ? `<p><strong>Cặp liên quan:</strong> ${v.pairs.map(esc).join(", ")}. <a href="#/thi-truong">Xem bảng thị trường</a></p>` : "";
   const note = `<h3>Nhận định</h3><p>${esc(v.note || "Tin này chỉ để bạn nắm thông tin. Hãy xem giá phản ứng thế nào trước khi rút ra kết luận.")}</p>`;
-  return `<div class="article-grid" style="margin-top:36px"><div class="article"><span class="tag">Tin tức mới nhất · ${n.category ? esc(n.category) + " · " : ""}${esc(n.source)}</span><h2 class="title">${esc(v.title)}</h2><p class="byline">When Lambo Vova · ${esc(time)}</p><p class="intro">${esc(v.summary)}</p>${n.body || ""}${pairs}${note}<p class="source">Nội dung chỉ để tham khảo, không phải lời khuyên đầu tư.</p><p class="source" style="font-size:12px">Nguồn: ${esc(n.source)}.</p><a class="back" href="#/tin-tuc">← Quay lại Tin tức mới nhất</a></div>${promoHTML()}</div>`;
+  return `<div class="article-grid" style="margin-top:36px"><div class="article"><span class="tag">Tin tức mới nhất · ${n.category ? esc(n.category) + " · " : ""}${esc(n.source)}</span><h2 class="title">${esc(v.title)}</h2><p class="byline">When Lambo Vova · ${esc(time)}</p><p class="intro">${esc(v.summary)}</p>${n.image ? `<img class="lead" src="${esc(n.image)}" alt="">` : ""}${n.body || ""}${pairs}${note}<p class="source">Nội dung chỉ để tham khảo, không phải lời khuyên đầu tư.</p><p class="source" style="font-size:12px">Nguồn: ${esc(n.source)}.</p><a class="back" href="#/tin-tuc">← Quay lại Tin tức mới nhất</a></div>${promoHTML()}</div>`;
 }
 
 async function loadNews(force) {
@@ -167,7 +167,8 @@ function renderNews() {
     const v = newsView(n);
     const time = new Date(n.at).toLocaleString("vi-VN", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" });
     const cat = n.category ? `${esc(n.category)} · ` : "";
-    return `<a class="article-item" href="#/tin/${encodeURIComponent(n.id)}"><span class="idx">→</span><span><span class="tag">${cat}${esc(n.source)} · ${time}</span><h3>${esc(v.title)}</h3><p>${esc(v.summary.length > 170 ? v.summary.slice(0, 167).replace(/\s+\S*$/, "") + "..." : v.summary)}</p></span></a>`;
+    const thumb = n.image ? `<img class="thumb" src="${esc(n.image)}" alt="" loading="lazy">` : "";
+    return `<a class="article-item${n.image ? " has-thumb" : ""}" href="#/tin/${encodeURIComponent(n.id)}"><span class="idx">→</span>${thumb}<span><span class="tag">${cat}${esc(n.source)} · ${time}</span><h3>${esc(v.title)}</h3><p>${esc(v.summary.length > 170 ? v.summary.slice(0, 167).replace(/\s+\S*$/, "") + "..." : v.summary)}</p></span></a>`;
   }).join("");
 }
 
