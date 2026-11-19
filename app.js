@@ -513,25 +513,25 @@ const ARTICLES = {
     body: `
       <h3>Giá đã xảy ra</h3>
       <ul>
-        <li>BTC/USD đóng nến ngày gần nhất (theo UTC) ở 63.076,38 USD, giảm 2,39% trong 24 giờ qua. Đáy 90 ngày là 62.996,68 USD — giá đóng cửa chỉ còn cách đáy này chưa tới 80 USD.</li>
+        <li>BTC/USD đóng nến ngày gần nhất (theo UTC) ở 63.076,38 USD, giảm 2,39% trong 24 giờ qua. Đáy 90 ngày là 62.996,68 USD. Giá đóng cửa chỉ còn cách đáy này chưa tới 80 USD.</li>
         <li>ETH/USD 1.782,74 USD (-1,82%), SOL/USD 73,6 USD (-1,54%) tại thời điểm 08:22 sáng nay.</li>
         <li>Vàng thế giới XAU/USD giao dịch quanh 3.751,95 USD/oz lúc 08:04, nến ngày đóng ở 3.741,5 USD. Tỷ giá tham khảo USD/VND 25.704.</li>
       </ul>
       <h3>Bộ chỉ báo cố định nói gì</h3>
       <ul>
         <li>BTC/USD đang nằm dưới cả bốn đường MA: MA 20 ở 72.026,3; MA 50 ở 78.191,78; MA 65 ở 79.239,44; MA 200 ở 72.650,53 USD. Dưới cả bốn đường EMA (21, 34, 89, 200), đường gần nhất là EMA 21 ở 70.898,97 USD.</li>
-        <li>RSI 14 của BTC ở 22,0 — vùng quá bán theo thang thông dụng. Biên dưới Bollinger (21, 2) nằm ở 60.964,5 USD.</li>
+        <li>RSI 14 của BTC ở 22,0, tức vùng quá bán theo thang thông dụng. Biên dưới Bollinger (21, 2) nằm ở 60.964,5 USD.</li>
         <li>Vàng thế giới cũng nằm dưới cả bốn đường MA: MA 20 ở 3.935,87; MA 50 ở 4.040,21; MA 65 ở 4.096,95; MA 200 ở 4.244,76 USD. RSI 14 của vàng ở 31,9, sát biên dưới Bollinger ở 3.715,38 USD.</li>
       </ul>
       <h3>Tin trong ngày cần kể tới</h3>
       <ul>
         <li>Rạng sáng 19/11 (giờ Việt Nam), Fed công bố biên bản cuộc họp 27-28/10: phần lớn quan chức vẫn nghiêng về thắt chặt thêm nếu kinh tế đi đúng kịch bản, đồng thời cảnh báo định giá tài sản và đòn bẩy có thể khuếch đại cú sốc. <a href="#/tin/fed-bien-ban-thang-10-cong-bo-2026-11-19">Đọc bản tin đầy đủ</a>.</li>
-        <li>Ngày 18/11, các quỹ ETF Bitcoin bị rút ròng 240 triệu USD và CryptoQuant nhận định thị trường quay lại pha giảm — đây là góc nhìn của một đơn vị phân tích, không phải kết luận.</li>
+        <li>Ngày 18/11, các quỹ ETF Bitcoin bị rút ròng 240 triệu USD và CryptoQuant nhận định thị trường quay lại pha giảm. Đây là góc nhìn của một đơn vị phân tích, không phải kết luận.</li>
         <li>Chiều 18/11, VN-Index mất hơn 23 điểm, xuống sát mốc 1.700 khi khối ngoại bán mạnh ở nhóm ngân hàng lớn.</li>
       </ul>
       <h3>Những mức cần theo dõi, không phải điểm vào</h3>
       <ul>
-        <li>Nếu nến ngày BTC đóng dưới 62.996,68 USD, thị trường sẽ có đáy 90 ngày mới — một dữ kiện, không phải tín hiệu mua hay bán.</li>
+        <li>Nếu nến ngày BTC đóng dưới 62.996,68 USD, thị trường sẽ có đáy 90 ngày mới. Đó là một dữ kiện, không phải tín hiệu mua hay bán.</li>
         <li>Phía trên, hình ảnh khung ngày chỉ đổi khi giá đóng cửa vượt lại EMA 21 quanh 70.899 USD, rồi tới cụm MA 200 quanh 72.650 USD. Giữa hai vùng đó là vùng chờ, không phải vùng đoán.</li>
         <li>Với vàng, biên dưới Bollinger 3.715,38 USD và MA 20 ở 3.935,87 USD là hai mức gần nhất để đối chiếu khi nến ngày đóng.</li>
       </ul>`,
