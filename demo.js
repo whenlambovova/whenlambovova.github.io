@@ -46,8 +46,8 @@ const D2_INSTR = [
 ];
 function d2Instr(key) { return D2_INSTR.find((i) => i.key === key); }
 function d2Price(key) {
-  if (key === "XAU") return goldSpot && Date.now()-goldSpot.at<180000 ? goldSpot.price : null;
   if (D2_QUOTES[key] && Date.now()-D2_QUOTES[key].at<120000) return D2_QUOTES[key].price;
+  if (key === "XAU") return goldSpot && Date.now()-goldSpot.at<180000 ? goldSpot.price : null;
   if (typeof lastUpdate !== "undefined" && lastUpdate && Date.now()-new Date(lastUpdate).getTime()>180000) return null;
   if (key === "XAG") return goldXag || null;
   const t = (tickers || []).find((x) => x.id === key);
@@ -538,6 +538,17 @@ async function d2RenderHeader() {
   const instr = d2Instr(headerKey);
   let p = d2Price(D2C.key);
   let chg = d2Chg(D2C.key), hi = null, lo = null, vol = null;
+  if(headerKey==="XAU"||headerKey==="XAG") {
+    try {
+      const cached=D2_QUOTES[headerKey];
+      if(!cached||Date.now()-cached.at>55000){
+        const r=await fetch("https://api.gold-api.com/price/"+headerKey,{signal:AbortSignal.timeout(10000)});if(!r.ok)throw Error("metal");const j=await r.json();
+        if(j.price>0) D2_QUOTES[headerKey]={price:j.price,at:Date.now()};
+      }
+      if(headerKey!==D2C.key)return;
+      p=d2Price(headerKey);
+    }catch(e){}
+  }
   if (instr.kraken) {
     try {
       const tk = await d2FetchTicker(instr.kraken);
@@ -618,6 +629,7 @@ function d2RenderSummary() {
     "<span>Số dư khả dụng: <b>" + d2Fmt(d2Available()) + " $</b></span>" +
     "<span>Ký quỹ đang dùng: <b>" + d2Fmt(d2UsedMargin()) + " $</b></span>" +
     '<span>PNL vị thế mở: <b class="' + cls + '">' + (pnl >= 0 ? "+" : "") + d2Fmt(pnl) + " $</b></span>" +
+    "<span>Giữ cho lệnh chờ: <b>" + d2Fmt(s.orders.reduce((a,o)=>a+o.margin,0)) + " $</b></span>" +
     "<span>Tổng tài sản ảo: <b>" + d2Fmt(eq) + " $</b></span>" +
     '<button id="dz-reset" class="demo-reset">↺ Reset 10.000 $</button>';
 }
