@@ -385,7 +385,7 @@ async function d2LoadCandles() {
       const t = d2Theme();
       D2C.vol.setData(data.map((c) => ({ time: c.time, value: c.volume, color: c.close >= c.open ? t.up : t.dn })));
     }
-    D2C.chart.timeScale().fitContent();
+    D2C.chart.timeScale().setVisibleLogicalRange({from:Math.max(0,data.length-120),to:data.length+4});
     d2ApplyIndicators();
     d2RedrawDrawings();
     if (st) st.textContent = D2C.key === "XAU" ? "Nến PAXG/USD của Kraken chỉ làm tham khảo, không phải nến XAU/USD. Giá đặt lệnh vàng từ Gold API." : "Nến: Kraken. Giá khớp mô phỏng theo lần cập nhật nguồn, không có phí/trượt giá. Chỉ xử lý lệnh khi mở trang.";
@@ -675,7 +675,7 @@ function d2FormHTML() {
 }
 function d2FormNotional() {
   const m = +((document.getElementById("dz-f-margin") || {}).value || 0);
-  const lev = +((document.getElementById("dz-f-lev") || {}).value || 1);
+  const lev = parseFloat((document.getElementById("dz-f-lev") || {}).value) || 1;
   const el = document.getElementById("dz-f-notional");
   if (el) el.textContent = m > 0 ? "Khối lượng mở: " + d2Fmt(m * lev) + " $ (" + lev + "x) · Khả dụng: " + d2Fmt(d2Available()) + " $" : "";
 }
