@@ -369,15 +369,17 @@ async function d2LoadCandles() {
   if (!instr.kraken) {
     if(D2C.cs) D2C.cs.setData([]);
     if(D2C.vol) D2C.vol.setData([]);
-    if (st) st.textContent = "Chưa có nguồn nến miễn phí cho " + instr.pair + " (Kraken chưa niêm yết). Vẫn đặt lệnh theo giá trực tiếp bình thường.";
+    if (st) st.textContent = "Chưa có nguồn nến miễn phí cho " + instr.pair + " (chưa tích hợp nguồn nến). Vẫn đặt lệnh theo giá trực tiếp bình thường.";
     D2C.candles = []; d2ApplyIndicators(); d2RedrawDrawings();
     return;
   }
   if (st) st.textContent = "Đang tải nến " + instr.pair + "…";
   const reqKey=D2C.key,reqTf=D2C.tf;
+  if(D2C.loadedKey!==reqKey+":"+reqTf){D2C.candles=[];D2C.cs.setData([]);D2C.vol.setData([]);d2ApplyIndicators();}
   try {
     const data = await d2FetchKlines(instr.kraken, reqTf);
     if(reqKey!==D2C.key || reqTf!==D2C.tf) return;
+    D2C.loadedKey=reqKey+":"+reqTf;
     D2C.candles = data;
     D2C.cs.setData(data);
     if (D2C.vol) {
@@ -535,6 +537,7 @@ async function d2RenderHeader() {
   if (!el) return;
   const headerKey = D2C.key;
   const instr = d2Instr(headerKey);
+  if(el.dataset.key!==headerKey){el.dataset.key=headerKey;el.innerHTML='<div class="dz-pairname"><strong>'+d2Esc(instr.pair)+'</strong><small>'+d2Esc(instr.name)+'</small></div><span class="dz-dim">Đang cập nhật giá…</span>';}
   let p = d2Price(D2C.key);
   let chg = d2Chg(D2C.key), hi = null, lo = null, vol = null;
   if(headerKey==="XAU"||headerKey==="XAG") {
@@ -556,6 +559,7 @@ async function d2RenderHeader() {
       if(headerKey!=="XAU") { D2_QUOTES[headerKey]={price:tk.last,at:Date.now()}; p=tk.last; }
     } catch (e) {}
   }
+  if(headerKey!==D2C.key)return;
   const cls = chg === null || chg === undefined ? "" : chg >= 0 ? "up" : "dn";
   const stat = (l, v) => '<div class="dz-stat"><b>' + l + "</b><span>" + v + "</span></div>";
   el.innerHTML =
