@@ -524,6 +524,39 @@ function barsHTML() {
 }
 
 const ARTICLES = {
+  "nhan-dinh-20-11": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg", credit: "https://commons.wikimedia.org/wiki/File:Physical_Bitcoin_by_Mike_Cauldwell_(Casascius).jpg", captext: "Đồng bitcoin vật lý Casascius",
+    tag: "Tin tức · Nhận định", date: "Ngày 20 tháng 11 năm 2026", title: "Nhận định đầu ngày 20/11: BTC phá đáy 90 ngày, RSI chạm 11",
+    intro: "Bản nhận định sáng 20/11 dùng số liệu thật: nến ngày BTC tổng hợp từ CoinGecko, vàng thế giới cập nhật 06:26, cùng các tin qua đêm từ Fed và phiên IPO của Anthropic. Chỉ mô tả trạng thái thị trường, không điểm vào, không lệnh, không hứa hướng đi.",
+    body: `
+      <h3>Giá đã xảy ra</h3>
+      <ul>
+        <li>BTC/USD đóng nến ngày 19/11 (theo UTC) ở 62.997 USD. Đến 06:26 sáng nay, giá giao dịch quanh 61.907 USD, tức đã phá đáy 90 ngày và ở vùng thấp nhất kể từ tháng 7. Năm nến ngày gần nhất đóng lần lượt ở 65.305, 64.841, 64.889, 62.997 và hiện tại 61.907 USD.</li>
+        <li>Vàng thế giới XAU/USD giao dịch quanh 3.629 USD/oz lúc 06:26, sau khi có thời điểm rơi dưới 3.700 USD trong phiên Mỹ, thấp nhất 14 tháng. Tỷ giá tham khảo USD/VND 25.704.</li>
+        <li>Anthropic (ANT) đóng phiên đầu tiên trên Nasdaq ở 97,17 USD, tăng 17,07% so với giá IPO 83 USD, sau khi mở cửa tới 111,50 USD.</li>
+      </ul>
+      <h3>Bộ chỉ báo cố định nói gì</h3>
+      <ul>
+        <li>BTC/USD nằm dưới cả các đường MA chính: MA 20 ở 71.968; MA 50 ở 78.168; MA 200 ở 72.645 USD.</li>
+        <li>RSI 14 của BTC ở 11,1, thấp hơn cả mức 22 của sáng hôm qua, tức vùng quá bán sâu theo thang thông dụng. Đây là mô tả trạng thái, không phải tín hiệu mua.</li>
+      </ul>
+      <h3>Tin qua đêm cần kể tới</h3>
+      <ul>
+        <li>Biên bản cuộc họp 27-28/10 của Fed cho thấy gần như tất cả quan chức nghiêng về tăng lãi suất thêm; Thống đốc Christopher Waller nói với CNBC ông ủng hộ tăng 50 điểm cơ bản trong tháng 12. Công cụ FedWatch của CME định giá 91% khả năng tăng 25 điểm cơ bản tháng 12.</li>
+        <li>Các quỹ ETF Bitcoin giao ngay bị rút ròng hơn 300 triệu USD trong phiên thứ Tư, theo CoinDesk.</li>
+        <li>Phản biện đáng chú ý: giá xăng bán buôn Mỹ đã rơi khoảng 20% trong ba tuần và một số chiến lược gia cho rằng áp lực lạm phát thực chất đang hạ, tức Fed có thể đang nhìn dữ liệu trễ. <a href="#/tin/fed-tang-lai-suat-sai-lam-gia-xang-2026-11-20">Đọc bản tin đầy đủ</a>.</li>
+        <li>Chiều 19/11, VN-Index mất mốc 1.700 điểm trong phiên đáo hạn phái sinh; tính từ đầu năm, khối ngoại đã bán ròng 126.000 tỷ đồng trên HOSE, kỷ lục chưa từng có. <a href="#/tin/khoi-ngoai-ban-rong-126-nghin-ty-ky-luc-2026-11-20">Đọc bản tin đầy đủ</a>.</li>
+      </ul>
+      <h3>Những mức cần theo dõi, không phải điểm vào</h3>
+      <ul>
+        <li>Với đáy 90 ngày đã bị phá, BTC không còn mốc đáy gần nào trên khung ngày để đối chiếu; vùng giá hiện tại là vùng chưa từng giao dịch kể từ tháng 7. Đó là dữ kiện, không phải lời dự đoán.</li>
+        <li>Phía trên, cụm MA 200 quanh 72.645 USD và MA 20 quanh 71.968 USD vẫn là ngưỡng đầu tiên để hình ảnh khung ngày đổi trạng thái, và giá hiện cách cụm này khoảng 14%.</li>
+        <li>Với vàng, mốc 3.700 USD vừa bị xuyên trong phiên Mỹ; nến ngày hôm nay đóng trên hay dưới mốc này là dữ kiện để đối chiếu tiếp.</li>
+      </ul>`,
+    takeaway: "Đúc kết hôm nay: BTC phá đáy 90 ngày với RSI ở 11, vàng thấp nhất 14 tháng, và Fed nghiêng rõ về thắt chặt thêm trong tháng 12. Ba dữ kiện đó mô tả một thị trường đang chịu áp lực đồng thời, chứ chúng không hứa điều gì về phiên tới.",
+    source: "Nguồn số liệu: nến ngày BTC/USD tổng hợp từ CoinGecko; XAU/USD từ Gold API lúc 06:26 20/11/2026; USD/VND từ open.er-api.com; dòng tiền ETF và giá đóng cửa ANT theo CoinDesk và Yahoo Finance. Giờ ghi trong bài là giờ Việt Nam.",
+    back: "#/tin-tuc", backLabel: "Quay lại Tin tức mới nhất",
+  },
   "nhan-dinh-19-11": {
     image: "https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg", credit: "https://commons.wikimedia.org/wiki/File:Physical_Bitcoin_by_Mike_Cauldwell_(Casascius).jpg",
     tag: "Tin tức · Nhận định", date: "Ngày 19 tháng 11 năm 2026", title: "Nhận định đầu ngày 19/11: BTC sát đáy 90 ngày, RSI chạm 22",
@@ -742,7 +775,7 @@ const PAGES = {
       <h2 class="section">Bài mới trên trang</h2>
       <p class="section-sub">Mỗi bài kết lại bằng một điều đúc kết, kiểm chứng được trên chart.</p>
       <div class="article-list">
-        <a class="article-item has-thumb" href="#/bai/nhan-dinh-19-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Tin tức · Nhận định</span><h3>Nhận định đầu ngày 19/11: BTC sát đáy 90 ngày, RSI chạm 22</h3><p>Số liệu thật sáng nay: BTC và vàng dưới mọi đường MA, biên bản Fed, ETF bị rút 240 triệu USD.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/nhan-dinh-20-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Tin tức · Nhận định</span><h3>Nhận định đầu ngày 20/11: BTC phá đáy 90 ngày, RSI chạm 11</h3><p>Số liệu thật sáng nay: BTC ở vùng thấp nhất từ tháng 7, vàng thủng 3.700 USD, Fed nghiêng tăng lãi suất tháng 12.</p></span></a>
         <a class="article-item has-thumb" href="#/bai/flash-crash-2020"><span class="idx">02</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg" alt="" loading="lazy"><span><span class="tag">Kiến thức · Bài học lịch sử</span><h3>12/3/2020: ngày Bitcoin mất gần 39%</h3><p>Đòn bẩy, thanh khoản, và vì sao không có cái đáy nào an toàn cả.</p></span></a>
         <a class="article-item has-thumb" href="#/bai/ftx-2022"><span class="idx">03</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Sam_Bankman-Fried.png/1280px-Sam_Bankman-Fried.png" alt="" loading="lazy"><span><span class="tag">Kiến thức · Bài học lịch sử</span><h3>FTX sập: khi niềm tin vào sàn là rủi ro lớn nhất</h3><p>Tháng 11/2022, từ bài báo về Alameda tới tờ đơn phá sản.</p></span></a>
       </div>
@@ -786,7 +819,7 @@ const PAGES = {
       <div class="article-list" id="news-auto"><p class="muted">Đang tải tin…</p></div>
       <p class="label" style="margin-top:18px">Bài nhận định của Vova</p>
       <div class="article-list">
-        <a class="article-item has-thumb" href="#/bai/nhan-dinh-19-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Nhận định · Bản sáng 19/11</span><h3>Nhận định đầu ngày 19/11: BTC sát đáy 90 ngày, RSI chạm 22</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/nhan-dinh-20-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Nhận định · Bản sáng 20/11</span><h3>Nhận định đầu ngày 20/11: BTC phá đáy 90 ngày, RSI chạm 11</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
       </div>
     </section>
     ${promoBandHTML()}`,
