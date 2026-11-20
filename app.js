@@ -524,6 +524,39 @@ function barsHTML() {
 }
 
 const ARTICLES = {
+  "nhan-dinh-21-11": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg", credit: "https://commons.wikimedia.org/wiki/File:Physical_Bitcoin_by_Mike_Cauldwell_(Casascius).jpg", captext: "\u0110\u1ed3ng bitcoin v\u1eadt l\u00fd Casascius",
+    tag: "Tin t\u1ee9c \u00b7 Nh\u1eadn \u0111\u1ecbnh", date: "Ng\u00e0y 21 th\u00e1ng 11 n\u0103m 2026", title: "Nh\u1eadn \u0111\u1ecbnh \u0111\u1ea7u ng\u00e0y 21/11: BTC \u00e1p s\u00e1t \u0111\u00e1y n\u0103m 57.700 USD, Ph\u1ed1 Wall ng\u1eadp s\u1eafc \u0111\u1ecf",
+    intro: "B\u1ea3n nh\u1eadn \u0111\u1ecbnh s\u00e1ng 21/11 (th\u1ee9 B\u1ea3y) d\u00f9ng s\u1ed1 li\u1ec7u th\u1eadt: n\u1ebfn ng\u00e0y BTC t\u1ed5ng h\u1ee3p t\u1eeb CoinGecko c\u1eadp nh\u1eadt l\u00fac 06:21, gi\u00e1 \u0111\u00f3ng c\u1eeda ch\u1ee9ng kho\u00e1n M\u1ef9 phi\u00ean 20/11 v\u00e0 v\u00e0ng th\u1ebf gi\u1edbi ch\u1ed1t tu\u1ea7n. Ch\u1ec9 m\u00f4 t\u1ea3 tr\u1ea1ng th\u00e1i th\u1ecb tr\u01b0\u1eddng, kh\u00f4ng \u0111i\u1ec3m v\u00e0o, kh\u00f4ng l\u1ec7nh, kh\u00f4ng h\u1ee9a h\u01b0\u1edbng \u0111i.",
+    body: `
+      <h3>Gi\u00e1 \u0111\u00e3 x\u1ea3y ra</h3>
+      <ul>
+        <li>BTC/USD \u0111\u00f3ng n\u1ebfn ng\u00e0y 20/11 (theo UTC) \u1edf 61.921 USD. \u0110\u1ebfn 06:21 s\u00e1ng nay, gi\u00e1 giao d\u1ecbch quanh 58.951 USD, ch\u1ec9 c\u00f2n c\u00e1ch \u0111\u00e1y 57.700 USD c\u1ee7a th\u00e1ng 6-7 kho\u1ea3ng 2%. N\u0103m n\u1ebfn ng\u00e0y g\u1ea7n nh\u1ea5t \u0111\u00f3ng l\u1ea7n l\u01b0\u1ee3t \u1edf 65.305, 64.841, 64.889, 62.997 v\u00e0 61.921 USD.</li>
+        <li>Ph\u1ed1 Wall kh\u00e9p tu\u1ea7n trong s\u1eafc \u0111\u1ecf: S&P 500 m\u1ea5t 3,7% phi\u00ean th\u1ee9 S\u00e1u v\u00e0 ch\u00ednh th\u1ee9c r\u01a1i v\u00e0o v\u00f9ng \u0111i\u1ec1u ch\u1ec9nh (gi\u1ea3m h\u01a1n 10% t\u1eeb \u0111\u1ec9nh 6/10), Nasdaq gi\u1ea3m 5,3% trong phi\u00ean v\u00e0 10% c\u1ea3 tu\u1ea7n, tu\u1ea7n t\u1ec7 nh\u1ea5t k\u1ec3 t\u1eeb n\u0103m 2020. Ch\u1ec9 s\u1ed1 s\u1ee3 h\u00e3i VIX t\u0103ng 33% l\u00ean 37.</li>
+        <li>V\u00e0ng c\u00f3 l\u00fac ch\u1ea1m 3.514 USD/oz trong phi\u00ean cu\u1ed1i tu\u1ea7n, th\u1ea5p nh\u1ea5t 14 th\u00e1ng; c\u1ea3 tu\u1ea7n m\u1ea5t h\u01a1n 8%, tu\u1ea7n gi\u1ea3m m\u1ea1nh nh\u1ea5t k\u1ec3 t\u1eeb th\u00e1ng 3.</li>
+      </ul>
+      <h3>B\u1ed9 ch\u1ec9 b\u00e1o c\u1ed1 \u0111\u1ecbnh n\u00f3i g\u00ec</h3>
+      <ul>
+        <li>BTC/USD n\u1eb1m d\u01b0\u1edbi c\u1ea3 c\u00e1c \u0111\u01b0\u1eddng MA ch\u00ednh: MA 20 \u1edf 71.040; MA 50 \u1edf 77.651; MA 200 \u1edf 72.540 USD.</li>
+        <li>RSI 14 c\u1ee7a BTC \u1edf 17,6, v\u00f9ng qu\u00e1 b\u00e1n s\u00e2u theo thang th\u00f4ng d\u1ee5ng. \u0110\u00e2y l\u00e0 m\u00f4 t\u1ea3 tr\u1ea1ng th\u00e1i, kh\u00f4ng ph\u1ea3i t\u00edn hi\u1ec7u mua.</li>
+      </ul>
+      <h3>Tin qua \u0111\u00eam c\u1ea7n k\u1ec3 t\u1edbi</h3>
+      <ul>
+        <li>JPMorgan d\u1ef1 b\u00e1o Fed s\u1ebd t\u0103ng l\u00e3i su\u1ea5t 3 cu\u1ed9c h\u1ecdp li\u00ean ti\u1ebfp (th\u00e1ng 12, th\u00e1ng 1, th\u00e1ng 3), c\u1ed9ng th\u00eam 0,75 \u0111i\u1ec3m ph\u1ea7n tr\u0103m trong 4 th\u00e1ng. Deutsche Bank v\u00e0 Bank of America c\u0169ng k\u1ef3 v\u1ecdng \u0111\u1ee3t t\u0103ng th\u00e1ng 12. <a href="#/tin/jpmorgan-fed-se-tang-lai-suat-3-cuoc-hop-lien-tiep-2026-11-21">\u0110\u1ecdc b\u1ea3n tin \u0111\u1ea7y \u0111\u1ee7</a>.</li>
+        <li>C\u00e1c qu\u1ef9 ETF Bitcoin b\u1ecb r\u00fat r\u00f2ng 582,2 tri\u1ec7u USD ng\u00e0y 19/11, n\u00e2ng t\u1ed5ng r\u00fat r\u00f2ng th\u00e1ng 11 l\u00ean kho\u1ea3ng 3,47 t\u1ef7 USD; c\u1ea3 th\u00e1ng ch\u1ec9 c\u00f3 hai ng\u00e0y c\u00f3 d\u00f2ng ti\u1ec1n v\u00e0o. <a href="#/tin/etf-bitcoin-rut-rong-582-trieu-usd-thang-11-chay-3-5-ty-2026-11-21">\u0110\u1ecdc b\u1ea3n tin \u0111\u1ea7y \u0111\u1ee7</a>.</li>
+        <li>Nvidia m\u1ea5t 14% trong phi\u00ean th\u1ee9 S\u00e1u v\u00e0 23% c\u1ea3 tu\u1ea7n sau tin SEC \u0111i\u1ec1u tra k\u1ebf to\u00e1n. C\u1ed5 phi\u1ebfu Anthropic gi\u1ea3m 8,5% trong ng\u00e0y giao d\u1ecbch \u0111\u1ea7y \u0111\u1ee7 \u0111\u1ea7u ti\u00ean, v\u1ec1 quanh 89 USD, ch\u1ec9 c\u00f2n cao h\u01a1n gi\u00e1 IPO 83 USD kho\u1ea3ng 7%. <a href="#/tin/nasdaq-mat-10-phan-tram-trong-tuan-sp500-roi-vao-dieu-chinh-2026-11-21">\u0110\u1ecdc b\u1ea3n tin \u0111\u1ea7y \u0111\u1ee7</a>.</li>
+        <li>VN-Index \u0111\u00f3ng tu\u1ea7n \u1edf 1.688,8 \u0111i\u1ec3m. H\u00f4m nay l\u00e0 th\u1ee9 B\u1ea3y, th\u1ecb tr\u01b0\u1eddng Vi\u1ec7t Nam ngh\u1ec9 giao d\u1ecbch; phi\u00ean t\u1edbi l\u00e0 s\u00e1ng th\u1ee9 Hai 23/11.</li>
+      </ul>
+      <h3>Nh\u1eefng m\u1ee9c c\u1ea7n theo d\u00f5i, kh\u00f4ng ph\u1ea3i \u0111i\u1ec3m v\u00e0o</h3>
+      <ul>
+        <li>\u0110\u00e1y 57.700 USD c\u1ee7a th\u00e1ng 6-7 l\u00e0 m\u1ed1c duy nh\u1ea5t c\u00f2n l\u1ea1i \u0111\u1ec3 \u0111\u1ed1i chi\u1ebfu tr\u00ean khung ng\u00e0y. N\u1ebfu m\u1ed1c n\u00e0y b\u1ecb ph\u00e1, BTC b\u01b0\u1edbc v\u00e0o v\u00f9ng ch\u01b0a t\u1eebng giao d\u1ecbch k\u1ec3 t\u1eeb n\u0103m 2024. \u0110\u00f3 l\u00e0 d\u1eef ki\u1ec7n, kh\u00f4ng ph\u1ea3i l\u1eddi d\u1ef1 \u0111o\u00e1n.</li>
+        <li>Ph\u00eda tr\u00ean, c\u1ee5m MA 200 quanh 72.540 USD v\u00e0 MA 20 quanh 71.040 USD v\u1eabn l\u00e0 ng\u01b0\u1ee1ng \u0111\u1ea7u ti\u00ean \u0111\u1ec3 h\u00ecnh \u1ea3nh khung ng\u00e0y \u0111\u1ed5i tr\u1ea1ng th\u00e1i, v\u00e0 gi\u00e1 hi\u1ec7n c\u00e1ch c\u1ee5m n\u00e0y kho\u1ea3ng 19%.</li>
+        <li>V\u1edbi v\u00e0ng, m\u1ed1c 3.500 USD l\u00e0 ng\u01b0\u1ee1ng t\u00e2m l\u00fd ngay d\u01b0\u1edbi \u0111\u00e1y 3.514 USD v\u1eeba t\u1ea1o; n\u1ebfn tu\u1ea7n t\u1edbi \u0111\u00f3ng tr\u00ean hay d\u01b0\u1edbi m\u1ed1c n\u00e0y l\u00e0 d\u1eef ki\u1ec7n \u0111\u1ec3 \u0111\u1ed1i chi\u1ebfu.</li>
+      </ul>`,
+    takeaway: "\u0110\u00fac k\u1ebft h\u00f4m nay: BTC \u0111ang \u1edf ngay tr\u00ean \u0111\u00e1y n\u0103m nay v\u1edbi RSI 17,6, Ph\u1ed1 Wall v\u1eeba c\u00f3 tu\u1ea7n t\u1ec7 nh\u1ea5t 18 th\u00e1ng, v\u00e0 c\u00e1c ng\u00e2n h\u00e0ng l\u1edbn nh\u1ea5t M\u1ef9 \u0111\u1ed3ng lo\u1ea1t d\u1ef1 b\u00e1o Fed t\u0103ng l\u00e3i su\u1ea5t li\u00ean ti\u1ebfp. Ba d\u1eef ki\u1ec7n \u0111\u00f3 m\u00f4 t\u1ea3 m\u1ed9t th\u1ecb tr\u01b0\u1eddng ch\u1ecbu \u00e1p l\u1ef1c \u0111\u1ed3ng th\u1eddi, ch\u1ee9 ch\u00fang kh\u00f4ng h\u1ee9a \u0111i\u1ec1u g\u00ec v\u1ec1 phi\u00ean t\u1edbi.",
+    source: "Ngu\u1ed3n s\u1ed1 li\u1ec7u: n\u1ebfn ng\u00e0y BTC/USD t\u1ed5ng h\u1ee3p t\u1eeb CoinGecko l\u00fac 06:21 21/11/2026; gi\u00e1 \u0111\u00f3ng c\u1eeda ch\u1ee9ng kho\u00e1n M\u1ef9 theo Reuters v\u00e0 AP; gi\u00e1 v\u00e0ng theo FXStreet v\u00e0 CoinDesk; d\u1ef1 b\u00e1o Fed theo JPMorgan qua Reuters. Gi\u1edd ghi trong b\u00e0i l\u00e0 gi\u1edd Vi\u1ec7t Nam.",
+    back: "#/tin-tuc", backLabel: "Quay l\u1ea1i Tin t\u1ee9c m\u1edbi nh\u1ea5t",
+  },
   "nhan-dinh-20-11": {
     image: "https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg", credit: "https://commons.wikimedia.org/wiki/File:Physical_Bitcoin_by_Mike_Cauldwell_(Casascius).jpg", captext: "Đồng bitcoin vật lý Casascius",
     tag: "Tin tức · Nhận định", date: "Ngày 20 tháng 11 năm 2026", title: "Nhận định đầu ngày 20/11: BTC phá đáy 90 ngày, RSI chạm 11",
@@ -775,7 +808,7 @@ const PAGES = {
       <h2 class="section">Bài mới trên trang</h2>
       <p class="section-sub">Mỗi bài kết lại bằng một điều đúc kết, kiểm chứng được trên chart.</p>
       <div class="article-list">
-        <a class="article-item has-thumb" href="#/bai/nhan-dinh-20-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Tin tức · Nhận định</span><h3>Nhận định đầu ngày 20/11: BTC phá đáy 90 ngày, RSI chạm 11</h3><p>Số liệu thật sáng nay: BTC ở vùng thấp nhất từ tháng 7, vàng thủng 3.700 USD, Fed nghiêng tăng lãi suất tháng 12.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/nhan-dinh-21-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Tin tức · Nhận định</span><h3>Nhận định đầu ngày 21/11: BTC áp sát đáy năm 57.700 USD, Phố Wall ngập sắc đỏ</h3><p>Số liệu thật sáng thứ Bảy: BTC cách đáy 6-7 chỉ 2%, S&P 500 vào vùng điều chỉnh, JPMorgan dự báo Fed tăng lãi 3 lần liên tiếp.</p></span></a>
         <a class="article-item has-thumb" href="#/bai/flash-crash-2020"><span class="idx">02</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg" alt="" loading="lazy"><span><span class="tag">Kiến thức · Bài học lịch sử</span><h3>12/3/2020: ngày Bitcoin mất gần 39%</h3><p>Đòn bẩy, thanh khoản, và vì sao không có cái đáy nào an toàn cả.</p></span></a>
         <a class="article-item has-thumb" href="#/bai/ftx-2022"><span class="idx">03</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Sam_Bankman-Fried.png/1280px-Sam_Bankman-Fried.png" alt="" loading="lazy"><span><span class="tag">Kiến thức · Bài học lịch sử</span><h3>FTX sập: khi niềm tin vào sàn là rủi ro lớn nhất</h3><p>Tháng 11/2022, từ bài báo về Alameda tới tờ đơn phá sản.</p></span></a>
       </div>
@@ -819,7 +852,7 @@ const PAGES = {
       <div class="article-list" id="news-auto"><p class="muted">Đang tải tin…</p></div>
       <p class="label" style="margin-top:18px">Bài nhận định của Vova</p>
       <div class="article-list">
-        <a class="article-item has-thumb" href="#/bai/nhan-dinh-20-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Nhận định · Bản sáng 20/11</span><h3>Nhận định đầu ngày 20/11: BTC phá đáy 90 ngày, RSI chạm 11</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/nhan-dinh-21-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Nhận định · Bản sáng 21/11</span><h3>Nhận định đầu ngày 21/11: BTC áp sát đáy năm 57.700 USD, Phố Wall ngập sắc đỏ</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
       </div>
     </section>
     ${promoBandHTML()}`,
