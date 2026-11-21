@@ -524,6 +524,40 @@ function barsHTML() {
 }
 
 const ARTICLES = {
+  "nhan-dinh-22-11": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg", credit: "https://commons.wikimedia.org/wiki/File:Physical_Bitcoin_by_Mike_Cauldwell_(Casascius).jpg", captext: "Đồng bitcoin vật lý Casascius",
+    tag: "Tin tức · Nhận định", date: "Ngày 22 tháng 11 năm 2026", title: "Nhận định đầu ngày 22/11: BTC bật lại 60.000 USD sau đáy hai năm, Phố Wall khép tuần tệ nhất từ 2020",
+    intro: "Bản nhận định sáng 22/11 (Chủ nhật) dùng số liệu thật: nến ngày BTC tổng hợp từ CoinGecko cập nhật lúc 06:22, giá đóng cửa tuần của chứng khoán Mỹ và vàng thế giới, giá SJC sáng nay. Chỉ mô tả trạng thái thị trường, không điểm vào, không lệnh, không hứa hướng đi.",
+    body: `
+      <h3>Giá đã xảy ra</h3>
+      <ul>
+        <li>BTC/USD đóng nến ngày 21/11 (theo UTC) ở 58.818 USD. Đến 06:22 sáng nay, giá giao dịch quanh 60.216 USD, bật khoảng 9% từ đáy tuần 55.130 USD, mức thấp nhất kể từ tháng 9/2024. Sáu nến ngày gần nhất đóng lần lượt ở 65.305, 64.841, 64.889, 62.997, 61.921 và 58.818 USD.</li>
+        <li>Phố Wall khép tuần tồi tệ: Dow Jones mất 8% cả tuần, tệ nhất kể từ tháng 3/2020; Nasdaq giảm khoảng 10%, tệ nhất trong hơn 6 năm; S&P 500 mất 8,6%, tệ nhất từ tháng 4/2025. Cả S&P 500 và Dow đều đóng tuần trong vùng điều chỉnh (giảm hơn 10% từ đỉnh).</li>
+        <li>Vàng thế giới đóng tuần quanh 3.539 USD/oz, mất gần 9%, tuần giảm mạnh nhất trong 8 tháng; có lúc chạm 3.502,93 USD/oz. Trong nước, SJC sáng nay niêm yết 128,5-133,5 triệu đồng/lượng, cả tuần mất 6 triệu đồng ở chiều mua vào.</li>
+        <li>VN-Index đóng tuần ở 1.688,8 điểm. Hôm nay là Chủ nhật; phiên tới của thị trường Việt Nam là sáng thứ Hai 23/11.</li>
+      </ul>
+      <h3>Bộ chỉ báo cố định nói gì</h3>
+      <ul>
+        <li>BTC/USD nằm dưới cả các đường MA chính: MA 20 ở 71.033; MA 50 ở 77.648; MA 200 ở 72.540 USD.</li>
+        <li>RSI 14 của BTC ở 17,4, vùng quá bán sâu theo thang thông dụng. Đây là mô tả trạng thái, không phải tín hiệu mua.</li>
+      </ul>
+      <h3>Tin qua đêm cần kể tới</h3>
+      <ul>
+        <li>Cú bật của BTC diễn ra sau khi khoảng 1,8 tỷ USD lệnh đòn bẩy bị thanh lý trong 24 giờ, phần lớn là lệnh mua. Glassnode ghi nhận cụm thanh lý 59.000-62.000 USD đã được dọn sạch; CryptoQuant gọi tuần qua là 'capitulation cực độ' với 11,3 tỷ USD lỗ được chốt thực tế trong 7 ngày. <a href="#/tin/bitcoin-bat-lai-60000-sau-day-2-nam-2026-11-22">Đọc bản tin đầy đủ</a>.</li>
+        <li>Kalshi sẽ hầu tòa tại New York lúc 11:30 sáng thứ Hai theo giờ Mỹ (23:30 giờ Việt Nam); lệnh đề xuất của bang có thể buộc sàn ngừng hoạt động toàn quốc. <a href="#/tin/kalshi-hau-toa-thu-hai-tai-new-york-2026-11-22">Đọc bản tin đầy đủ</a>.</li>
+        <li>Thị trường đang đặt cược gần như chắc chắn Fed tăng lãi suất trong tháng 12, theo công cụ FedWatch của CME. Thống đốc Waller nhắc khả năng tăng 0,5 điểm phần trăm.</li>
+        <li>Tuần tới thị trường Mỹ nghỉ Lễ Tạ ơn thứ Năm 26/11 và giao dịch nửa ngày thứ Sáu, thanh khoản thường mỏng.</li>
+      </ul>
+      <h3>Những mức cần theo dõi, không phải điểm vào</h3>
+      <ul>
+        <li>Đáy 55.130 USD của tuần qua là mốc đối chiếu gần nhất trên khung ngày. Phía trên, ngưỡng tâm lý 60.000 USD vừa được lấy lại trong cuối tuần thanh khoản mỏng; QCP Capital lưu ý phiên Mỹ thứ Hai mới là bài kiểm tra thật.</li>
+        <li>Cụm MA 20 và MA 200 quanh 71.000-72.500 USD vẫn là vùng đầu tiên để hình ảnh khung ngày đổi trạng thái; giá hiện cách vùng này khoảng 17%.</li>
+        <li>Với vàng, mốc 3.500 USD/oz là ngưỡng tâm lý ngay dưới đáy tuần; giới phân tích chỉ vùng 3.256-3.280 USD (đáy tháng 7/2025) nếu mốc này vỡ.</li>
+      </ul>`,
+    takeaway: "Đúc kết hôm nay: BTC bật lại sau khi chạm đáy hai năm nhưng vẫn nằm dưới mọi đường MA chính, còn chứng khoán Mỹ và vàng cùng khép tuần tệ nhất nhiều tháng. Ba dữ kiện đó mô tả một thị trường vừa dọn xong một đợt bán cưỡng chế lớn, chúng không hứa điều gì về phiên tới.",
+    source: "Nguồn số liệu: nến ngày BTC/USD tổng hợp từ CoinGecko lúc 06:22 22/11/2026; giá đóng cửa chứng khoán Mỹ theo Reuters và VnEconomy; giá vàng và SJC theo VietNamNet; dữ kiện thanh lý, ETF và pháp lý theo CoinDesk và The Block. Giờ ghi trong bài là giờ Việt Nam.",
+    back: "#/tin-tuc", backLabel: "Quay lại Tin tức mới nhất",
+  },
   "nhan-dinh-21-11": {
     image: "https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg", credit: "https://commons.wikimedia.org/wiki/File:Physical_Bitcoin_by_Mike_Cauldwell_(Casascius).jpg", captext: "\u0110\u1ed3ng bitcoin v\u1eadt l\u00fd Casascius",
     tag: "Tin t\u1ee9c \u00b7 Nh\u1eadn \u0111\u1ecbnh", date: "Ng\u00e0y 21 th\u00e1ng 11 n\u0103m 2026", title: "Nh\u1eadn \u0111\u1ecbnh \u0111\u1ea7u ng\u00e0y 21/11: BTC \u00e1p s\u00e1t \u0111\u00e1y n\u0103m 57.700 USD, Ph\u1ed1 Wall ng\u1eadp s\u1eafc \u0111\u1ecf",
@@ -808,7 +842,7 @@ const PAGES = {
       <h2 class="section">Bài mới trên trang</h2>
       <p class="section-sub">Mỗi bài kết lại bằng một điều đúc kết, kiểm chứng được trên chart.</p>
       <div class="article-list">
-        <a class="article-item has-thumb" href="#/bai/nhan-dinh-21-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Tin tức · Nhận định</span><h3>Nhận định đầu ngày 21/11: BTC áp sát đáy năm 57.700 USD, Phố Wall ngập sắc đỏ</h3><p>Số liệu thật sáng thứ Bảy: BTC cách đáy 6-7 chỉ 2%, S&P 500 vào vùng điều chỉnh, JPMorgan dự báo Fed tăng lãi 3 lần liên tiếp.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/nhan-dinh-22-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Tin tức · Nhận định</span><h3>Nhận định đầu ngày 22/11: BTC bật lại 60.000 USD sau đáy hai năm, Phố Wall khép tuần tệ nhất từ 2020</h3><p>Số liệu thật sáng Chủ nhật: BTC bật 9% từ đáy 55.130 USD, S&P 500 và Dow vào vùng điều chỉnh, vàng mất 9% trong tuần.</p></span></a>
         <a class="article-item has-thumb" href="#/bai/flash-crash-2020"><span class="idx">02</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg" alt="" loading="lazy"><span><span class="tag">Kiến thức · Bài học lịch sử</span><h3>12/3/2020: ngày Bitcoin mất gần 39%</h3><p>Đòn bẩy, thanh khoản, và vì sao không có cái đáy nào an toàn cả.</p></span></a>
         <a class="article-item has-thumb" href="#/bai/ftx-2022"><span class="idx">03</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Sam_Bankman-Fried.png/1280px-Sam_Bankman-Fried.png" alt="" loading="lazy"><span><span class="tag">Kiến thức · Bài học lịch sử</span><h3>FTX sập: khi niềm tin vào sàn là rủi ro lớn nhất</h3><p>Tháng 11/2022, từ bài báo về Alameda tới tờ đơn phá sản.</p></span></a>
       </div>
@@ -852,7 +886,7 @@ const PAGES = {
       <div class="article-list" id="news-auto"><p class="muted">Đang tải tin…</p></div>
       <p class="label" style="margin-top:18px">Bài nhận định của Vova</p>
       <div class="article-list">
-        <a class="article-item has-thumb" href="#/bai/nhan-dinh-21-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Nhận định · Bản sáng 21/11</span><h3>Nhận định đầu ngày 21/11: BTC áp sát đáy năm 57.700 USD, Phố Wall ngập sắc đỏ</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/nhan-dinh-22-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Nhận định · Bản sáng 22/11</span><h3>Nhận định đầu ngày 22/11: BTC bật lại 60.000 USD sau đáy hai năm, Phố Wall khép tuần tệ nhất từ 2020</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
       </div>
     </section>
     ${promoBandHTML()}`,
