@@ -524,6 +524,38 @@ function barsHTML() {
 }
 
 const ARTICLES = {
+  "nhan-dinh-23-11": {
+    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg", credit: "https://commons.wikimedia.org/wiki/File:Bitcoin_on_Laptop_Keyboard.jpg", creditlabel: "Wikimedia Commons", captext: "Biểu tượng bitcoin trên bàn phím laptop",
+    tag: "Tin tức · Nhận định", date: "Ngày 23 tháng 11 năm 2026", title: "Nhận định đầu ngày 23/11: BTC giữ lại 60.000 USD sau cuối tuần thủng 55.000, VN-Index mở tuần dưới 1.700",
+    intro: "Bản nhận định sáng 23/11 (thứ Hai) dùng số liệu thật: giá BTC tổng hợp từ CoinGecko lúc 06:28, giá đóng cửa tuần của chứng khoán Mỹ và VN-Index, cùng tin qua đêm từ châu Á. Chỉ mô tả trạng thái thị trường, không điểm vào, không lệnh, không hứa hướng đi.",
+    body: `
+      <h3>Giá đã xảy ra</h3>
+      <ul>
+        <li>BTC/USD đóng nến ngày 22/11 (theo UTC) ở 61.009 USD. Đến 06:28 sáng nay, giá giao dịch quanh 60.927 USD. Cuối tuần giá có lúc thủng 55.130 USD, mức thấp nhất kể từ tháng 9/2024, rồi bật lại. Bitcoin vừa khép chuỗi 6 tuần giảm liên tiếp, dài nhất kể từ năm 2022.</li>
+        <li>Phố Wall khép tuần tệ nhất từ 2020: Dow Jones mất 8%, Nasdaq mất khoảng 10%, S&P 500 mất 8,6%. Cả S&P 500 và Dow đều nằm trong vùng điều chỉnh.</li>
+        <li>Vàng thế giới phiên Chủ nhật mất 2,42% còn 3.538,31 USD/oz; bạc mất 3,88% còn 41,22 USD/oz. Trong nước, SJC sáng nay giữ 128,5-133,5 triệu đồng/lượng.</li>
+        <li>VN-Index đóng tuần trước ở 1.688,8 điểm, mất 2,7% trong tuần. Khối ngoại bán ròng khoảng 3.300 tỷ đồng, cao nhất 6 tuần. Phiên đầu tuần hôm nay là lúc kiểm định lại vùng 1.650-1.700 điểm.</li>
+      </ul>
+      <h3>Bộ chỉ báo cố định nói gì</h3>
+      <ul>
+        <li>BTC/USD nằm dưới cả các đường MA chính: MA 20 ở 69.340; MA 50 ở 76.686; MA 200 ở 72.334 USD.</li>
+        <li>RSI 14 của BTC ở 19,0, vùng quá bán sâu theo thang thông dụng. Đây là mô tả trạng thái, không phải tín hiệu mua.</li>
+        <li>Dải Bollinger (21, 2) có mép dưới ở 56.445 USD; giá đã chạm vùng này trong cuối tuần trước khi bật lại.</li>
+      </ul>
+      <h3>Hôm nay để ý gì</h3>
+      <ul>
+        <li>VN-Index mở phiên đầu tuần: theo dõi vùng 1.650-1.700 điểm và thanh khoản. Các công ty chứng khoán đồng thuận chưa gọi là đảo chiều cho tới khi chỉ số đóng cửa trên 1.700 kèm khối lượng vượt trung bình. <a href="#/tin/vn-index-tuan-moi-cho-kiem-dinh-lai-moc-1700-2026-11-23">Đọc bản tin đầy đủ</a>.</li>
+        <li>Đài Loan áp lệnh cấm bán khống lần đầu kể từ 2015, Hàn Quốc lần đầu kích hoạt quỹ bình ổn thị trường 100.000 tỷ won. Đây là hai động thái hỗ trợ hiếm gặp từ châu Á. <a href="#/tin/dai-loan-cam-ban-khong-co-phieu-giam-lan-dau-tu-2015-2026-11-23">Đọc bản tin đầy đủ</a>.</li>
+        <li>Tuần này Mỹ công bố lạm phát PCE vào thứ Tư, nghỉ Lễ Tạ ơn thứ Năm và giao dịch nửa ngày thứ Sáu; thanh khoản toàn cầu thường mỏng dịp này.</li>
+      </ul>
+      <h3>Quá khứ nhắc gì</h3>
+      <ul>
+        <li>Tháng 3/2020, RSI ngày của BTC cũng rơi xuống vùng quá bán sâu tương tự trước khi thị trường dần cân bằng. Quá bán mô tả cú bán đã đi xa, nó không hứa đáy đã xong. <a href="#/bai/flash-crash-2020">Đọc lại vụ việc</a>.</li>
+      </ul>`,
+    takeaway: "Đúc kết hôm nay: BTC giữ lại được 60.000 USD sau cuối tuần thủng 55.000 nhưng vẫn nằm dưới mọi đường MA chính; VN-Index bước vào tuần mới dưới 1.700 điểm với khối ngoại bán ròng cao nhất 6 tuần. Số liệu trước, cảm xúc sau.",
+    source: "Nguồn số liệu: nến ngày BTC/USD tổng hợp từ CoinGecko lúc 06:28 23/11/2026; giá đóng cửa chứng khoán Mỹ theo Reuters và AP; giá vàng, bạc theo iEconomy; khối ngoại và kịch bản VN-Index theo Thời báo Tài chính Việt Nam và Báo Đầu tư; tin Đài Loan, Hàn Quốc theo MLQ.ai. Giờ ghi trong bài là giờ Việt Nam.",
+    back: "#/tin-tuc", backLabel: "Quay lại Tin tức mới nhất",
+  },
   "nhan-dinh-22-11": {
     image: "https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg", credit: "https://commons.wikimedia.org/wiki/File:Physical_Bitcoin_by_Mike_Cauldwell_(Casascius).jpg", captext: "Đồng bitcoin vật lý Casascius",
     tag: "Tin tức · Nhận định", date: "Ngày 22 tháng 11 năm 2026", title: "Nhận định đầu ngày 22/11: BTC bật lại 60.000 USD sau đáy hai năm, Phố Wall khép tuần tệ nhất từ 2020",
@@ -842,7 +874,7 @@ const PAGES = {
       <h2 class="section">Bài mới trên trang</h2>
       <p class="section-sub">Mỗi bài kết lại bằng một điều đúc kết, kiểm chứng được trên chart.</p>
       <div class="article-list">
-        <a class="article-item has-thumb" href="#/bai/nhan-dinh-22-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Tin tức · Nhận định</span><h3>Nhận định đầu ngày 22/11: BTC bật lại 60.000 USD sau đáy hai năm, Phố Wall khép tuần tệ nhất từ 2020</h3><p>Số liệu thật sáng Chủ nhật: BTC bật 9% từ đáy 55.130 USD, S&P 500 và Dow vào vùng điều chỉnh, vàng mất 9% trong tuần.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/nhan-dinh-23-11"><span class="idx">01</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg" alt="" loading="lazy"><span><span class="tag">Tin tức · Nhận định</span><h3>Nhận định đầu ngày 23/11: BTC giữ lại 60.000 USD sau cuối tuần thủng 55.000, VN-Index mở tuần dưới 1.700</h3><p>Số liệu thật sáng thứ Hai: BTC quanh 60.900 USD sau đáy 55.130, RSI 19, khối ngoại bán ròng 3.300 tỷ tuần trước.</p></span></a>
       </div>
     </section>
     ${promoBandHTML()}`,
@@ -884,7 +916,7 @@ const PAGES = {
       <div class="article-list" id="news-auto"><p class="muted">Đang tải tin…</p></div>
       <p class="label" style="margin-top:18px">Bài nhận định của Vova</p>
       <div class="article-list">
-        <a class="article-item has-thumb" href="#/bai/nhan-dinh-22-11"><span class="idx">01</span><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg" alt="" loading="lazy"><span><span class="tag">Nhận định · Bản sáng 22/11</span><h3>Nhận định đầu ngày 22/11: BTC bật lại 60.000 USD sau đáy hai năm, Phố Wall khép tuần tệ nhất từ 2020</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/nhan-dinh-23-11"><span class="idx">01</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg" alt="" loading="lazy"><span><span class="tag">Nhận định · Bản sáng 23/11</span><h3>Nhận định đầu ngày 23/11: BTC giữ lại 60.000 USD sau cuối tuần thủng 55.000, VN-Index mở tuần dưới 1.700</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
       </div>
     </section>
     ${promoBandHTML()}`,
@@ -896,12 +928,12 @@ const PAGES = {
       <div class="article-grid" style="margin-top:26px"><div class="article">
         <figure class="leadfig"><img class="lead" src="https://alternative.me/crypto/fear-and-greed-index.png" alt="Chỉ số Fear and Greed của thị trường crypto"><figcaption>Chỉ số Sợ hãi &amp; Tham lam (Fear &amp; Greed) của thị trường crypto · Ảnh: <a href="https://alternative.me/crypto/fear-and-greed-index/" target="_blank" rel="noopener">alternative.me</a></figcaption></figure>
         <div id="sentiment-box">
-          <p><strong>22/11:</strong> Chỉ số đang ở <strong>11 điểm — Sợ hãi tột độ</strong> (theo alternative.me).</p>
-          <p>Bối cảnh tuần qua: Bitcoin có lúc rơi về vùng thấp nhất hai năm quanh 60.000 USD rồi bật lại. Phố Wall khép tuần tệ nhất kể từ 2020.</p>
+          <p><strong>23/11:</strong> Chỉ số đang ở <strong>11 điểm — Sợ hãi tột độ</strong> (theo alternative.me).</p>
+          <p>Cuối tuần qua: Bitcoin thủng 55.130 USD, đáy từ tháng 9/2024, rồi bật lại quanh 60.000 USD; chuỗi 6 tuần giảm liên tiếp, dài nhất từ 2022. Phố Wall khép tuần tệ nhất từ 2020.</p>
           <p>Khi đám đông sợ hãi tột độ, lịch sử ghi nhận giá biến động mạnh theo cả hai chiều. Ba cú tương tự đã mổ xẻ: tháng 3/2020, tháng 5/2021, tháng 11/2022.</p>
           <h3 style="margin:18px 0 6px">Dòng tiền</h3>
           <p>ETF Bitcoin spot (Mỹ): phiên 20/11 dòng tiền ròng -124,5 triệu USD — tạm tính, quỹ IBIT chưa báo số; phiên 19/11 chốt -582,3 triệu USD (theo Farside).</p>
-          <p>Khối ngoại trên HOSE: bán ròng 841 tỷ đồng phiên 20/11, phiên thứ tư liên tiếp bán ròng; cộng dồn 20 phiên -7.663 tỷ đồng (theo Stockfly, dữ liệu VNINDEX).</p>
+          <p>Khối ngoại trên HOSE: tuần 16-20/11 bán ròng khoảng 3.300 tỷ đồng, cao nhất 6 tuần (theo Thời báo Tài chính Việt Nam).</p>
         </div>
         <p style="margin-top:14px"><a href="#/bai-hoc">Xem các cú sập tương tự trong Bài học quá khứ →</a></p>
         <p class="source">Nội dung chỉ để tham khảo, không phải lời khuyên đầu tư.</p>
