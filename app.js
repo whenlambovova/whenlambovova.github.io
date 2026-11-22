@@ -888,6 +888,25 @@ const PAGES = {
       </div>
     </section>
     ${promoBandHTML()}`,
+  "tam-ly": () => `
+    <section class="blk" style="margin-top:40px">
+      <p class="label">Tâm lý thị trường</p>
+      <h2 class="section">Hôm nay đám đông đang nghĩ gì</h2>
+      <p class="section-sub">Số liệu tâm lý và dòng tiền, cập nhật mỗi sáng. Đọc để biết đám đông đang ở đâu, không phải để làm theo.</p>
+      <div class="article-grid" style="margin-top:26px"><div class="article">
+        <figure class="leadfig"><img class="lead" src="https://alternative.me/crypto/fear-and-greed-index.png" alt="Chỉ số Fear and Greed của thị trường crypto"><figcaption>Chỉ số Sợ hãi &amp; Tham lam (Fear &amp; Greed) của thị trường crypto · Ảnh: <a href="https://alternative.me/crypto/fear-and-greed-index/" target="_blank" rel="noopener">alternative.me</a></figcaption></figure>
+        <div id="sentiment-box">
+          <p><strong>22/11:</strong> Chỉ số đang ở <strong>11 điểm — Sợ hãi tột độ</strong> (theo alternative.me).</p>
+          <p>Bối cảnh tuần qua: Bitcoin có lúc rơi về vùng thấp nhất hai năm quanh 60.000 USD rồi bật lại. Phố Wall khép tuần tệ nhất kể từ 2020.</p>
+          <p>Khi đám đông sợ hãi tột độ, lịch sử ghi nhận giá biến động mạnh theo cả hai chiều. Ba cú tương tự đã mổ xẻ: tháng 3/2020, tháng 5/2021, tháng 11/2022.</p>
+          <h3 style="margin:18px 0 6px">Dòng tiền</h3>
+          <p>ETF Bitcoin spot (Mỹ): dòng tiền ròng 24 giờ qua -582,3 triệu USD (số ngày 21/11 giờ Mỹ, theo The Block).</p>
+          <p>Khối ngoại trên HOSE: bán ròng 841 tỷ đồng phiên 20/11, phiên thứ tư liên tiếp bán ròng; cộng dồn 20 phiên -7.663 tỷ đồng (theo Stockfly, dữ liệu VNINDEX).</p>
+        </div>
+        <p style="margin-top:14px"><a href="#/bai-hoc">Xem các cú sập tương tự trong Bài học quá khứ →</a></p>
+        <p class="source">Nội dung chỉ để tham khảo, không phải lời khuyên đầu tư.</p>
+      </div></div>
+    </section>`,
   "bai-hoc": () => `
     <section class="blk" style="margin-top:40px">
       <p class="label">Bài học quá khứ</p>
@@ -1052,7 +1071,25 @@ function route() {
   if (page === "fx") renderFx();
   if (page === "vang") { renderGoldSpot(); renderGoldChart(); }
   if (page === "tin-tuc") { renderNews(); loadNews(); }
+  if (page === "tam-ly") loadSentiment();
   if (page === "demo") { demoMount(); loadGold(); }
+}
+
+async function loadSentiment() {
+  const box = document.getElementById("sentiment-box");
+  if (!box) return;
+  try {
+    const r = await fetch("data/sentiment.json?cb=" + Date.now(), { cache: "reload" });
+    if (!r.ok) return;
+    const s = await r.json();
+    let h = `<p><strong>${esc(s.date_short)}</strong> Chỉ số đang ở <strong>${esc(String(s.fng_value))} điểm — ${esc(s.fng_label)}</strong> (theo alternative.me).</p>`;
+    (s.note || []).forEach((p) => { h += `<p>${esc(p)}</p>`; });
+    if ((s.flows || []).length) {
+      h += `<h3 style="margin:18px 0 6px">Dòng tiền</h3>`;
+      s.flows.forEach((p) => { h += `<p>${esc(p)}</p>`; });
+    }
+    box.innerHTML = h;
+  } catch (e) { /* giữ nội dung tĩnh */ }
 }
 
 function setActive(page) {
