@@ -351,7 +351,7 @@ html[data-theme="dark"] body[data-page="home"], html[data-theme="dark"] body[dat
 .demo-h { font-family: "Playfair Display", Georgia, serif; font-size: 19px; font-weight: 500; margin: 30px 0 12px; }
 @media (max-width: 760px) { .demo-grid { grid-template-columns: repeat(2, 1fr); } }
 
-/* ===== Sàn ảo v2 dashboard ===== */
+/* ===== Giao dịch demo v2 dashboard ===== */
 .dz-shell { margin-top: 1rem; }
 .dz-msg { display: none; margin: 0.5rem 0; padding: 0.6rem 0.9rem; border-radius: 8px; background: rgba(201,162,39,0.15); border: 1px solid #c9a227; font-size: 0.9rem; }
 .dz-msg.show { display: block; }
