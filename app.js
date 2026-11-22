@@ -106,7 +106,7 @@ async function loadTickers() {
   renderTickerStrip();
   if(window.demoDashRefresh) window.demoDashRefresh();
   if (currentRoute === "home") renderHomeMarket();
-  if (currentRoute === "thi-truong") renderMarketTable();
+  if ((currentRoute === "thi-truong" || currentRoute === "bang-gia")) renderMarketTable();
 }
 
 
@@ -121,7 +121,7 @@ function newsView(n) {
 function newsArticleHTML(n) {
   const v = newsView(n);
   const time = new Date(n.at).toLocaleString("vi-VN", { weekday: "long", day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" });
-  const pairs = v.pairs.length ? `<p><strong>Cặp liên quan:</strong> ${v.pairs.map(esc).join(", ")}. <a href="#/thi-truong">Xem bảng thị trường</a></p>` : "";
+  const pairs = v.pairs.length ? `<p><strong>Cặp liên quan:</strong> ${v.pairs.map(esc).join(", ")}. <a href="#/bang-gia">Xem bảng giá</a></p>` : "";
   const note = `<h3>Nhận định</h3>` + (v.note || "Tin này chỉ để bạn nắm thông tin. Hãy xem giá phản ứng thế nào trước khi rút ra kết luận.").split(/\n\n+/).map(p => `<p>${esc(p)}</p>`).join("");
   return `<div class="article-grid" style="margin-top:36px"><div class="article"><span class="tag">Tin tức mới nhất · ${n.category ? esc(n.category) + " · " : ""}${esc(n.source)}</span><h2 class="title">${esc(v.title)}</h2><p class="byline">When Lambo Vova · ${esc(time)}</p><p class="intro">${esc(v.summary)}</p>${n.image ? `<figure class="leadfig"><img class="lead" src="${esc(n.image)}" alt="">${n.credit ? `<figcaption>${n.captext ? esc(n.captext) + " · " : ""}Ảnh: <a href="${esc(n.credit)}" target="_blank" rel="noopener">${esc(n.creditlabel || "Wikimedia Commons")}</a></figcaption>` : ""}</figure>` : ""}${n.body || ""}${pairs}${note}<p class="source">Nội dung chỉ để tham khảo, không phải lời khuyên đầu tư.</p><p class="source" style="font-size:12px">Nguồn: ${esc(n.source)}.</p><a class="back" href="#/tin-tuc">← Quay lại Tin tức mới nhất</a></div>${promoHTML()}</div>`;
 }
@@ -201,7 +201,7 @@ async function loadGold() {
       else { goldSpot = null; goldError = true; }
     }
   }
-  if (currentRoute === "vang") renderGoldSpot();
+  if ((currentRoute === "vang" || currentRoute === "bang-gia")) renderGoldSpot();
 }
 
 function renderGoldSpot() {
@@ -233,7 +233,7 @@ async function loadVangVN() {
     if (live && live.vang && live.vang.sjc && live.vang.sjc.buy) vangVN = live.vang;
     else vangVNError = true;
   } catch (e) { vangVNError = true; }
-  if (currentRoute === "vang") renderVangVN();
+  if ((currentRoute === "vang" || currentRoute === "bang-gia")) renderVangVN();
 }
 function renderVangVN() {
   const el = document.getElementById("gold-vn");
@@ -265,7 +265,7 @@ async function loadGoldKlines() {
       else { goldKline = null; goldKlineError = true; }
     }
   }
-  if (currentRoute === "vang") renderGoldChart();
+  if ((currentRoute === "vang" || currentRoute === "bang-gia")) renderGoldChart();
 }
 
 
@@ -307,7 +307,7 @@ async function loadFx() {
     const s = cacheGetStale("wlv_fx");
     if (s) applyFx(s.data); else { fxRows = null; fxError = true; }
   }
-  if (currentRoute === "fx") renderFx();
+  if ((currentRoute === "fx" || currentRoute === "bang-gia")) renderFx();
 }
 function applyFx(d) { fxRows = d.rows; fxDate = d.date; vndRate = d.vnd || null; fxError = false; }
 
@@ -389,7 +389,7 @@ async function loadKlines() {
       else { klineData = null; klineError = true; }
     }
   }
-  if (currentRoute === "thi-truong") renderChart();
+  if ((currentRoute === "thi-truong" || currentRoute === "bang-gia")) renderChart();
 }
 
 /* ---------- Chart drawing ---------- */
@@ -834,7 +834,7 @@ const PAGES = {
       <h2 class="section">Hôm nay giá thế nào</h2>
       <p class="section-sub">Giá trực tiếp các cặp chính, quy về …/USD. Tự cập nhật mỗi 90 giây.</p>
       <div id="home-market">${marketTableHTML(5)}</div>
-      <a class="btn ghost" href="#/thi-truong">Mở bảng thị trường đầy đủ</a>
+      <a class="btn ghost" href="#/bang-gia">Mở bảng giá đầy đủ</a>
       </div>
     </section>
     <section class="blk">
@@ -960,6 +960,75 @@ const PAGES = {
       <h3 style="font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:19px;margin:30px 0 12px">Xem ngay bản mới nhất</h3>
       <iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/${VIDEO_ID}" title="Nhận định phiên 9/11/2026 — When Lambo Vova" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>`,
+  "bang-gia": () => `
+    <section class="blk" style="margin-top:40px">
+      <p class="label">Bảng giá</p>
+      <h2 class="section">Bảng giá 24 giờ</h2>
+      <p class="section-sub">Crypto, vàng và FX trên một trang. Số liệu từ nguồn công khai miễn phí, chỉ để tham khảo, không phải lời khuyên đầu tư.</p>
+      <div id="market-table">${marketTableHTML(0)}</div>
+      <div id="market-bars">${barsHTML()}</div>
+    </section>
+    <section class="blk">
+      <p class="label">Chart</p>
+      <h2 class="section">BTC/USD, khung ngày</h2>
+      <p class="section-sub">Đúng một bộ chỉ báo: MA 20/50/65/200, EMA 21/34/89/200, Bollinger (21, 2), RSI 14.</p>
+      <div class="chart-box">
+        <div class="legend">
+          <span style="--c:#211d19">BTC/USD</span>
+          <span style="--c:#2e86de">MA 20</span>
+          <span style="--c:#8e44ad">MA 50</span>
+          <span style="--c:#a2543f">MA 200</span>
+          <span style="--c:#cbb26a">Bollinger (21, 2)</span>
+        </div>
+        <div id="chart-area"><p class="muted">Đang tải nến ngày và tính chỉ báo…</p></div>
+        <canvas id="chart"></canvas>
+        <canvas id="rsi"></canvas>
+        <p class="table-note">Nguồn: giá BTC/USD theo ngày, tổng hợp nhiều sàn từ dữ liệu công khai. Số liệu một nguồn tổng hợp không thay chart của từng sàn cụ thể.</p>
+      </div>
+      <div class="facts" id="facts"></div>
+      <div class="note">Đọc theo đúng bộ cố định: giá đang ở đâu so với từng đường MA và EMA, RSI ở vùng nào, giá nằm trên hay dưới đường giữa Bollinger. Trang chỉ mô tả trạng thái, không kết luận thay người xem.</div>
+    </section>
+    <section class="blk">
+      <p class="label">Giá vàng</p>
+      <h2 class="section">Theo dõi giá vàng</h2>
+      <p class="section-sub">Vàng thế giới tự động từ nguồn miễn phí; vàng trong nước không có nguồn API miễn phí tin cậy nên Vova cập nhật tay, ghi rõ giờ.</p>
+      <div id="gold-spot"><p class="muted">Đang tải giá vàng thế giới…</p></div>
+    </section>
+    <section class="blk blk--alt">
+      <div class="wrap-inner">
+        <p class="label">Trong nước</p>
+        <h2 class="section">Vàng SJC và nhẫn trơn</h2>
+        <p class="section-sub">SJC, nhẫn trơn 9999, DOJI, Phú Quý — tự động từ nguồn niêm yết công khai, mỗi 30 phút.</p>
+        <div id="gold-vn"><p class="muted">Đang tải giá trong nước…</p></div>
+      </div>
+    </section>
+    <section class="blk">
+      <p class="label">Chart</p>
+      <h2 class="section">PAXG/USD, khung ngày</h2>
+      <p class="section-sub">Vàng token hóa bám vàng thế giới, chỉ để tham khảo hình chart. Đúng một bộ chỉ báo: MA 20/50/65/200, EMA 21/34/89/200, Bollinger (21, 2), RSI 14.</p>
+      <div class="chart-box">
+        <div class="legend">
+          <span style="--c:#211d19">PAXG/USD</span>
+          <span style="--c:#2e86de">MA 20</span>
+          <span style="--c:#8e44ad">MA 50</span>
+          <span style="--c:#a2543f">MA 200</span>
+          <span style="--c:#cbb26a">Bollinger (21, 2)</span>
+        </div>
+        <div id="gchart-area"><p class="muted">Đang tải nến ngày và tính chỉ báo…</p></div>
+        <canvas id="gchart"></canvas>
+        <canvas id="grsi"></canvas>
+        <p class="table-note">Nguồn: giá PAXG/USD theo ngày từ dữ liệu công khai. PAXG là token bám giá vàng thế giới, chỉ tham khảo, không thay giá SJC.</p>
+      </div>
+      <div class="facts" id="gfacts"></div>
+      <div class="note">Đọc theo đúng bộ cố định: giá đang ở đâu so với từng đường MA và EMA, RSI ở vùng nào, giá nằm trên hay dưới đường giữa Bollinger. Trang chỉ mô tả trạng thái, không kết luận thay người xem.</div>
+    </section>
+    <section class="blk">
+      <p class="label">Thị trường</p>
+      <h2 class="section">Cặp FX nổi bật</h2>
+      <p class="section-sub">Tỷ giá tham chiếu miễn phí từ ECB, cập nhật mỗi ngày làm việc.</p>
+      <div id="fx-table"><p class="muted">Đang tải tỷ giá…</p></div>
+    </section>
+    ${promoBandHTML()}`,
   "vang": () => `
     <section class="blk" style="margin-top:40px">
       <p class="label">Giá vàng</p>
@@ -1043,6 +1112,7 @@ function route() {
   if (window.demoDashUnmount) window.demoDashUnmount();
   const hash = location.hash.replace(/^#\/?/, "");
   const app = document.getElementById("app");
+  if (hash === "thi-truong" || hash === "vang" || hash === "fx") { location.hash = "#/bang-gia"; return; }
   let page = "home";
   if (hash.startsWith("tin/")) {
     const id = decodeURIComponent(hash.slice(4));
@@ -1070,6 +1140,7 @@ function route() {
   if (page === "vang") renderGoldChart();
   if (page === "fx") renderFx();
   if (page === "vang") { renderGoldSpot(); renderGoldChart(); }
+  if (page === "bang-gia") { renderChart(); renderGoldSpot(); renderGoldChart(); renderFx(); }
   if (page === "tin-tuc") { renderNews(); loadNews(); }
   if (page === "tam-ly") loadSentiment();
   if (page === "demo") { demoMount(); loadGold(); }
@@ -1097,7 +1168,7 @@ function setActive(page) {
 }
 
 window.addEventListener("hashchange", route);
-window.addEventListener("resize", () => { if (currentRoute === "thi-truong") renderChart(); if (currentRoute === "vang") renderGoldChart(); });
+window.addEventListener("resize", () => { if ((currentRoute === "thi-truong" || currentRoute === "bang-gia")) renderChart(); if ((currentRoute === "vang" || currentRoute === "bang-gia")) renderGoldChart(); });
 
 const dl = document.getElementById("date-line");
 if (dl) dl.textContent = new Date().toLocaleDateString("vi-VN", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
