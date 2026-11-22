@@ -900,7 +900,7 @@ const PAGES = {
           <p>Bối cảnh tuần qua: Bitcoin có lúc rơi về vùng thấp nhất hai năm quanh 60.000 USD rồi bật lại. Phố Wall khép tuần tệ nhất kể từ 2020.</p>
           <p>Khi đám đông sợ hãi tột độ, lịch sử ghi nhận giá biến động mạnh theo cả hai chiều. Ba cú tương tự đã mổ xẻ: tháng 3/2020, tháng 5/2021, tháng 11/2022.</p>
           <h3 style="margin:18px 0 6px">Dòng tiền</h3>
-          <p>ETF Bitcoin spot (Mỹ): dòng tiền ròng 24 giờ qua -582,3 triệu USD (số ngày 21/11 giờ Mỹ, theo The Block).</p>
+          <p>ETF Bitcoin spot (Mỹ): phiên 20/11 dòng tiền ròng -124,5 triệu USD — tạm tính, quỹ IBIT chưa báo số; phiên 19/11 chốt -582,3 triệu USD (theo Farside).</p>
           <p>Khối ngoại trên HOSE: bán ròng 841 tỷ đồng phiên 20/11, phiên thứ tư liên tiếp bán ròng; cộng dồn 20 phiên -7.663 tỷ đồng (theo Stockfly, dữ liệu VNINDEX).</p>
         </div>
         <p style="margin-top:14px"><a href="#/bai-hoc">Xem các cú sập tương tự trong Bài học quá khứ →</a></p>
