@@ -127,17 +127,17 @@ function newsArticleHTML(n) {
 }
 
 async function loadNews(force) {
-  const fresh = force ? null : cacheGet("wlv_art", 30 * 60 * 1000);
+  const fresh = force ? null : cacheGet("wlv_art_eve23", 30 * 60 * 1000);
   if (fresh) { newsItems = fresh; newsError = false; if (currentRoute === "tin-tuc") renderNews(); return; }
   try {
-    const r = await fetch("data/articles.json?t=" + Date.now());
+    const r = await fetch("data/3-articles.json?t=" + Date.now());
     if (!r.ok) throw new Error("news " + r.status);
     const d = await r.json();
     newsItems = (d && d.items) ? d.items : [];
     newsError = false;
-    cacheSet("wlv_art", newsItems);
+    cacheSet("wlv_art_eve23", newsItems);
   } catch (e) {
-    const stale = cacheGetStale("wlv_art");
+    const stale = cacheGetStale("wlv_art_eve23");
     if (stale) { newsItems = stale.data; newsError = false; }
     else newsError = true;
   }
