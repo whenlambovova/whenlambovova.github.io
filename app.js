@@ -127,17 +127,17 @@ function newsArticleHTML(n) {
 }
 
 async function loadNews(force) {
-  const fresh = force ? null : cacheGet("wlv_art_eve23", 30 * 60 * 1000);
+  const fresh = force ? null : cacheGet("wlv_art_morn24", 30 * 60 * 1000);
   if (fresh) { newsItems = fresh; newsError = false; if (currentRoute === "tin-tuc") renderNews(); return; }
   try {
-    const r = await fetch("data/3-articles.json?t=" + Date.now());
+    const r = await fetch("data/1-morning-24.json?t=" + Date.now());
     if (!r.ok) throw new Error("news " + r.status);
     const d = await r.json();
     newsItems = (d && d.items) ? d.items : [];
     newsError = false;
-    cacheSet("wlv_art_eve23", newsItems);
+    cacheSet("wlv_art_morn24", newsItems);
   } catch (e) {
-    const stale = cacheGetStale("wlv_art_eve23");
+    const stale = cacheGetStale("wlv_art_morn24");
     if (stale) { newsItems = stale.data; newsError = false; }
     else newsError = true;
   }
@@ -524,6 +524,7 @@ function barsHTML() {
 }
 
 const ARTICLES = {
+  "nhan-dinh-24-11": {"image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg", "credit": "https://commons.wikimedia.org/wiki/File:Bitcoin_on_Laptop_Keyboard.jpg", "creditlabel": "Wikimedia Commons", "captext": "Biểu tượng Bitcoin trên bàn phím laptop", "tag": "Tin tức · Nhận định", "date": "Ngày 24 tháng 11 năm 2026", "title": "Nhận định sáng 24/11: Phố Wall bật mạnh, Bitcoin chưa theo kịp, VN-Index chờ dòng tiền", "intro": "Bản sáng thứ Ba 24/11 dùng phiên Mỹ 23/11 đã đóng cửa, phiên Việt Nam 23/11 và dữ liệu giá cập nhật khoảng 06:17-06:20 giờ Việt Nam. Không điểm vào, không dự đoán chắc chắn, không lời khuyên mua bán.", "body": "<h3>Cú hồi đang phân hóa</h3><p>Nasdaq Composite tăng 6,51% lên 24.089,56 điểm; S&P 500 tăng 4,73% lên 7.237,17; Dow Jones tăng 3,01% lên 49.595,31 trong phiên Mỹ 23/11, theo CNBC. Nvidia tăng hơn 31% sau tin Jensen Huang trở lại. Đây là cú hồi rất mạnh sau tuần bán tháo, không phải bằng chứng mọi khoản giảm đã được bù lại.</p><p>Bitcoin có lúc bật gần 64.500 USD sau tin Nvidia rồi lùi về quanh 61.000 USD trong phiên theo CoinDesk. Dữ liệu CoinGecko gần 06:20 cho giá khoảng 61.424 USD. Giá này thuộc thời điểm ghi nhận, không phải báo giá liên tục. Tương quan với Nasdaq không buộc Bitcoin tăng cùng tỷ lệ mỗi ngày.</p><h3>Khung ngày Bitcoin còn dưới các đường trung bình</h3><p>Từ chuỗi giá ngày CoinGecko, mẫu gần nhất gồm cả điểm giá hiện tại cho MA 20 khoảng 68.550 USD, MA 50 khoảng 76.188 USD và MA 200 khoảng 72.241 USD. Giá vẫn thấp hơn cả ba đường. Đây là phép mô tả theo chuỗi tổng hợp của nguồn, có thể khác nến của từng sàn; điểm cuối chưa phải ngày UTC hoàn tất nên các giá trị còn thay đổi.</p><p>Nhịp hồi ngắn hạn và trạng thái yếu trên khung ngày có thể cùng tồn tại. Cần quan sát giá có giữ được phần hồi và sức mua có lan rộng hay không, thay vì mặc định một cây nến mạnh đã xác nhận đảo chiều.</p><h3>Vàng, bạc và thị trường Việt Nam</h3><p>Gold-api.com lúc khoảng 06:17 cho vàng 3.629,60 USD/oz và bạc 43,068 USD/oz. Đây là giá quốc tế, không phải niêm yết vàng bạc trong nước. Phiên Mỹ trước đó vàng hồi mạnh ngay cả khi USD tăng, cho thấy vai trò của nhu cầu tiền mặt và giải chấp có thể khiến quan hệ thường thấy thay đổi.</p><p>VN-Index kết phiên 23/11 ở 1.697,14 điểm, tăng 8,35 điểm, trong khi giá trị giao dịch HOSE gần 12.691 tỷ đồng. Khối ngoại bán ròng khoảng 419 tỷ đồng trên HOSE. Một phiên hồi đã xuất hiện, nhưng dòng tiền và độ lan tỏa cần được đánh giá tiếp trong phiên 24/11, không mượn sự hưng phấn ở Mỹ để kết luận thay.</p><h3>Tâm lý và dòng tiền: đọc đúng ngày</h3><p>VIX phiên Mỹ 23/11 ở 26,62 theo CBOE qua Yahoo Finance, giảm khoảng 25,8%. Fear & Greed crypto vẫn là 11/100 với dấu thời gian ngày 23/11 UTC vì bản ngày mới chưa được công bố khi kiểm. Hai thước đo phản ánh hai thị trường, không có nghĩa một bên sai.</p><p>Farside lúc khoảng 06:18 ghi dòng tiền ETF Bitcoin spot phiên Mỹ 23/11 tạm tính -61,1 triệu USD, IBIT cùng nhiều quỹ chưa có số. Không đọc ô chưa báo là dòng tiền bằng không. Phiên 20/11 nay đã đủ số, tổng -669,2 triệu USD, trong đó IBIT -544,7 triệu USD.</p><p><a href=\"#/tam-ly\">Xem tâm lý các thị trường</a> · <a href=\"#/tin-tuc\">Đọc các bản tin mới</a>.</p>", "takeaway": "Giá hồi mạnh không làm rủi ro biến mất. Hôm nay cần nhìn thị trường nào giữ được nhịp hồi và có dòng tiền đi cùng. Quản trị vốn là chén thánh duy nhất; volume vào lệnh không chạy theo cảm xúc của bảng điện.", "source": "Nguồn: CNBC, CoinDesk, CoinGecko, CBOE qua Yahoo Finance, alternative.me, Farside Investors, gold-api.com, CafeF, Thời báo Tài chính Việt Nam.", "back": "#/tin-tuc", "backLabel": "Quay lại Tin tức mới nhất"},
   "nhan-dinh-23-11": {
     image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg", credit: "https://commons.wikimedia.org/wiki/File:Bitcoin_on_Laptop_Keyboard.jpg", creditlabel: "Wikimedia Commons", captext: "Biểu tượng bitcoin trên bàn phím laptop",
     tag: "Tin tức · Nhận định", date: "Ngày 23 tháng 11 năm 2026", title: "Nhận định đầu ngày 23/11: BTC giữ lại 60.000 USD sau cuối tuần thủng 55.000, VN-Index mở tuần dưới 1.700",
@@ -874,7 +875,7 @@ const PAGES = {
       <h2 class="section">Bài mới trên trang</h2>
       <p class="section-sub">Mỗi bài kết lại bằng một điều đúc kết, kiểm chứng được trên chart.</p>
       <div class="article-list">
-        <a class="article-item has-thumb" href="#/bai/nhan-dinh-23-11"><span class="idx">01</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg" alt="" loading="lazy"><span><span class="tag">Tin tức · Nhận định</span><h3>Nhận định đầu ngày 23/11: BTC giữ lại 60.000 USD sau cuối tuần thủng 55.000, VN-Index mở tuần dưới 1.700</h3><p>Số liệu thật sáng thứ Hai: BTC quanh 60.900 USD sau đáy 55.130, RSI 19, khối ngoại bán ròng 3.300 tỷ tuần trước.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/nhan-dinh-24-11"><span class="idx">01</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg" alt="" loading="lazy"><span><span class="tag">Tin tức · Nhận định</span><h3>Nhận định sáng 24/11: Phố Wall bật mạnh, Bitcoin chưa theo kịp, VN-Index chờ dòng tiền</h3><p>Số liệu thật sáng thứ Hai: BTC quanh 60.900 USD sau đáy 55.130, RSI 19, khối ngoại bán ròng 3.300 tỷ tuần trước.</p></span></a>
       </div>
     </section>
     ${promoBandHTML()}`,
@@ -916,7 +917,7 @@ const PAGES = {
       <div class="article-list" id="news-auto"><p class="muted">Đang tải tin…</p></div>
       <p class="label" style="margin-top:18px">Bài nhận định của Vova</p>
       <div class="article-list">
-        <a class="article-item has-thumb" href="#/bai/nhan-dinh-23-11"><span class="idx">01</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg" alt="" loading="lazy"><span><span class="tag">Nhận định · Bản sáng 23/11</span><h3>Nhận định đầu ngày 23/11: BTC giữ lại 60.000 USD sau cuối tuần thủng 55.000, VN-Index mở tuần dưới 1.700</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
+        <a class="article-item has-thumb" href="#/bai/nhan-dinh-24-11"><span class="idx">01</span><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bitcoin_on_Laptop_Keyboard.jpg/1280px-Bitcoin_on_Laptop_Keyboard.jpg" alt="" loading="lazy"><span><span class="tag">Nhận định · Bản sáng 24/11</span><h3>Nhận định sáng 24/11: Phố Wall bật mạnh, Bitcoin chưa theo kịp, VN-Index chờ dòng tiền</h3><p>Số liệu thật, giờ thật, nguồn rõ. Không điểm vào, không hứa hướng đi.</p></span></a>
       </div>
     </section>
     ${promoBandHTML()}`,
