@@ -931,6 +931,13 @@ const PAGES = {
           <p><strong>23/11:</strong> Chỉ số đang ở <strong>11 điểm — Sợ hãi tột độ</strong> (theo alternative.me).</p>
           <p>Cuối tuần qua: Bitcoin thủng 55.130 USD, đáy từ tháng 9/2024, rồi bật lại quanh 60.000 USD; chuỗi 6 tuần giảm liên tiếp, dài nhất từ 2022. Phố Wall khép tuần tệ nhất từ 2020.</p>
           <p>Khi đám đông sợ hãi tột độ, lịch sử ghi nhận giá biến động mạnh theo cả hai chiều. Ba cú tương tự đã mổ xẻ: tháng 3/2020, tháng 5/2021, tháng 11/2022.</p>
+          <h3 style="margin:18px 0 6px">Nhiệt kế các thị trường</h3>
+          <p>Chứng khoán Mỹ: chỉ số sợ hãi VIX chốt phiên 20/11 ở 35,89, tăng 26% trong phiên và áp sát đỉnh 52 tuần 40,03 — đám đông Phố Wall đang sợ (theo CBOE qua Yahoo Finance).</p>
+          <p>Chứng khoán châu Á: KOSPI mất thêm hơn 3% sáng 23/11 dù Hàn Quốc kích hoạt quỹ bình ổn; Đài Loan cấm bán khống lần đầu từ 2015 — tâm lý khu vực vẫn phòng thủ.</p>
+          <p>Chứng khoán VN: thanh khoản HOSE dưới 10.000 tỷ đồng/phiên, về vùng của năm 2022 — tiền đang đứng ngoài (theo MBS qua CafeF).</p>
+          <p>Vàng: 3.630 USD/oz chiều 23/11, bật khoảng 2,5% từ đáy tuần — tiền tìm trú ẩn khi sợ hãi (theo gold-api.com).</p>
+          <p>Bạc: 42,56 USD/oz chiều 23/11, phục hồi sau phiên Chủ nhật mất 3,88% (theo gold-api.com).</p>
+          <p>Tâm lý đám đông là bối cảnh, không phải tín hiệu. Phần việc của người chơi là quản trị vốn và volume vào lệnh.</p>
           <h3 style="margin:18px 0 6px">Dòng tiền</h3>
           <p>ETF Bitcoin spot (Mỹ): phiên 20/11 dòng tiền ròng -124,5 triệu USD — tạm tính, quỹ IBIT chưa báo số; phiên 19/11 chốt -582,3 triệu USD (theo Farside).</p>
           <p>Khối ngoại trên HOSE: tuần 16-20/11 bán ròng khoảng 3.300 tỷ đồng, cao nhất 6 tuần (theo Thời báo Tài chính Việt Nam).</p>
@@ -1187,6 +1194,10 @@ async function loadSentiment() {
     const s = await r.json();
     let h = `<p><strong>${esc(s.date_short)}</strong> Chỉ số đang ở <strong>${esc(String(s.fng_value))} điểm — ${esc(s.fng_label)}</strong> (theo alternative.me).</p>`;
     (s.note || []).forEach((p) => { h += `<p>${esc(p)}</p>`; });
+    if ((s.markets || []).length) {
+      h += `<h3 style="margin:18px 0 6px">Nhiệt kế các thị trường</h3>`;
+      s.markets.forEach((p) => { h += `<p>${esc(p)}</p>`; });
+    }
     if ((s.flows || []).length) {
       h += `<h3 style="margin:18px 0 6px">Dòng tiền</h3>`;
       s.flows.forEach((p) => { h += `<p>${esc(p)}</p>`; });
