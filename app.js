@@ -130,7 +130,7 @@ async function loadNews(force) {
   const fresh = force ? null : cacheGet("wlv_art_noon24", 30 * 60 * 1000);
   if (fresh) { newsItems = fresh; newsError = false; if (currentRoute === "tin-tuc") renderNews(); return; }
   try {
-    const r = await fetch("data/1-noon-24.json?t=" + Date.now());
+    const r = await fetch("data/2-noon-final24.json?t=" + Date.now());
     if (!r.ok) throw new Error("news " + r.status);
     const d = await r.json();
     newsItems = (d && d.items) ? d.items : [];
