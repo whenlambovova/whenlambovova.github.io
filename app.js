@@ -127,17 +127,17 @@ function newsArticleHTML(n) {
 }
 
 async function loadNews(force) {
-  const fresh = force ? null : cacheGet("wlv_art_morn24", 30 * 60 * 1000);
+  const fresh = force ? null : cacheGet("wlv_art_noon24", 30 * 60 * 1000);
   if (fresh) { newsItems = fresh; newsError = false; if (currentRoute === "tin-tuc") renderNews(); return; }
   try {
-    const r = await fetch("data/1-morning-24.json?t=" + Date.now());
+    const r = await fetch("data/1-noon-24.json?t=" + Date.now());
     if (!r.ok) throw new Error("news " + r.status);
     const d = await r.json();
     newsItems = (d && d.items) ? d.items : [];
     newsError = false;
-    cacheSet("wlv_art_morn24", newsItems);
+    cacheSet("wlv_art_noon24", newsItems);
   } catch (e) {
-    const stale = cacheGetStale("wlv_art_morn24");
+    const stale = cacheGetStale("wlv_art_noon24");
     if (stale) { newsItems = stale.data; newsError = false; }
     else newsError = true;
   }
