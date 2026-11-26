@@ -130,10 +130,11 @@ async function loadNews(force) {
   const fresh = force ? null : cacheGet("wlv_art_morn27", 30 * 60 * 1000);
   if (fresh) { newsItems = fresh; newsError = false; if (currentRoute === "tin-tuc") renderNews(); return; }
   try {
-    const r = await fetch("11-news27.json?t=" + Date.now());
+    const r = await fetch("23-news27.json?t=" + Date.now());
     if (!r.ok) throw new Error("news " + r.status);
     const d = await r.json();
     newsItems = (d && d.items) ? d.items : [];
+    newsItems.forEach(n => { if(n.id.endsWith("-2026-11-27")) n.image=n.image.replace(/^(\d+)-m27-/,(_,x)=>(Number(x)+12)+"-m27-"); });
     newsItems.forEach(n => { if(n.id === "chau-a-chot-phien-phan-hoa-2026-11-26") { const parts = n.body.split("\n"); parts[2] = "<p>Thị trường Hàn Quốc nhích lên sau mức thấp của phiên trước. Reuters ghi nhận KOSPI thu hẹp phần tăng sau khi ngân hàng trung ương tăng lãi suất và phát tín hiệu cứng rắn. Một nhịp hồi của chỉ số vì thế không có nghĩa sức ép chính sách đã biến mất.</p>"; n.body = parts.join("\n"); } });
     newsItems.forEach(n => { if(n.id === "hnx-ngung-giao-dich-hai-ngay-truoc-chuyen-hose-2026-11-24") { n.captext="Tòa nhà sở giao dịch chứng khoán, ảnh tư liệu minh họa việc chuyển sàn"; n.creditlabel="Wikimedia Commons"; } });
     newsError = false;
