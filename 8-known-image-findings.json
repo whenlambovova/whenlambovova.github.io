@@ -1,0 +1,1053 @@
+{
+  "checked": "2026-11-28",
+  "note": "Existing broken external image references, not excluded from checks. Old article text untouched.",
+  "findings": [
+    {
+      "route": "tin/backward-hat-bi-cao-buoc-ponzi-600-trieu-usd-2026-11-24",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg"
+      ]
+    },
+    {
+      "route": "tin/bitcoin-hoi-vuot-61000-usd-sau-dot-thanh-ly-2026-11-23",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://i.ytimg.com/vi/lYPGX4-Kj48/hqdefault.jpg"
+      ]
+    },
+    {
+      "route": "tin/bitcoin-hoi-vuot-61000-usd-sau-dot-thanh-ly-2026-11-23",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg"
+      ]
+    },
+    {
+      "route": "tin/bon-cong-ty-chung-khoan-chot-moc-vn-index-tuan-nay-2026-11-23",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/S%E1%BB%9F_GDCK_TPHCM_%28HOSE%29.JPG/1280px-S%E1%BB%9F_GDCK_TPHCM_%28HOSE%29.JPG"
+      ]
+    },
+    {
+      "route": "tin/bon-cong-ty-chung-khoan-chot-moc-vn-index-tuan-nay-2026-11-23",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/S%E1%BB%9F_GDCK_TPHCM_%28HOSE%29.JPG/1280px-S%E1%BB%9F_GDCK_TPHCM_%28HOSE%29.JPG"
+      ]
+    },
+    {
+      "route": "tin/gia-vang-trua-23-11-lon-nguoc-dong-tang-15-trieu-chenh-lech-mua-ban-5-trieu-2026-11-23",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/gia-vang-trua-23-11-lon-nguoc-dong-tang-15-trieu-chenh-lech-mua-ban-5-trieu-2026-11-23",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/loi-nhuan-dao-bitcoin-cham-day-khi-gia-vat-duoi-60000-usd-2026-11-22",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Antminer_ASIC_Miner.jpeg/1280px-Antminer_ASIC_Miner.jpeg"
+      ]
+    },
+    {
+      "route": "tin/loi-nhuan-dao-bitcoin-cham-day-khi-gia-vat-duoi-60000-usd-2026-11-22",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Antminer_ASIC_Miner.jpeg/1280px-Antminer_ASIC_Miner.jpeg"
+      ]
+    },
+    {
+      "route": "tin/quoc-hoi-chot-gia-dien-sinh-hoat-theo-gio-cao-diem-thap-diem-2026-11-21",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://whenlambovova.github.io/img/evn-card.svg",
+        "Broken image: https://i.ytimg.com/vi/lYPGX4-Kj48/hqdefault.jpg"
+      ]
+    },
+    {
+      "route": "tin/strategy-saylor-khong-can-cuu-tro-2026-11-24",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://i.ytimg.com/vi/lYPGX4-Kj48/hqdefault.jpg"
+      ]
+    },
+    {
+      "route": "tin/thuong-dinh-my-trung-nga-dau-tien-2026-11-22",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/0/01/P20261119DT-0349_%2855662747706%29_%28Xi_Jinping_cropped%29.jpg"
+      ]
+    },
+    {
+      "route": "tin/thuong-dinh-my-trung-nga-dau-tien-2026-11-22",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/0/01/P20261119DT-0349_%2855662747706%29_%28Xi_Jinping_cropped%29.jpg"
+      ]
+    },
+    {
+      "route": "tin/trump-doa-danh-thue-doanh-nghiep-xay-trung-tam-du-lieu-nuoc-ngoai-2026-11-22",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/3e/2026_Donald_Trump_at_the_White_House_on_9_January_%28cropped%29.jpg"
+      ]
+    },
+    {
+      "route": "tin/trump-doa-danh-thue-doanh-nghiep-xay-trung-tam-du-lieu-nuoc-ngoai-2026-11-22",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/3e/2026_Donald_Trump_at_the_White_House_on_9_January_%28cropped%29.jpg"
+      ]
+    },
+    {
+      "route": "tin/vang-giam-5-phien-lien-tiep-ve-sat-moc-3500-usd-2026-11-21",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/vang-giam-5-phien-lien-tiep-ve-sat-moc-3500-usd-2026-11-21",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/vinhomes-sgc-chi-dinh-thau-5-tuyen-metro-ha-noi-873-nghin-ty-2026-11-21",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/69/Hanoi_Metro_Line_2A_Train%2C_La_Th%C3%A0nh_%2820231223a%29_%2853489340770%29.jpg"
+      ]
+    },
+    {
+      "route": "tin/vinhomes-sgc-chi-dinh-thau-5-tuyen-metro-ha-noi-873-nghin-ty-2026-11-21",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/69/Hanoi_Metro_Line_2A_Train%2C_La_Th%C3%A0nh_%2820231223a%29_%2853489340770%29.jpg"
+      ]
+    },
+    {
+      "route": "tin/chung-khoan-thieu-tien-loat-thuong-vu-ban-von-bat-thanh-2026-11-23",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ho_Chi_Minh_stock_exchange.jpg/1280px-Ho_Chi_Minh_stock_exchange.jpg"
+      ]
+    },
+    {
+      "route": "tin/chung-khoan-thieu-tien-loat-thuong-vu-ban-von-bat-thanh-2026-11-23",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ho_Chi_Minh_stock_exchange.jpg/1280px-Ho_Chi_Minh_stock_exchange.jpg"
+      ]
+    },
+    {
+      "route": "tin/coindesk-bitcoin-basis-trade-can-kiem-2026-11-19",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg"
+      ]
+    },
+    {
+      "route": "tin/fpt-ke-hoach-moi-ai-nhat-ban-2026-11-20",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/FPT_logo_2010.svg/1280px-FPT_logo_2010.svg.png",
+        "Broken image: https://i.ytimg.com/vi/lYPGX4-Kj48/hqdefault.jpg"
+      ]
+    },
+    {
+      "route": "tin/hnx-ngung-giao-dich-hai-ngay-truoc-chuyen-hose-2026-11-24",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Hanoi_Stock_Exchange_%2818780216822%29.jpg/1280px-Hanoi_Stock_Exchange_%2818780216822%29.jpg"
+      ]
+    },
+    {
+      "route": "tin/invesco-quy-du-tru-stablecoin-iroxx-2026-11-19",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Invesco_Global_Headquarters%2C_Atlanta_Georgia%2C_2026-04-26%2C_from_North-west_perspective.webp/1280px-Invesco_Global_Headquarters%2C_Atlanta_Georgia%2C_2026-04-26%2C_from_North-west_perspective.webp",
+        "Broken image: https://i.ytimg.com/vi/lYPGX4-Kj48/hqdefault.jpg"
+      ]
+    },
+    {
+      "route": "tin/kraken-payward-mua-tribe-capital-2026-11-19",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/39/Kraken-logo-light-background.png"
+      ]
+    },
+    {
+      "route": "tin/kraken-payward-mua-tribe-capital-2026-11-19",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/39/Kraken-logo-light-background.png"
+      ]
+    },
+    {
+      "route": "tin/quoc-hoi-dat-muc-tieu-2030-von-hoa-chung-khoan-120-gdp-2026-11-21",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg"
+      ]
+    },
+    {
+      "route": "tin/singapore-tin-phieu-token-hoa-cbdc-2026-11-20",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/0/09/MASBuilding-Singapore-20090914.jpg"
+      ]
+    },
+    {
+      "route": "tin/singapore-tin-phieu-token-hoa-cbdc-2026-11-20",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/0/09/MASBuilding-Singapore-20090914.jpg"
+      ]
+    },
+    {
+      "route": "tin/sungroup-mua-vietinbank-tower-2026-11-19",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7f/Sun-group-logo.png"
+      ]
+    },
+    {
+      "route": "tin/to-chuc-lon-mua-rong-4-ty-usd-quy-bitcoin-quy-3-2026-11-20",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg"
+      ]
+    },
+    {
+      "route": "tin/sungroup-mua-vietinbank-tower-2026-11-19",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7f/Sun-group-logo.png"
+      ]
+    },
+    {
+      "route": "tin/to-chuc-lon-mua-rong-4-ty-usd-quy-bitcoin-quy-3-2026-11-20",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg"
+      ]
+    },
+    {
+      "route": "tin/vn-index-thung-1700-phien-sang-2026-11-19",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg"
+      ]
+    },
+    {
+      "route": "tin-tuc",
+      "width": 390,
+      "errors": [
+        "Broken image: https://whenlambovova.github.io/8-e27-8.jpg",
+        "Broken image: https://whenlambovova.github.io/9-e27-9.jpg",
+        "Broken image: https://whenlambovova.github.io/10-e27-10.jpg",
+        "Broken image: https://whenlambovova.github.io/1-n27-1.jpg",
+        "Broken image: https://whenlambovova.github.io/2-n27-2.jpg",
+        "Broken image: https://whenlambovova.github.io/3-n27-3.jpg",
+        "Broken image: https://whenlambovova.github.io/4-n27-4.jpg",
+        "Broken image: https://whenlambovova.github.io/5-n27-5.jpg",
+        "Broken image: https://whenlambovova.github.io/6-n27-6.jpg",
+        "Broken image: https://whenlambovova.github.io/7-n27-7.jpg",
+        "Broken image: https://whenlambovova.github.io/8-n27-8.jpg",
+        "Broken image: https://whenlambovova.github.io/9-n27-9.jpg",
+        "Broken image: https://whenlambovova.github.io/10-n27-10.jpg",
+        "Broken image: https://whenlambovova.github.io/13-m27-1.jpg",
+        "Broken image: https://whenlambovova.github.io/14-m27-2.jpg",
+        "Broken image: https://whenlambovova.github.io/15-m27-3.jpg",
+        "Broken image: https://whenlambovova.github.io/16-m27-4.jpg",
+        "Broken image: https://whenlambovova.github.io/17-m27-5.jpg",
+        "Broken image: https://whenlambovova.github.io/18-m27-6.jpg",
+        "Broken image: https://whenlambovova.github.io/19-m27-7.jpg",
+        "Broken image: https://whenlambovova.github.io/20-m27-8.jpg",
+        "Broken image: https://whenlambovova.github.io/21-m27-9.jpg",
+        "Broken image: https://whenlambovova.github.io/22-m27-10.jpg",
+        "Broken image: https://whenlambovova.github.io/1-ev26-1.jpg",
+        "Broken image: https://whenlambovova.github.io/2-ev26-2.jpg",
+        "Broken image: https://whenlambovova.github.io/3-ev26-3.jpg",
+        "Broken image: https://whenlambovova.github.io/4-ev26-4.jpg",
+        "Broken image: https://whenlambovova.github.io/5-ev26-5.jpg",
+        "Broken image: https://whenlambovova.github.io/6-ev26-6.jpg",
+        "Broken image: https://whenlambovova.github.io/7-ev26-7.jpg",
+        "Broken image: https://whenlambovova.github.io/8-ev26-8.jpg",
+        "Broken image: https://whenlambovova.github.io/9-ev26-9.jpg",
+        "Broken image: https://whenlambovova.github.io/10-ev26-10.jpg",
+        "Broken image: https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/24/avatar1795508425768-17955084310641024429487.jpg",
+        "Broken image: https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/24/avatar1795500140594-17955001413591141905217.jpg",
+        "Broken image: data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%3E%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23f5f3ed%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%20fill%3D%22%23151515%22%3EAnalog%20Devices%3C/text%3E%3C/svg%3E",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%3E%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23f5f3ed%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%20fill%3D%22%23151515%22%3EGemini%3C/text%3E%3C/svg%3E",
+        "Broken image: data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%3E%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23f5f3ed%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%20fill%3D%22%23151515%22%3EOKXICE%3C/text%3E%3C/svg%3E",
+        "Broken image: data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%3E%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23f5f3ed%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%20fill%3D%22%23151515%22%3EArkham%3C/text%3E%3C/svg%3E",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Uralelectromed_silver_bar_2016_Ag_99_99.jpg/1280px-Uralelectromed_silver_bar_2016_Ag_99_99.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Hanoi_Stock_Exchange_%2818780216822%29.jpg/1280px-Hanoi_Stock_Exchange_%2818780216822%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Uralelectromed_silver_bar_2016_Ag_99_99.jpg/1280px-Uralelectromed_silver_bar_2016_Ag_99_99.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://doanhnghiepkinhtexanh.vn/zoom-share/1200x630/uploads/blog/caotienviet/2026/11/24/gia-bac-24-11-a-1795483416.jpg",
+        "Broken image: https://static.cryptobriefing.com/wp-content/uploads/2026/11/23204554/hpe.jpg",
+        "Broken image: https://static.cryptobriefing.com/wp-content/uploads/2026/11/23203621/Zoom-800x420.jpg",
+        "Broken image: data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%3E%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23f5f3ed%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22245%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%22150%22%20font-weight%3D%22900%22%20fill%3D%22%23101010%22%3EOKX%3C/text%3E%3C/svg%3E",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1280px-Ethereum_logo_2014.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://whenlambovova.github.io/img/anthropic-card.svg",
+        "Broken image: https://whenlambovova.github.io/img/nvidia-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Commodity_Futures_Trading_Commission_seal.svg/250px-Commodity_Futures_Trading_Commission_seal.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Commodity_Futures_Trading_Commission_seal.svg/250px-Commodity_Futures_Trading_Commission_seal.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/1280px-Binance_Logo.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://whenlambovova.github.io/img/nvidia-card.svg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://whenlambovova.github.io/img/nvidia-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ho_Chi_Minh_stock_exchange.jpg/1280px-Ho_Chi_Minh_stock_exchange.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://coin-images.coingecko.com/coins/images/34188/large/jup.png?1704266489",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1280px-Flag_of_South_Korea.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Solana_cryptocurrency.svg/1280px-Solana_cryptocurrency.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Europ%C3%A4ische_Zentralbank_Frankfurt.jpg/1280px-Europ%C3%A4ische_Zentralbank_Frankfurt.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/d/d4/2014_Pure_Gold_Physical_Bitcoin_China_Mint.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1280px-Flag_of_South_Korea.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1280px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Taipei_Taiwan_Taipei-101-Tower-01.jpg/1280px-Taipei_Taiwan_Taipei-101-Tower-01.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/c/c4/Jensen_Huang_%28cropped%29.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/61/United_States_one-hundred-dollar_bill.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Uralelectromed_silver_bar_2016_Ag_99_99.jpg/1280px-Uralelectromed_silver_bar_2016_Ag_99_99.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ho_Chi_Minh_stock_exchange.jpg/1280px-Ho_Chi_Minh_stock_exchange.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Taipei_Taiwan_Taipei-101-Tower-01.jpg/1280px-Taipei_Taiwan_Taipei-101-Tower-01.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Australian_Securities_Exchange_entrance.jpg/1280px-Australian_Securities_Exchange_entrance.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Uralelectromed_silver_bar_2016_Ag_99_99.jpg/1280px-Uralelectromed_silver_bar_2016_Ag_99_99.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ho_Chi_Minh_stock_exchange.jpg/1280px-Ho_Chi_Minh_stock_exchange.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/S%E1%BB%9F_GDCK_TPHCM_%28HOSE%29.JPG/1280px-S%E1%BB%9F_GDCK_TPHCM_%28HOSE%29.JPG",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Seal_of_the_United_States_Securities_and_Exchange_Commission.svg/1280px-Seal_of_the_United_States_Securities_and_Exchange_Commission.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/United_States_Capitol_-_west_front.jpg/1280px-United_States_Capitol_-_west_front.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Antminer_ASIC_Miner.jpeg/1280px-Antminer_ASIC_Miner.jpeg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/c/c4/Jensen_Huang_%28cropped%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Oil_pumpjack_in_the_Permian_Basin.jpg/1280px-Oil_pumpjack_in_the_Permian_Basin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Navy_Day_at_Naval_Support_Activity_Bahrain_140416-N-RJ323-385.jpg/1280px-Navy_Day_at_Naval_Support_Activity_Bahrain_140416-N-RJ323-385.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Penaeus_monodon_-_Giant_tiger_prawn_%28%E0%A6%AC%E0%A6%BE%E0%A6%97%E0%A6%A6%E0%A6%BE_%E0%A6%9A%E0%A6%BF%E0%A6%82%E0%A6%A1%E0%A6%BC%E0%A6%BF%29_02.jpg/1280px-Penaeus_monodon_-_Giant_tiger_prawn_%28%E0%A6%AC%E0%A6%BE%E0%A6%97%E0%A6%A6%E0%A6%BE_%E0%A6%9A%E0%A6%BF%E0%A6%82%E0%A6%A1%E0%A6%BC%E0%A6%BF%29_02.jpg",
+        "Broken image: https://whenlambovova.github.io/img/hagl-card.svg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/This_is_a_stack_of_gold_coins.jpg/1280px-This_is_a-stack_of_gold_coins.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Woman_holding_a_Bitcoin_physical_coin_with_blurry_background.jpg/1280px-Woman_holding_a_Bitcoin_physical_coin_with_blurry_background.jpg",
+        "Broken image: https://whenlambovova.github.io/img/kraken-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/US_Capitol_dome_Jan_2006.jpg/1280px-US_Capitol_dome_Jan_2006.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Seat_of_the_European_Central_Bank_and_Frankfurt_Skyline_at_dawn_20150422_1.jpg/1280px-Seat_of_the_European_Central_Bank_and_Frankfurt_Skyline_at_dawn_20150422_1.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Zcash_logo_%282024%E2%80%93present%29.svg/1280px-Zcash_logo_%282024%E2%80%93present%29.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/3e/2026_Donald_Trump_at_the_White_House_on_9_January_%28cropped%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/The_Entrance_of_Tokyo_Stock_Exchange_Main_Building_20240329.jpg/1280px-The_Entrance_of_Tokyo_Stock_Exchange_Main_Building_20240329.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ho_Chi_Minh_stock_exchange.jpg/1280px-Ho_Chi_Minh_stock_exchange.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Ho_Chi_Minh_stock_exchange_at_night.jpg/1280px-Ho_Chi_Minh_stock_exchange_at_night.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Gold_bullion_bars.jpg/1280px-Gold_bullion_bars.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Kalshi_logo.svg/1280px-Kalshi_logo.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Hong_Kong_Night_Skyline.jpg/1280px-Hong_Kong_Night_Skyline.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://whenlambovova.github.io/img/crowdstrike-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Nvidia_HQ.jpg/1280px-Nvidia_HQ.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/0/01/P20261119DT-0349_%2855662747706%29_%28Xi_Jinping_cropped%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/State_Bank_of_Vietnam_-_Ho_Chi_Minh_City_Branch.jpg/1280px-State_Bank_of_Vietnam_-_Ho_Chi_Minh_City_Branch.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/b/bd/Busan-port-from-Busan-tower-2.jpg",
+        "Broken image: https://whenlambovova.github.io/img/xrp-card.svg",
+        "Broken image: https://whenlambovova.github.io/img/jpmorgan-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/400-oz-Gold-Bars-AB-01.jpg/1280px-400-oz-Gold-Bars-AB-01.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/EUR_100_obverse_%282002_issue%29.jpg/1280px-EUR_100_obverse_%282002_issue%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/National_Assembly_of_Vietnam.JPG/1280px-National_Assembly_of_Vietnam.JPG",
+        "Broken image: https://whenlambovova.github.io/img/evn-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Mercedes-Benz-Vietnam_factory_workers_management.jpg/1280px-Mercedes-Benz-Vietnam_factory_workers_management.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/C%E1%BA%A3ng_C%C3%A1t_L%C3%A1i.jpg/1280px-C%E1%BA%A3ng_C%C3%A1t_L%C3%A1i.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Gold_bar.jpg/1280px-Gold_bar.jpg",
+        "Broken image: https://whenlambovova.github.io/img/nvidia-card.svg",
+        "Broken image: https://whenlambovova.github.io/img/deepseek-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Usdollar100front.jpg/1280px-Usdollar100front.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://whenlambovova.github.io/img/vaneck-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/National_Assembly_Building_of_Vietnam.jpg/1280px-National_Assembly_Building_of_Vietnam.jpg",
+        "Broken image: https://whenlambovova.github.io/img/novaland-card.svg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/d/d5/10000_Yenes_%28Anverso%29.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/78/New_York_Stock_Exchange_Facade_2015.jpg",
+        "Broken image: https://whenlambovova.github.io/img/anthropic-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Kalshi_logo.svg/1280px-Kalshi_logo.svg.png",
+        "Broken image: https://whenlambovova.github.io/img/samsung-card.svg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/69/Hanoi_Metro_Line_2A_Train%2C_La_Th%C3%A0nh_%2820231223a%29_%2853489340770%29.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg",
+        "Broken image: https://whenlambovova.github.io/img/jpmorgan-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/1280px-Binance_Logo.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/HOSE_logo.jpg/1280px-HOSE_logo.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Gold_Ingots_on_white_background.jpg/1280px-Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/FPT_logo_2010.svg/1280px-FPT_logo_2010.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Gold_ingot_and_bar_of_Banque_de_France.jpg/1280px-Gold_ingot_and_bar_of_Banque_de_France.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7f/Series_F_10K_Yen_Bank_of_Japan_note_-_obverse.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Coinbase.svg/1280px-Coinbase.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/4/44/Cathie_Wood_ARK_Invest_Photo.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Gold_ingot_and_bar_of_Banque_de_France.jpg/1280px-Gold_ingot_and_bar_of_Banque_de_France.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/400-oz-Gold-Bars-AB-01.jpg/1280px-400-oz-Gold-Bars-AB-01.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/FPT_logo_2010.svg/1280px-FPT_logo_2010.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/PNJ%2C_t%E1%BA%A7ng_1%2C_Vincom_Nguy%E1%BB%85n_Ch%C3%AD_Thanh%2C_H%C3%A0_N%E1%BB%99i_001.JPG/1280px-PNJ%2C_t%E1%BA%A7ng_1%2C_Vincom_Nguy%E1%BB%85n_Ch%C3%AD_Thanh%2C_H%C3%A0_N%E1%BB%99i_001.JPG",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Ngan_Hang_Phuong_Dong_office_in_Hoan_Kiem.jpg/1280px-Ngan_Hang_Phuong_Dong_office_in_Hoan_Kiem.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/New_York_Stock_Exchange_Facade_2015.jpg/1280px-New_York_Stock_Exchange_Facade_2015.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Seat_of_the_European_Central_Bank_and_Frankfurt_Skyline_at_dawn_20150422_1.jpg/1280px-Seat_of_the_European_Central_Bank_and_Frankfurt_Skyline_at_dawn_20150422_1.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1280px-Ethereum_logo_2014.svg.png",
+        "Broken image: https://whenlambovova.github.io/img/vaneck-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/1280px-Binance_Logo.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Dai_Logo.png/1280px-Dai_Logo.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Dario_Amodei_in_2023.jpg/1280px-Dario_Amodei_in_2023.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/U.S._Securities_and_Exchange_Commission_headquarters.JPG/1280px-U.S._Securities_and_Exchange_Commission_headquarters.JPG",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/0/09/MASBuilding-Singapore-20090914.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/HOSE_logo.jpg/1280px-HOSE_logo.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/S%E1%BB%9F_GDCK_TPHCM_%28HOSE%29.JPG/1280px-S%E1%BB%9F_GDCK_TPHCM_%28HOSE%29.JPG",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Gold_Ingots_on_white_background.jpg/1280px-Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg/1280px-Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg",
+        "Broken image: https://whenlambovova.github.io/img/tmtg-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/FPT_logo_2010.svg/1280px-FPT_logo_2010.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Landmark_81_%2832099609868%29.jpg/1280px-Landmark_81_%2832099609868%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/400-oz-Gold-Bars-AB-01.jpg/1280px-400-oz-Gold-Bars-AB-01.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Gold_ingot_and_bar_of_Banque_de_France.jpg/1280px-Gold_ingot_and_bar_of_Banque_de_France.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/9/96/Gary_Gensler%2C_SEC_Chair.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/NVIDIA_Headquarters.jpg/1280px-NVIDIA_Headquarters.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Nvidia_sign.jpg/1280px-Nvidia_sign.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/61/United_States_one-hundred-dollar_bill.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/400-oz-Gold-Bars-AB-01.jpg/1280px-400-oz-Gold-Bars-AB-01.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/1280px-Binance_Logo.svg.png",
+        "Broken image: https://whenlambovova.github.io/img/ledger-card.svg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/e/e1/Changpeng_Zhao_in_2022.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/39/Kraken-logo-light-background.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/78/Dcentre_racks.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Tether_Logo.svg/1280px-Tether_Logo.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7c/Kalshi_logo.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Nebraska_Avenue_Complex_2017a.jpg/1280px-Nebraska_Avenue_Complex_2017a.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7f/Sun-group-logo.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Vietcombank_Hoan_Kiem_in_2016.jpg/1280px-Vietcombank_Hoan_Kiem_in_2016.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg/1280px-Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/4/49/Abu_Dhabi_Global_Market_logo.gif",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/e/e6/OCBC_Centre_Tower%2C_Dec_05.JPG",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Hanoi_Stock_Exchange_%2818780216822%29.jpg/1280px-Hanoi_Stock_Exchange_%2818780216822%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/NETS_logo.svg/1280px-NETS_logo.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Cdnlogo.com_gelex-logo.svg/960px-Cdnlogo.com_gelex-logo.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/e/ee/LPBank_Logo_-_Brandname.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/30/Novaworld_mui_ne_marina_city.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://cf-images.us-east-1.prod.boltdns.net/v1/jit/66043936001/5453d611-fdb2-4718-82df-5329d8f474c3/main/1280x720/17m8s405ms/match/image.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Invesco_Global_Headquarters%2C_Atlanta_Georgia%2C_2026-04-26%2C_from_North-west_perspective.webp/1280px-Invesco_Global_Headquarters%2C_Atlanta_Georgia%2C_2026-04-26%2C_from_North-west_perspective.webp",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Solana_cryptocurrency.svg/1280px-Solana_cryptocurrency.svg.png",
+        "Broken image: https://whenlambovova.github.io/img/ledger-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/1280px-Binance_Logo.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Coinbase.svg/1280px-Coinbase.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/World_Bank_building_at_Washington.jpg/1280px-World_Bank_building_at_Washington.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Solana_cryptocurrency.svg/1280px-Solana_cryptocurrency.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/c/c4/Jensen_Huang_%28cropped%29.jpg"
+      ]
+    },
+    {
+      "route": "tin-tuc",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://whenlambovova.github.io/8-n27-8.jpg",
+        "Broken image: https://whenlambovova.github.io/9-n27-9.jpg",
+        "Broken image: https://whenlambovova.github.io/10-n27-10.jpg",
+        "Broken image: https://whenlambovova.github.io/13-m27-1.jpg",
+        "Broken image: https://whenlambovova.github.io/14-m27-2.jpg",
+        "Broken image: https://whenlambovova.github.io/15-m27-3.jpg",
+        "Broken image: https://whenlambovova.github.io/16-m27-4.jpg",
+        "Broken image: https://whenlambovova.github.io/17-m27-5.jpg",
+        "Broken image: https://whenlambovova.github.io/18-m27-6.jpg",
+        "Broken image: https://whenlambovova.github.io/19-m27-7.jpg",
+        "Broken image: https://whenlambovova.github.io/20-m27-8.jpg",
+        "Broken image: https://whenlambovova.github.io/21-m27-9.jpg",
+        "Broken image: https://whenlambovova.github.io/22-m27-10.jpg",
+        "Broken image: https://whenlambovova.github.io/1-ev26-1.jpg",
+        "Broken image: https://whenlambovova.github.io/2-ev26-2.jpg",
+        "Broken image: https://whenlambovova.github.io/3-ev26-3.jpg",
+        "Broken image: https://whenlambovova.github.io/4-ev26-4.jpg",
+        "Broken image: https://whenlambovova.github.io/5-ev26-5.jpg",
+        "Broken image: https://whenlambovova.github.io/6-ev26-6.jpg",
+        "Broken image: https://whenlambovova.github.io/7-ev26-7.jpg",
+        "Broken image: https://whenlambovova.github.io/8-ev26-8.jpg",
+        "Broken image: https://whenlambovova.github.io/9-ev26-9.jpg",
+        "Broken image: https://whenlambovova.github.io/10-ev26-10.jpg",
+        "Broken image: https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/24/avatar1795508425768-17955084310641024429487.jpg",
+        "Broken image: https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/24/avatar1795500140594-17955001413591141905217.jpg",
+        "Broken image: data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%3E%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23f5f3ed%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%20fill%3D%22%23151515%22%3EAnalog%20Devices%3C/text%3E%3C/svg%3E",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%3E%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23f5f3ed%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%20fill%3D%22%23151515%22%3EGemini%3C/text%3E%3C/svg%3E",
+        "Broken image: data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%3E%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23f5f3ed%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%20fill%3D%22%23151515%22%3EOKXICE%3C/text%3E%3C/svg%3E",
+        "Broken image: data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%3E%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23f5f3ed%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%20fill%3D%22%23151515%22%3EArkham%3C/text%3E%3C/svg%3E",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Uralelectromed_silver_bar_2016_Ag_99_99.jpg/1280px-Uralelectromed_silver_bar_2016_Ag_99_99.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Hanoi_Stock_Exchange_%2818780216822%29.jpg/1280px-Hanoi_Stock_Exchange_%2818780216822%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Uralelectromed_silver_bar_2016_Ag_99_99.jpg/1280px-Uralelectromed_silver_bar_2016_Ag_99_99.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://doanhnghiepkinhtexanh.vn/zoom-share/1200x630/uploads/blog/caotienviet/2026/11/24/gia-bac-24-11-a-1795483416.jpg",
+        "Broken image: https://static.cryptobriefing.com/wp-content/uploads/2026/11/23204554/hpe.jpg",
+        "Broken image: https://static.cryptobriefing.com/wp-content/uploads/2026/11/23203621/Zoom-800x420.jpg",
+        "Broken image: data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%3E%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23f5f3ed%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22245%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%22150%22%20font-weight%3D%22900%22%20fill%3D%22%23101010%22%3EOKX%3C/text%3E%3C/svg%3E",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1280px-Ethereum_logo_2014.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://whenlambovova.github.io/img/anthropic-card.svg",
+        "Broken image: https://whenlambovova.github.io/img/nvidia-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Commodity_Futures_Trading_Commission_seal.svg/250px-Commodity_Futures_Trading_Commission_seal.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Commodity_Futures_Trading_Commission_seal.svg/250px-Commodity_Futures_Trading_Commission_seal.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/1280px-Binance_Logo.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://whenlambovova.github.io/img/nvidia-card.svg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://whenlambovova.github.io/img/nvidia-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ho_Chi_Minh_stock_exchange.jpg/1280px-Ho_Chi_Minh_stock_exchange.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://coin-images.coingecko.com/coins/images/34188/large/jup.png?1704266489",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1280px-Flag_of_South_Korea.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Solana_cryptocurrency.svg/1280px-Solana_cryptocurrency.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Europ%C3%A4ische_Zentralbank_Frankfurt.jpg/1280px-Europ%C3%A4ische_Zentralbank_Frankfurt.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/d/d4/2014_Pure_Gold_Physical_Bitcoin_China_Mint.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1280px-Flag_of_South_Korea.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1280px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Taipei_Taiwan_Taipei-101-Tower-01.jpg/1280px-Taipei_Taiwan_Taipei-101-Tower-01.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/c/c4/Jensen_Huang_%28cropped%29.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/61/United_States_one-hundred-dollar_bill.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Uralelectromed_silver_bar_2016_Ag_99_99.jpg/1280px-Uralelectromed_silver_bar_2016_Ag_99_99.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ho_Chi_Minh_stock_exchange.jpg/1280px-Ho_Chi_Minh_stock_exchange.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Taipei_Taiwan_Taipei-101-Tower-01.jpg/1280px-Taipei_Taiwan_Taipei-101-Tower-01.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Australian_Securities_Exchange_entrance.jpg/1280px-Australian_Securities_Exchange_entrance.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Uralelectromed_silver_bar_2016_Ag_99_99.jpg/1280px-Uralelectromed_silver_bar_2016_Ag_99_99.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ho_Chi_Minh_stock_exchange.jpg/1280px-Ho_Chi_Minh_stock_exchange.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/S%E1%BB%9F_GDCK_TPHCM_%28HOSE%29.JPG/1280px-S%E1%BB%9F_GDCK_TPHCM_%28HOSE%29.JPG",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Seal_of_the_United_States_Securities_and_Exchange_Commission.svg/1280px-Seal_of_the_United_States_Securities_and_Exchange_Commission.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/United_States_Capitol_-_west_front.jpg/1280px-United_States_Capitol_-_west_front.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Antminer_ASIC_Miner.jpeg/1280px-Antminer_ASIC_Miner.jpeg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/c/c4/Jensen_Huang_%28cropped%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Oil_pumpjack_in_the_Permian_Basin.jpg/1280px-Oil_pumpjack_in_the_Permian_Basin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Navy_Day_at_Naval_Support_Activity_Bahrain_140416-N-RJ323-385.jpg/1280px-Navy_Day_at_Naval_Support_Activity_Bahrain_140416-N-RJ323-385.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Penaeus_monodon_-_Giant_tiger_prawn_%28%E0%A6%AC%E0%A6%BE%E0%A6%97%E0%A6%A6%E0%A6%BE_%E0%A6%9A%E0%A6%BF%E0%A6%82%E0%A6%A1%E0%A6%BC%E0%A6%BF%29_02.jpg/1280px-Penaeus_monodon_-_Giant_tiger_prawn_%28%E0%A6%AC%E0%A6%BE%E0%A6%97%E0%A6%A6%E0%A6%BE_%E0%A6%9A%E0%A6%BF%E0%A6%82%E0%A6%A1%E0%A6%BC%E0%A6%BF%29_02.jpg",
+        "Broken image: https://whenlambovova.github.io/img/hagl-card.svg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/This_is_a_stack_of_gold_coins.jpg/1280px-This_is_a-stack_of_gold_coins.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Woman_holding_a_Bitcoin_physical_coin_with_blurry_background.jpg/1280px-Woman_holding_a_Bitcoin_physical_coin_with_blurry_background.jpg",
+        "Broken image: https://whenlambovova.github.io/img/kraken-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/US_Capitol_dome_Jan_2006.jpg/1280px-US_Capitol_dome_Jan_2006.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Seat_of_the_European_Central_Bank_and_Frankfurt_Skyline_at_dawn_20150422_1.jpg/1280px-Seat_of_the_European_Central_Bank_and_Frankfurt_Skyline_at_dawn_20150422_1.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Zcash_logo_%282024%E2%80%93present%29.svg/1280px-Zcash_logo_%282024%E2%80%93present%29.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/3e/2026_Donald_Trump_at_the_White_House_on_9_January_%28cropped%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/The_Entrance_of_Tokyo_Stock_Exchange_Main_Building_20240329.jpg/1280px-The_Entrance_of_Tokyo_Stock_Exchange_Main_Building_20240329.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ho_Chi_Minh_stock_exchange.jpg/1280px-Ho_Chi_Minh_stock_exchange.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Ho_Chi_Minh_stock_exchange_at_night.jpg/1280px-Ho_Chi_Minh_stock_exchange_at_night.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Gold_bullion_bars.jpg/1280px-Gold_bullion_bars.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Kalshi_logo.svg/1280px-Kalshi_logo.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Hong_Kong_Night_Skyline.jpg/1280px-Hong_Kong_Night_Skyline.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://whenlambovova.github.io/img/crowdstrike-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Nvidia_HQ.jpg/1280px-Nvidia_HQ.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/0/01/P20261119DT-0349_%2855662747706%29_%28Xi_Jinping_cropped%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/State_Bank_of_Vietnam_-_Ho_Chi_Minh_City_Branch.jpg/1280px-State_Bank_of_Vietnam_-_Ho_Chi_Minh_City_Branch.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/b/bd/Busan-port-from-Busan-tower-2.jpg",
+        "Broken image: https://whenlambovova.github.io/img/xrp-card.svg",
+        "Broken image: https://whenlambovova.github.io/img/jpmorgan-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/400-oz-Gold-Bars-AB-01.jpg/1280px-400-oz-Gold-Bars-AB-01.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/EUR_100_obverse_%282002_issue%29.jpg/1280px-EUR_100_obverse_%282002_issue%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/National_Assembly_of_Vietnam.JPG/1280px-National_Assembly_of_Vietnam.JPG",
+        "Broken image: https://whenlambovova.github.io/img/evn-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Mercedes-Benz-Vietnam_factory_workers_management.jpg/1280px-Mercedes-Benz-Vietnam_factory_workers_management.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/C%E1%BA%A3ng_C%C3%A1t_L%C3%A1i.jpg/1280px-C%E1%BA%A3ng_C%C3%A1t_L%C3%A1i.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Gold_bar.jpg/1280px-Gold_bar.jpg",
+        "Broken image: https://whenlambovova.github.io/img/nvidia-card.svg",
+        "Broken image: https://whenlambovova.github.io/img/deepseek-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Usdollar100front.jpg/1280px-Usdollar100front.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://whenlambovova.github.io/img/vaneck-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/National_Assembly_Building_of_Vietnam.jpg/1280px-National_Assembly_Building_of_Vietnam.jpg",
+        "Broken image: https://whenlambovova.github.io/img/novaland-card.svg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/d/d5/10000_Yenes_%28Anverso%29.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/78/New_York_Stock_Exchange_Facade_2015.jpg",
+        "Broken image: https://whenlambovova.github.io/img/anthropic-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Kalshi_logo.svg/1280px-Kalshi_logo.svg.png",
+        "Broken image: https://whenlambovova.github.io/img/samsung-card.svg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/69/Hanoi_Metro_Line_2A_Train%2C_La_Th%C3%A0nh_%2820231223a%29_%2853489340770%29.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg",
+        "Broken image: https://whenlambovova.github.io/img/jpmorgan-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/1280px-Binance_Logo.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/HOSE_logo.jpg/1280px-HOSE_logo.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Gold_Ingots_on_white_background.jpg/1280px-Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/FPT_logo_2010.svg/1280px-FPT_logo_2010.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Gold_ingot_and_bar_of_Banque_de_France.jpg/1280px-Gold_ingot_and_bar_of_Banque_de_France.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7f/Series_F_10K_Yen_Bank_of_Japan_note_-_obverse.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Coinbase.svg/1280px-Coinbase.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/4/44/Cathie_Wood_ARK_Invest_Photo.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Gold_ingot_and_bar_of_Banque_de_France.jpg/1280px-Gold_ingot_and_bar_of_Banque_de_France.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/400-oz-Gold-Bars-AB-01.jpg/1280px-400-oz-Gold-Bars-AB-01.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/FPT_logo_2010.svg/1280px-FPT_logo_2010.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/PNJ%2C_t%E1%BA%A7ng_1%2C_Vincom_Nguy%E1%BB%85n_Ch%C3%AD_Thanh%2C_H%C3%A0_N%E1%BB%99i_001.JPG/1280px-PNJ%2C_t%E1%BA%A7ng_1%2C_Vincom_Nguy%E1%BB%85n_Ch%C3%AD_Thanh%2C_H%C3%A0_N%E1%BB%99i_001.JPG",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Ngan_Hang_Phuong_Dong_office_in_Hoan_Kiem.jpg/1280px-Ngan_Hang_Phuong_Dong_office_in_Hoan_Kiem.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/New_York_Stock_Exchange_Facade_2015.jpg/1280px-New_York_Stock_Exchange_Facade_2015.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Seat_of_the_European_Central_Bank_and_Frankfurt_Skyline_at_dawn_20150422_1.jpg/1280px-Seat_of_the_European_Central_Bank_and_Frankfurt_Skyline_at_dawn_20150422_1.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1280px-Ethereum_logo_2014.svg.png",
+        "Broken image: https://whenlambovova.github.io/img/vaneck-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/1280px-Binance_Logo.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Dai_Logo.png/1280px-Dai_Logo.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Dario_Amodei_in_2023.jpg/1280px-Dario_Amodei_in_2023.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/U.S._Securities_and_Exchange_Commission_headquarters.JPG/1280px-U.S._Securities_and_Exchange_Commission_headquarters.JPG",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/0/09/MASBuilding-Singapore-20090914.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/HOSE_logo.jpg/1280px-HOSE_logo.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/S%E1%BB%9F_GDCK_TPHCM_%28HOSE%29.JPG/1280px-S%E1%BB%9F_GDCK_TPHCM_%28HOSE%29.JPG",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Gold_Ingots_on_white_background.jpg/1280px-Gold_Ingots_on_white_background.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg/1280px-Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg",
+        "Broken image: https://whenlambovova.github.io/img/tmtg-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/FPT_logo_2010.svg/1280px-FPT_logo_2010.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Landmark_81_%2832099609868%29.jpg/1280px-Landmark_81_%2832099609868%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/400-oz-Gold-Bars-AB-01.jpg/1280px-400-oz-Gold-Bars-AB-01.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Gold_ingot_and_bar_of_Banque_de_France.jpg/1280px-Gold_ingot_and_bar_of_Banque_de_France.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/9/96/Gary_Gensler%2C_SEC_Chair.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/NVIDIA_Headquarters.jpg/1280px-NVIDIA_Headquarters.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Nvidia_sign.jpg/1280px-Nvidia_sign.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/61/United_States_one-hundred-dollar_bill.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/400-oz-Gold-Bars-AB-01.jpg/1280px-400-oz-Gold-Bars-AB-01.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/1280px-Binance_Logo.svg.png",
+        "Broken image: https://whenlambovova.github.io/img/ledger-card.svg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/e/e1/Changpeng_Zhao_in_2022.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/39/Kraken-logo-light-background.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/78/Dcentre_racks.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Tether_Logo.svg/1280px-Tether_Logo.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7c/Kalshi_logo.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Nebraska_Avenue_Complex_2017a.jpg/1280px-Nebraska_Avenue_Complex_2017a.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7f/Sun-group-logo.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Vietcombank_Hoan_Kiem_in_2016.jpg/1280px-Vietcombank_Hoan_Kiem_in_2016.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg/1280px-Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/4/49/Abu_Dhabi_Global_Market_logo.gif",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/e/e6/OCBC_Centre_Tower%2C_Dec_05.JPG",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Hanoi_Stock_Exchange_%2818780216822%29.jpg/1280px-Hanoi_Stock_Exchange_%2818780216822%29.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/NETS_logo.svg/1280px-NETS_logo.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Cdnlogo.com_gelex-logo.svg/960px-Cdnlogo.com_gelex-logo.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/e/ee/LPBank_Logo_-_Brandname.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/30/Novaworld_mui_ne_marina_city.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7b/Obverse_of_the_series_2009_%24100_Federal_Reserve_Note.jpg",
+        "Broken image: https://cf-images.us-east-1.prod.boltdns.net/v1/jit/66043936001/5453d611-fdb2-4718-82df-5329d8f474c3/main/1280x720/17m8s405ms/match/image.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Invesco_Global_Headquarters%2C_Atlanta_Georgia%2C_2026-04-26%2C_from_North-west_perspective.webp/1280px-Invesco_Global_Headquarters%2C_Atlanta_Georgia%2C_2026-04-26%2C_from_North-west_perspective.webp",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Solana_cryptocurrency.svg/1280px-Solana_cryptocurrency.svg.png",
+        "Broken image: https://whenlambovova.github.io/img/ledger-card.svg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/1280px-Binance_Logo.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Coinbase.svg/1280px-Coinbase.svg.png",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/World_Bank_building_at_Washington.jpg/1280px-World_Bank_building_at_Washington.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg",
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Solana_cryptocurrency.svg/1280px-Solana_cryptocurrency.svg.png",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/36/Physical_Bitcoin_by_Mike_Cauldwell_%28Casascius%29.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/c/c4/Jensen_Huang_%28cropped%29.jpg"
+      ]
+    },
+    {
+      "route": "tin/bitcoin-thung-59000-usd-ap-sat-day-thi-truong-gau-2026-11-21",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg"
+      ]
+    },
+    {
+      "route": "tin/chu-tich-tig-giai-chap-62-trieu-2026-11-24",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/24/avatar1795508425768-17955084310641024429487.jpg"
+      ]
+    },
+    {
+      "route": "tin/chu-tich-tig-giai-chap-62-trieu-2026-11-24",
+      "width": 390,
+      "errors": [
+        "Broken image: https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/24/avatar1795508425768-17955084310641024429487.jpg"
+      ]
+    },
+    {
+      "route": "tin/co-van-tai-san-405-phan-tram-etf-bitcoin-2026-11-24",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg"
+      ]
+    },
+    {
+      "route": "tin/ethereum-pqai27-de-xuat-chua-thong-qua-2026-11-24",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1280px-Ethereum_logo_2014.svg.png",
+        "Broken image: https://i.ytimg.com/vi/lYPGX4-Kj48/hqdefault.jpg"
+      ]
+    },
+    {
+      "route": "tin/ethereum-pqai27-de-xuat-chua-thong-qua-2026-11-24",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1280px-Ethereum_logo_2014.svg.png",
+        "Broken image: https://i.ytimg.com/vi/lYPGX4-Kj48/hqdefault.jpg"
+      ]
+    },
+    {
+      "route": "tin/gia-vang-sang-23-11-sjc-giu-133-5-trieu-lo-gan-25-trieu-tu-dau-nam-2026-11-23",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/gia-vang-sang-23-11-sjc-giu-133-5-trieu-lo-gan-25-trieu-tu-dau-nam-2026-11-23",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/kalshi-19-phan-tram-bitcoin-vuot-vang-2026-11-23",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/kalshi-19-phan-tram-bitcoin-vuot-vang-2026-11-23",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/khoi-ngoai-ban-rong-127-nghin-ty-vuot-ky-luc-2025-2026-11-22",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Ho_Chi_Minh_stock_exchange_at_night.jpg/1280px-Ho_Chi_Minh_stock_exchange_at_night.jpg"
+      ]
+    },
+    {
+      "route": "tin/nasdaq-mat-10-phan-tram-trong-tuan-sp500-roi-vao-dieu-chinh-2026-11-21",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/78/New_York_Stock_Exchange_Facade_2015.jpg"
+      ]
+    },
+    {
+      "route": "tin/nvidia-token-hoa-tang-159-giua-khung-hoang-2026-11-19",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Nvidia_sign.jpg/1280px-Nvidia_sign.jpg"
+      ]
+    },
+    {
+      "route": "tin/nha-dau-tu-bitcoin-chot-lo-thuc-17-ty-usd-trong-30-ngay-2026-11-23",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg"
+      ]
+    },
+    {
+      "route": "tin/nasdaq-mat-10-phan-tram-trong-tuan-sp500-roi-vao-dieu-chinh-2026-11-21",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/78/New_York_Stock_Exchange_Facade_2015.jpg"
+      ]
+    },
+    {
+      "route": "tin/theblock-tien-gui-token-hoa-stanchart-ocbc-2026-11-19",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/e/e6/OCBC_Centre_Tower%2C_Dec_05.JPG"
+      ]
+    },
+    {
+      "route": "tin/theblock-tien-gui-token-hoa-stanchart-ocbc-2026-11-19",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/e/e6/OCBC_Centre_Tower%2C_Dec_05.JPG"
+      ]
+    },
+    {
+      "route": "tin/vafi-kien-nghi-giam-50-thue-giao-dich-2026-11-20",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg"
+      ]
+    },
+    {
+      "route": "tin/vang-bac-lui-lai-phien-au-24-11-2026-11-24",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Uralelectromed_silver_bar_2016_Ag_99_99.jpg/1280px-Uralelectromed_silver_bar_2016_Ag_99_99.jpg"
+      ]
+    },
+    {
+      "route": "tin/vang-bac-lui-lai-phien-au-24-11-2026-11-24",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Uralelectromed_silver_bar_2016_Ag_99_99.jpg/1280px-Uralelectromed_silver_bar_2016_Ag_99_99.jpg"
+      ]
+    },
+    {
+      "route": "tin/vang-sjc-sang-24-11-130-135-2026-11-24",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/vang-sjc-sang-24-11-130-135-2026-11-24",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/vfs-chao-ban-1399-trieu-co-phieu-2026-11-24",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/24/avatar1795500140594-17955001413591141905217.jpg"
+      ]
+    },
+    {
+      "route": "tin/vfs-chao-ban-1399-trieu-co-phieu-2026-11-24",
+      "width": 390,
+      "errors": [
+        "Broken image: https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/24/avatar1795500140594-17955001413591141905217.jpg"
+      ]
+    },
+    {
+      "route": "tin/yen-nhat-manh-len-lam-phat-cot-loi-vuot-muc-tieu-2-thang-lien-tiep-2026-11-21",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/d/d5/10000_Yenes_%28Anverso%29.jpg"
+      ]
+    },
+    {
+      "route": "tin/yen-nhat-manh-len-lam-phat-cot-loi-vuot-muc-tieu-2-thang-lien-tiep-2026-11-21",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/d/d5/10000_Yenes_%28Anverso%29.jpg"
+      ]
+    },
+    {
+      "route": "tin/anthropic-ipo-ky-luc-81-ty-usd-2026-11-19",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg/1280px-Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/78/Dcentre_racks.jpg"
+      ]
+    },
+    {
+      "route": "tin/bitcoin-thung-57000-lan-dau-sau-2-nam-2026-11-21",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casascius_coin.jpg/1280px-Casascius_coin.jpg",
+        "Broken image: https://i.ytimg.com/vi/lYPGX4-Kj48/hqdefault.jpg"
+      ]
+    },
+    {
+      "route": "tin/chuyen-gia-bloomberg-canh-bao-gia-vang-co-the-di-ngang-10-nam-2026-11-22",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/This_is_a_stack_of_gold_coins.jpg/1280px-This_is_a-stack_of_gold_coins.jpg"
+      ]
+    },
+    {
+      "route": "tin/dau-tho-tuan-thu-ba-giam-lien-tiep-xang-trong-nuoc-re-them-2026-11-22",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Oil_pumpjack_in_the_Permian_Basin.jpg/1280px-Oil_pumpjack_in_the_Permian_Basin.jpg"
+      ]
+    },
+    {
+      "route": "tin/iran-tan-cong-can-cu-my-tai-bahrain-tau-dau-trung-dan-hormuz-2026-11-22",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Navy_Day_at_Naval_Support_Activity_Bahrain_140416-N-RJ323-385.jpg/1280px-Navy_Day_at_Naval_Support_Activity_Bahrain_140416-N-RJ323-385.jpg"
+      ]
+    },
+    {
+      "route": "tin/khoi-ngoai-ban-rong-126-nghin-ty-ky-luc-2026-11-20",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/HOSE_logo.jpg/1280px-HOSE_logo.jpg"
+      ]
+    },
+    {
+      "route": "tin/ky-niem-30-nam-nganh-chung-khoan-viet-nam-thu-tuong-chu-tri-2026-11-23",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ho_Chi_Minh_stock_exchange.jpg/1280px-Ho_Chi_Minh_stock_exchange.jpg"
+      ]
+    },
+    {
+      "route": "tin/khoi-ngoai-ban-rong-126-nghin-ty-ky-luc-2026-11-20",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/HOSE_logo.jpg/1280px-HOSE_logo.jpg"
+      ]
+    },
+    {
+      "route": "tin/ky-niem-30-nam-nganh-chung-khoan-viet-nam-thu-tuong-chu-tri-2026-11-23",
+      "width": 390,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ho_Chi_Minh_stock_exchange.jpg/1280px-Ho_Chi_Minh_stock_exchange.jpg"
+      ]
+    },
+    {
+      "route": "tin/vang-bac-hoi-saxo27-2026-11-27",
+      "width": 390,
+      "errors": [
+        "Broken image: https://whenlambovova.github.io/8-e27-8.jpg",
+        "Broken image: https://i.ytimg.com/vi/lYPGX4-Kj48/hqdefault.jpg"
+      ]
+    },
+    {
+      "route": "tin/vang-bac-hoi-saxo27-2026-11-27",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://i.ytimg.com/vi/lYPGX4-Kj48/hqdefault.jpg"
+      ]
+    },
+    {
+      "route": "tin/vang-hoi-manh-doi-pce-my-2026-11-24",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/vang-hoi-manh-doi-pce-my-2026-11-24",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/vn-index-tuan-moi-cho-kiem-dinh-lai-moc-1700-2026-11-23",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg/1280px-So_Giao_dich_Chung_Khoan%2C_q1%2C_tphcmvn_-_panoramio.jpg"
+      ]
+    },
+    {
+      "route": "tin/gia-vang-trong-nuoc-sang-thu-bay-sjc-ve-128-133-trieu-2026-11-21",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/gia-vang-trong-nuoc-sang-thu-bay-sjc-ve-128-133-trieu-2026-11-21",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/vang-sjc-tuan-mat-6-trieu-chuyen-gia-canh-bao-2026-11-22",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/vang-sjc-tuan-mat-6-trieu-chuyen-gia-canh-bao-2026-11-22",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/6/60/Gold_Ingots_on_white_background.jpg"
+      ]
+    },
+    {
+      "route": "tin/vneconomy-novaland-gia-han-800-trieu-cp-2026-11-19",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/30/Novaworld_mui_ne_marina_city.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/a/a9/Chantier_de_construction%2C_Monastir%2C_Tunisie_-_29.jpg"
+      ]
+    },
+    {
+      "route": "tin/vneconomy-novaland-gia-han-800-trieu-cp-2026-11-19",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/3/30/Novaworld_mui_ne_marina_city.jpg",
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/a/a9/Chantier_de_construction%2C_Monastir%2C_Tunisie_-_29.jpg"
+      ]
+    },
+    {
+      "route": "tin/yen-tang-sau-cpi-thang-10-boj-sap-tang-lai-2026-11-20",
+      "width": 390,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7f/Series_F_10K_Yen_Bank_of_Japan_note_-_obverse.jpg"
+      ]
+    },
+    {
+      "route": "tin/yen-tang-sau-cpi-thang-10-boj-sap-tang-lai-2026-11-20",
+      "width": 1440,
+      "errors": [
+        "Broken image: https://upload.wikimedia.org/wikipedia/commons/7/7f/Series_F_10K_Yen_Bank_of_Japan_note_-_obverse.jpg"
+      ]
+    }
+  ]
+}
