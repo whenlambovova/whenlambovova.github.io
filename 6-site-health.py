@@ -41,6 +41,20 @@ async def main():
        # A sized canvas alone is not proof: count differing nontransparent pixels.
        ink=await page.locator('#dz-chart canvas').first.evaluate('(c)=>{try{let a=c.getContext("2d").getImageData(0,0,c.width,c.height).data;let n=0;for(let i=0;i<a.length;i+=64)if(a[i+3]&&(a[i]!==a[0]||a[i+1]!==a[1]||a[i+2]!==a[2]))n++;return n}catch(e){return 0}}')
        if ink<20:errors.append('Chart canvas appears empty')
+     if route=='demo':
+      # Test noncrypto charts with the external broker domain blocked, as on a restricted network.
+      await page.route('https://biquote.io/**',lambda route:route.abort())
+      for market in ['vn','world','commodity','forex']:
+       await page.locator('[data-market="'+market+'"]').click()
+       if market in ['vn','world']:
+        if not await page.locator('#d3-chart-state').is_visible():errors.append('Missing in-chart source warning: '+market)
+       else:
+        try:
+         await page.wait_for_function('document.querySelector("#dz-chart-status")?.textContent.includes("cache website") && !document.querySelector("#d3-chart-state")',timeout=15000)
+         ink=await page.locator('#dz-chart canvas').first.evaluate('(c)=>{let a=c.getContext("2d").getImageData(0,0,c.width,c.height).data,n=0;for(let i=0;i<a.length;i+=64)if(a[i+3]&&(a[i]!==a[0]||a[i+1]!==a[1]||a[i+2]!==a[2]))n++;return n}')
+         if ink<20:errors.append('Empty noncrypto canvas: '+market)
+        except Exception:errors.append('Noncrypto cache chart unavailable: '+market)
+       if not await page.locator('.d3-drawing-rail').is_visible():errors.append('Drawing tools hidden: '+market)
      if route=='bang-gia':
       frames=page.frames[1:]
       if not frames or not any('tradingview' in f.url or 'simplize' in f.url for f in frames):errors.append('Missing quote/chart widget frame')
