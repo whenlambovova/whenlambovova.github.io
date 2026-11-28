@@ -1125,10 +1125,10 @@ function demoPageHTML() {
   <div>
     <p class="label">Công cụ luyện tập</p>
     <h2 class="section">Giao dịch demo When Lambo</h2>
-    <p class="section-sub">Bản giao dịch mô phỏng với tiền ảo, chưa đạt đủ tính năng và dữ liệu ngang Binance. Crypto có nến công khai Binance và nguồn dự phòng OKX; chứng khoán, hàng hóa chưa có nguồn nến. Không gửi lệnh ra sàn. Tài khoản ký quỹ Long/Short ảo, chưa phải Spot. Không phải khuyến nghị đầu tư.</p>
+    <p class="section-sub">Giao dịch mô phỏng với tiền ảo, không gửi lệnh ra sàn. Chart, công cụ vẽ và chỉ báo chạy ngay trên web. Crypto dùng nến Binance hoặc OKX; Forex, kim loại và dầu dùng nến broker tham khảo Biquote. Chứng khoán Việt Nam chưa có nguồn nến được phép hiển thị; cổ phiếu Mỹ chưa nối nguồn CFD. Không phải khuyến nghị đầu tư.</p>
   </div>
 </section>
-<p class="muted" style="padding:12px 18px;margin:0">Bản giao dịch mô phỏng, chưa đủ tính năng và dữ liệu ngang Binance. Chart TradingView và chart VN qua widget Simplize chỉ để xem, dữ liệu có thể chậm; không nối vào lệnh mô phỏng. Info/Data/Cộng đồng còn thiếu. Tài khoản Long/Short ký quỹ ảo, không phải Spot; chưa tính phí, funding, trượt giá. Không gửi lệnh ra sàn.</p>
+<p class="muted" style="padding:12px 18px;margin:0">Chart, trendline, Fibonacci, MA/EMA và các chỉ báo chạy ngay trên web, không dùng widget chart. Crypto dùng Binance hoặc OKX; Forex, kim loại và dầu dùng báo giá broker Biquote, không phải giá được sàn cấp phép. Chứng khoán Việt Nam chưa có nguồn nến hợp lệ để hiển thị; cổ phiếu Mỹ chưa nối nguồn CFD. Dữ liệu có thể chậm, xem nguồn và thời gian dưới chart. Tài khoản Long/Short dùng tiền ảo, chưa tính phí, funding hay trượt giá; không gửi lệnh ra sàn.</p>
 <div id="dz-shell-root"><p class="muted" style="padding:1rem">Đang tải giao dịch demo…</p></div>`;
 }
 function demoMount() { if (window.demoDashMount) window.demoDashMount(); }
