@@ -26,6 +26,9 @@ async def main():
      text=await page.locator('#app').inner_text()
      if not r or r.status>=400:errors.append('HTTP failure')
      if len(text.strip())<80 or 'Không tìm thấy bài này' in text:errors.append('Missing/empty page')
+     # Trigger below-fold lazy images and await their real load/error before judging.
+     await page.locator('#app img').evaluate_all('(els)=>els.forEach(e=>e.loading="eager")')
+     await page.evaluate('''async()=>{await Promise.all([...document.querySelectorAll("#app img")].map(e=>Promise.race([e.decode().catch(()=>{}),new Promise(r=>setTimeout(r,12000))])))}''')
      broken=await page.locator('#app img').evaluate_all('(els)=>els.filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src)')
      errors.extend('Broken image: '+x for x in broken)
      if route=='tam-ly' and await page.locator('[data-sentiment]').count()!=5:errors.append('Expected five sentiment markets')
