@@ -1,0 +1,31 @@
+name: Site health desktop and mobile
+on:
+  schedule:
+    - cron: '23 1 * * *'
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install playwright==1.58.0
+      - run: python -m playwright install --with-deps chromium
+      - name: Start candidate site for pull requests
+        if: github.event_name == 'pull_request'
+        run: python -m http.server 8080 > /tmp/site-server.log 2>&1 &
+      - name: Check candidate before publish
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_URL: http://127.0.0.1:8080
+        run: python 6-site-health.py
+      - name: Check live site on desktop and mobile
+        if: github.event_name != 'pull_request'
+        run: python 6-site-health.py
