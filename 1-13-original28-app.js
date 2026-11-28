@@ -920,8 +920,8 @@ const PAGES = {
     <section class="blk" style="margin-top:40px">
       <p class="label">Thị trường</p>
       <h2 class="section">Tin tức mới nhất</h2>
-      <p class="section-sub">Tin thị trường được viết lại đầy đủ bằng tiếng Việt, giọng When Lambo, đủ bối cảnh và số liệu từ bài gốc, có ghi nguồn. Chỉ để tham khảo, không phải lời khuyên đầu tư.</p>
-      <p class="label" style="margin-top:18px">Cập nhật mỗi 30 phút</p>
+      <p class="section-sub">Các bài mới là nhận định tự viết của When Lambo Vova, tham khảo thông tin từ các nguồn có ghi tên. Nội dung chỉ để tham khảo, không phải lời khuyên đầu tư.</p>
+      <p class="label" style="margin-top:18px">Mục tiêu 3 bài nhận định mỗi ngày, ưu tiên chất lượng</p>
       <div id="news-cats" style="display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 16px"></div>
       <div class="article-list" id="news-auto"><p class="muted">Đang tải tin…</p></div>
       <p class="label" style="margin-top:18px">Bài nhận định của Vova</p>
