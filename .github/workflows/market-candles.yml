@@ -5,6 +5,8 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  pages: write
+  id-token: write
 concurrency:
   group: market-candles
   cancel-in-progress: false
@@ -12,6 +14,9 @@ jobs:
   refresh:
     runs-on: ubuntu-22.04
     timeout-minutes: 8
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - name: Fetch permitted Biquote OHLC cache
@@ -26,3 +31,15 @@ jobs:
             git pull --rebase
             git push
           fi
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Stage site without repository internals
+        run: |
+          mkdir -p /tmp/pages-site
+          rsync -a --exclude='.git' --exclude='.github' ./ /tmp/pages-site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: /tmp/pages-site
+      - name: Deploy refreshed cache to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
